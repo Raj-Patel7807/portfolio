@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
-import Shinchan from '../assets/Shinchan.jpg';
+import Shinchan from "../assets/Shinchan.jpg";
 
 export const Navbar = () => {
     return (
@@ -13,15 +13,65 @@ export const Navbar = () => {
                     <p>Raj Patel</p>
                 </div>
                 <div className="links nav-underline">
-                    <Link to='/home' className='nav-link active'>Home</Link>
-                    <Link to='/about' className='nav-link'>About</Link>
-                    <Link to='/skills' className='nav-link'>Skills</Link>
-                    <Link to='/education' className='nav-link'>Education</Link>
-                    <Link to='/work' className='nav-link'>Work</Link>
-                    <Link to='/experience' className='nav-link'>Experience</Link>
-                    <Link to='/contact' className='nav-link'>Contact</Link>
+                    <NavLink
+                        to="/"
+                        end
+                        className={({ isActive }) =>
+                            `nav-link${isActive ? " active" : ""}`
+                        }
+                    >
+                        Home
+                    </NavLink>
+                    <NavLink
+                        to="/about"
+                        className={({ isActive }) =>
+                            `nav-link${isActive ? " active" : ""}`
+                        }
+                    >
+                        About
+                    </NavLink>
+                    <NavLink
+                        to="/skills"
+                        className={({ isActive }) =>
+                            `nav-link${isActive ? " active" : ""}`
+                        }
+                    >
+                        Skills
+                    </NavLink>
+                    <NavLink
+                        to="/education"
+                        className={({ isActive }) =>
+                            `nav-link${isActive ? " active" : ""}`
+                        }
+                    >
+                        Education
+                    </NavLink>
+                    <NavLink
+                        to="/work"
+                        className={({ isActive }) =>
+                            `nav-link${isActive ? " active" : ""}`
+                        }
+                    >
+                        Work
+                    </NavLink>
+                    <NavLink
+                        to="/experience"
+                        className={({ isActive }) =>
+                            `nav-link${isActive ? " active" : ""}`
+                        }
+                    >
+                        Experience
+                    </NavLink>
+                    <NavLink
+                        to="/contact"
+                        className={({ isActive }) =>
+                            `nav-link${isActive ? " active" : ""}`
+                        }
+                    >
+                        Contact
+                    </NavLink>
                 </div>
             </nav>
         </>
-    )
+    );
 };
