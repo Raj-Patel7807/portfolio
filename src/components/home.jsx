@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./home.css";
 
+import Google from "../assets/Google.svg";
 import Shinchan from "../assets/Shinchan.jpg";
 
 export const Home = () => {
@@ -16,6 +17,9 @@ export const Home = () => {
                         I'm Raj Patel.
                     </h1>
                     <h2>I'm a Competitive Programmer..</h2>
+                    <div className="home-socials">
+                        <img src={Google} alt='Google'></img>
+                    </div>
                     <button
                         type="button"
                         className="btn btn-primary"
