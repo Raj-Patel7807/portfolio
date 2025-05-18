@@ -7,10 +7,8 @@ export const Contact = () => {
             <div className='contact'>
                 <div className="title">Contact -------</div>
                 <div className="socials">
-                    <a href="#"><i class="fab fa-google"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
                     <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
                 <div className="mail"></div>
                 <form className="contact-form">
