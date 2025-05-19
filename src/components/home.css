@@ -44,3 +44,21 @@
 .home .name button {
     margin-bottom: 25px;
 }
+
+.home .name .home-socials {
+    height: 10vh;
+    width: 33vw;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    img {
+        height: 55px;
+        width: 55px;
+        border-radius: 25%;
+        margin-right: 2px;
+        margin-left: 2px;
+        box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.35);
+    }
+}
