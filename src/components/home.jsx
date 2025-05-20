@@ -24,13 +24,56 @@ export const Home = () => {
                     </h1>
                     <h2>I'm a Competitive Programmer..</h2>
                     <div className="home-socials">
-                        <img src={Google} alt="Google" />
-                        <img src={LinkedIn} alt="LinkedIn" />
-                        <img src={Telegram} alt="Telegram" />
-                        <img src={GitHub} alt="GitHub" />
-                        <img src={CodeForces} alt="CodeForces" />
-                        <img src={CodeChef} alt="CodeChef" />
-                        <img src={LeetCode} alt="LeetCode" />
+                        <a
+                            href="https://mail.google.com/mail/?view=cm&to=rajpatel7807@gmail.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={Google} alt="Google" className="w-8 h-8"/>
+                        </a>
+                        <a 
+                            href="https://www.linkedin.com/in/raj-patel7807/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-text="LinkedIn: raj-patel7807"
+                        >
+                            <img src={LinkedIn} alt="LinkedIn" />
+                        </a>
+                        <a
+                            href="https://t.me/Raj_Patel_7807"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={Telegram} alt="Telegram" />
+                        </a>
+                        <a
+                            href="https://github.com/Raj-Patel7807"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={GitHub} alt="GitHub" />
+                        </a>
+                        <a
+                            href="https://codeforces.com/profile/Raj_Patel_7807"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={CodeForces} alt="CodeForces" />
+                        </a>
+                        <a
+                            href="https://www.codechef.com/users/raj_patel_7807"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={CodeChef} alt="CodeChef" />
+                        </a>
+                        <a
+                            href="https://leetcode.com/u/Raj_Patel_7807/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={LeetCode} alt="LeetCode" />
+                        </a>
                     </div>
                     <button
                         type="button"

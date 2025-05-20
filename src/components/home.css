@@ -46,19 +46,33 @@
 }
 
 .home .name .home-socials {
-    height: 10vh;
-    width: 33vw;
+    height: 50px;
+    width: 30vw;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 
-    img {
-        height: 55px;
-        width: 55px;
+    a {
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        transition: all 0.3s ease-in-out;
         border-radius: 25%;
-        margin-right: 2px;
-        margin-left: 2px;
         box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.35);
+        background-color: black;
+
+        img {
+            height: 30px;
+            width:30px;
+        }
+    }
+
+    a:hover {
+        transform: scale(1.2);
+        transition: all 0.3s ease-in-out;
     }
 }
