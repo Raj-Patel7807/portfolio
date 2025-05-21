@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./home.css";
 
@@ -12,8 +12,12 @@ import CodeForces from "../assets/CodeForces.svg";
 import CodeChef from "../assets/CodeChef.svg";
 import LeetCode from "../assets/LeetCode.svg";
 
-const Typewriter = ({ text = "I'm a Competitive Programmer...", speed = 100, pause = 1000 }) => {
-    const [displayedText, setDisplayedText] = useState('');
+const Typewriter = ({
+    text = "I'm a Competitive Programmer...",
+    speed = 100,
+    pause = 1000,
+}) => {
+    const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
     const [deleting, setDeleting] = useState(false);
 
@@ -53,7 +57,8 @@ export const Home = () => {
                     </h1>
                     <h2 className="typewriter-wrapper">
                         <Typewriter
-                            text="I'm a Competitive Programmer...😎" speed={80}
+                            text="I'm a Competitive Programmer...😎"
+                            speed={90}
                         />
                     </h2>
                     <div className="home-socials">
@@ -62,13 +67,12 @@ export const Home = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={Google} alt="Google" className="w-8 h-8"/>
+                            <img src={Google} alt="Google" />
                         </a>
-                        <a 
+                        <a
                             href="https://www.linkedin.com/in/raj-patel7807/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            data-text="LinkedIn: raj-patel7807"
                         >
                             <img src={LinkedIn} alt="LinkedIn" />
                         </a>
