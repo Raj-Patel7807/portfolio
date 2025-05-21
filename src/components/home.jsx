@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import "./home.css";
 
@@ -11,6 +12,34 @@ import CodeForces from "../assets/CodeForces.svg";
 import CodeChef from "../assets/CodeChef.svg";
 import LeetCode from "../assets/LeetCode.svg";
 
+const Typewriter = ({ text = "I'm a Competitive Programmer...", speed = 100, pause = 1000 }) => {
+    const [displayedText, setDisplayedText] = useState('');
+    const [index, setIndex] = useState(0);
+    const [deleting, setDeleting] = useState(false);
+
+    useEffect(() => {
+        let typingInterval;
+
+        if (!deleting && index <= text.length) {
+            typingInterval = setTimeout(() => {
+                setDisplayedText(text.substring(0, index));
+                setIndex((prev) => prev + 1);
+            }, speed);
+        } else if (deleting && index >= 0) {
+            typingInterval = setTimeout(() => {
+                setDisplayedText(text.substring(0, index));
+                setIndex((prev) => prev - 1);
+            }, speed / 2);
+        } else {
+            setTimeout(() => setDeleting((prev) => !prev), pause);
+        }
+
+        return () => clearTimeout(typingInterval);
+    }, [index, deleting, text, speed, pause]);
+
+    return <span className="typewriter">{displayedText}</span>;
+};
+
 export const Home = () => {
     const navigate = useNavigate();
 
@@ -22,7 +51,11 @@ export const Home = () => {
                         Hii, There <br />
                         I'm Raj Patel.
                     </h1>
-                    <h2>I'm a Competitive Programmer..</h2>
+                    <h2 className="typewriter-wrapper">
+                        <Typewriter
+                            text="I'm a Competitive Programmer...😎" speed={80}
+                        />
+                    </h2>
                     <div className="home-socials">
                         <a
                             href="https://mail.google.com/mail/?view=cm&to=rajpatel7807@gmail.com"
