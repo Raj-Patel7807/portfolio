@@ -1,9 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import "./home.css";
 
-import Shinchan from "../assets/Shinchan.jpg";
+import Shinchan from "../assets/Raj1.jpg";
 import Google from "../assets/Google.svg";
 import LinkedIn from "../assets/LinkedIn.svg";
 import Telegram from "../assets/Telegram.svg";
@@ -51,65 +52,91 @@ export const Home = () => {
         <>
             <div className="home">
                 <div className="name">
-                    <h1>
-                        Hii, There <br />
-                        I'm Raj Patel.
-                    </h1>
-                    <h2 className="typewriter-wrapper">
+                    <h1>Hi, There 👋</h1>
+                    <h2>I’m <span>Raj Patel</span></h2>
+                    <h3 className="typewriter-wrapper">
                         <Typewriter
                             text="I'm a Competitive Programmer...😎"
                             speed={90}
                         />
-                    </h2>
+                    </h3>
                     <div className="home-socials">
                         <a
                             href="https://mail.google.com/mail/?view=cm&to=rajpatel7807@gmail.com"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={Google} alt="Google" />
+                            <img
+                                src={Google}
+                                alt="Google"
+                                title="Google"
+                            />
                         </a>
                         <a
                             href="https://www.linkedin.com/in/raj-patel7807/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={LinkedIn} alt="LinkedIn" />
+                            <img
+                                src={LinkedIn}
+                                alt="LinkedIn"
+                                title="LinkedIn"
+                            />
                         </a>
                         <a
                             href="https://t.me/Raj_Patel_7807"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={Telegram} alt="Telegram" />
+                            <img
+                                src={Telegram}
+                                alt="Telegram"
+                                title="Telegram"
+                            />
                         </a>
                         <a
                             href="https://github.com/Raj-Patel7807"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={GitHub} alt="GitHub" />
+                            <img
+                                src={GitHub} 
+                                alt="GitHub"
+                                title="GitHub"
+                            />
                         </a>
                         <a
                             href="https://codeforces.com/profile/Raj_Patel_7807"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={CodeForces} alt="CodeForces" />
+                            <img
+                                src={CodeForces}
+                                alt="CodeForces"
+                                title="CodeForces"
+                            />
                         </a>
                         <a
                             href="https://www.codechef.com/users/raj_patel_7807"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={CodeChef} alt="CodeChef" />
+                            <img
+                                src={CodeChef}
+                                alt="CodeChef"
+                                title="CodeChef"
+                            />
                         </a>
                         <a
                             href="https://leetcode.com/u/Raj_Patel_7807/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={LeetCode} alt="LeetCode" />
+                            <img
+                                src={LeetCode}
+                                alt="LeetCode"
+                                title="LeetCode"
+                            />
                         </a>
                     </div>
                     <button
@@ -120,7 +147,8 @@ export const Home = () => {
                         About Me
                     </button>
                 </div>
-                <div className="photo">
+
+                <div className="home-photo">
                     <img src={Shinchan} alt="Raj Patel" />
                 </div>
             </div>
