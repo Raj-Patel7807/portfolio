@@ -23,26 +23,32 @@ function App() {
                     <Routes>
                         <Route 
                             path="/" 
-                            element={<Home />} />
+                            element={<Home />}
+                        />
                         <Route 
                             path="/about" 
-                            element={<About />} />
+                            element={<About />}
+                        />
                         <Route 
                             path="/education" 
-                            element={<Education />} />
+                            element={<Education />} 
+                        />
                         <Route
                             path="/achievements"
                             element={<Achievements />}
                         />
                         <Route 
                             path="/projects" 
-                            element={<Projects />} />
+                            element={<Projects />}
+                        />
                         <Route 
                             path="/resume" 
-                            element={<Resume />} />
+                            element={<Resume />} 
+                        />
                         <Route 
                             path="/contact" 
-                            element={<Contact />} />
+                            element={<Contact />} 
+                        />
                     </Routes>
                 </div>
             </Router>
