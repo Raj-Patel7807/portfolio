@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Skills = () => {
+export const Achievements = () => {
     return (
         <>
             <div>
