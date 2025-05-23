@@ -12,36 +12,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.about .myphoto {
-    height: 100%;
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    .myphoto {
+        height: 100%;
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
 
-    p {
-        text-align: left;
-        margin-right: 70px;
-        margin-bottom: 30px;
-        font-size: 20px;
-        font-weight: 600;
+        p {
+            text-align: left;
+            margin-right: 70px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        img {
+            height: 60vh;
+            border-radius: 5%;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+        }
     }
 
-    img {
-        height: 60vh;
-        border-radius: 5%;
-        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    .aboutme {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
-}
-
-.about .aboutme {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
