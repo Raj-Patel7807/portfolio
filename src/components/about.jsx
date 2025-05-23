@@ -8,13 +8,21 @@ export const About = () => {
         <>
             <div className='about'>
                 <div className="myphoto">
-                    <p>ABOUT ME  ----------</p>
                     <img src={Raj} alt='Raj Patel'></img>
                 </div>
                 <div className="aboutme">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus totam quasi suscipit, sint sed veniam rem? Sit, deleniti facilis magni enim accusamus ipsam blanditiis quis quos amet similique quidem voluptates!</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime molestias dolorum nihil necessitatibus consectetur veritatis blanditiis pariatur accusantium velit sapiente adipisci et ut, consequuntur, exercitationem minima, tenetur ullam totam suscipit!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt tempora alias asperiores minima id dignissimos quia voluptas similique perspiciatis, repudiandae quisquam excepturi veniam ex voluptatem rerum aspernatur saepe adipisci. Tenetur.</p>
+                    <div className="about-name">
+                        <h1><u>About Me</u> 🧑🏻‍💻</h1>
+                        <h1>Raj Patel</h1>
+                        <h5>Mehsana, Gujarat, India</h5>
+                    </div>
+                    <div className="about-bio">
+                        I am a Second Year B.Tech(ICT) student at Dhirubhai Ambani University (Formerly DA-IICT).
+                        Data Structures are my strong suit, and I'm passionate about Competitive Programming and Problem Solving.
+                        As a Coder, I've solved 1300+ Problems across several platforms, including Codeforces, CodeChef and LeetCode.
+                        Furthermore, I am interested in Web development and have made a few web projects using my Development skills.
+                        Currently I am a 3 star Coder at CodeChef Max Rating(1702), CodeForces (Specialist) Max Rating (1517).
+                    </div>
                 </div>
             </div>
         </>

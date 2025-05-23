@@ -21,14 +21,6 @@
         justify-content: center;
         flex-direction: column;
 
-        p {
-            text-align: left;
-            margin-right: 70px;
-            margin-bottom: 30px;
-            font-size: 20px;
-            font-weight: 600;
-        }
-
         img {
             height: 60vh;
             border-radius: 5%;
@@ -43,5 +35,26 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        .about-name {
+            width: 100%;
+        }
+
+        .about-name :nth-child(1) {
+            
+        }
+
+        .about-name :nth-child(2) {
+            margin-top: 40px;
+        }
+
+        .about-name :nth-child(3) {
+            margin-top: 7px;
+        }
+
+        .about-bio {
+            margin-top: 10px;
+            font-size: 20px;
+        }
     }
 }
