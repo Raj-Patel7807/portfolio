@@ -31,14 +31,6 @@ export const Navbar = () => {
                         About
                     </NavLink>
                     <NavLink
-                        to="/skills"
-                        className={({ isActive }) =>
-                            `nav-link${isActive ? " active" : ""}`
-                        }
-                    >
-                        Skills
-                    </NavLink>
-                    <NavLink
                         to="/education"
                         className={({ isActive }) =>
                             `nav-link${isActive ? " active" : ""}`
@@ -47,20 +39,28 @@ export const Navbar = () => {
                         Education
                     </NavLink>
                     <NavLink
-                        to="/work"
+                        to="/achievements"
                         className={({ isActive }) =>
                             `nav-link${isActive ? " active" : ""}`
                         }
                     >
-                        Work
+                        Achievements
                     </NavLink>
                     <NavLink
-                        to="/experience"
+                        to="/projects"
                         className={({ isActive }) =>
                             `nav-link${isActive ? " active" : ""}`
                         }
                     >
-                        Experience
+                        Projects
+                    </NavLink>
+                    <NavLink
+                        to="/resume"
+                        className={({ isActive }) =>
+                            `nav-link${isActive ? " active" : ""}`
+                        }
+                    >
+                        Resume
                     </NavLink>
                     <NavLink
                         to="/contact"
