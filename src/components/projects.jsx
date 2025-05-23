@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Project = () => {
+export const Projects = () => {
     return (
         <>
             <div>
