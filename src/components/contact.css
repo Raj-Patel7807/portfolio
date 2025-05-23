@@ -13,34 +13,145 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;
     flex-wrap: wrap;
-}
 
-.contact .title {
-    width: 100%;
-    height: 5vh;
-    background-color: #fdf;
-}
+    .title {
+        width: 100%;
+        height: 5vh;
+    }
 
-.contact .socials {
-    height: 20vh;
-    width: 40%;
-    background-color: #fff;
-}
+    .contact-socials {
+        height: 17vh;
+        width: 44%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 1vh;
+        padding-bottom: 2vh;
+        border: 2px solid black;
 
-.contact .mail {
-    height: 20vh;
-    width: 40%;
-    background-color: red;
-}
+        .social-title {
+            font-size: 25px;
+            font-weight: 600;
+            text-align: left;
+            width: 100%;
+            margin-left: 4vw;
+        }
+        
+        .socials-icons {
+            font-size: 25px;
+            font-weight: 500;
+            width: 100%;
+            text-align: left;
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
 
-.contact form {
-    width: 100%;
-    height: 55vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: lightblue;
-    flex-direction: column;
+            a {
+                height: 40px;
+                width: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 8px;
+                transition: all 0.2s ease;
+                border-radius: 25%;
+                box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.35);
+                background-color: black;
+
+                img {
+                    height: 23px;
+                    width:23px;
+                }
+            }
+
+            a:hover {
+                transform: scale(1.2);
+                transition: all 0.2s ease;
+            }
+        }
+    }
+
+    .mail {
+        height: 17vh;
+        width: 44%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 3vh;
+        padding-bottom: 4vh;
+        border: 2px solid black;
+
+        .mail-title {
+            font-size: 25px;
+            font-weight: 600;
+            text-align: left;
+            width: 100%;
+            margin-left: 4vw;
+        }
+
+        .gmail {
+            font-size: 18px;
+            font-weight: 500;
+            width: 100%;
+            text-align: left;
+            margin-left: 9vw;
+        }
+    }
+
+    form {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 3vw 0 3vw;
+        border: 2px solid black;
+
+        .form-row {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            input {
+                width: 49%;
+                height: 7vh;
+                padding-left: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        input {
+            width: 100%;
+            height: 7vh;
+            padding-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            border-radius: 6px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 22vh;
+            margin-top: 20px;
+            padding: 6px 10px 6px 10px;
+            border-radius: 6px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: lightgreen;
+            border-radius: 7px;
+        }
+    }
 }
