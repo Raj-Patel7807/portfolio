@@ -18,34 +18,34 @@ nav {
     z-index: 1;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 1);
-}
 
-.thumb {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .thumb {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-.thumb p {
-    margin-right: 25vw;
-    margin-left: 20px;
-    margin-top: 12px;
-}
+        p {
+            margin-right: 25vw;
+            margin-left: 20px;
+            margin-top: 12px;
+        }
 
-.thumb img {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    margin-left: 5vw;
-}
+        img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin-left: 5vw;
+        }
+    }
 
-.links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-.links a {
-    margin-left: 30px;
+        a {
+            margin-left: 30px;
+        }
+    }
 }
