@@ -18,10 +18,28 @@ export const Achievements = () => {
                 <div className="coding-profiles">
                     <div className="code-profile codeforces">
                         <div className="code-profile-logo">
-                            <img src={CodeForces} alt="Codeforces" />
+                            <a
+                                href="https://codeforces.com/profile/Raj_Patel_7807"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src={CodeForces}
+                                    alt="Codeforces"
+                                    title="Codeforces"
+                                />
+                            </a>
                         </div>
                         <div className="code-profile-bio">
-                            <p className="code-profile-name">Codeforces</p>
+                            <p className="code-profile-name">
+                                <a
+                                    href="https://codeforces.com/profile/Raj_Patel_7807"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Codeforces
+                                </a>
+                            </p>
                             <div className="code-profile-rating">
                                 <p>
                                     1100+ Problems, [Specialist] (Max Rating :
@@ -32,10 +50,28 @@ export const Achievements = () => {
                     </div>
                     <div className="code-profile codechef">
                         <div className="code-profile-logo">
-                            <img src={CodeChef} alt="Codechef" />
+                            <a
+                                href="https://www.codechef.com/users/raj_patel_7807"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src={CodeChef}
+                                    alt="CodeChef"
+                                    title="CodeChef"
+                                />
+                            </a>
                         </div>
                         <div className="code-profile-bio">
-                            <p className="code-profile-name">Codechef</p>
+                            <p className="code-profile-name">
+                                <a
+                                    href="https://www.codechef.com/users/raj_patel_7807"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Codechef
+                                </a>
+                            </p>
                             <div className="code-profile-rating">
                                 <p>
                                     100+ Problems, [⭐⭐⭐] (Max Rating : 1606)
@@ -45,10 +81,28 @@ export const Achievements = () => {
                     </div>
                     <div className="code-profile leetcode">
                         <div className="code-profile-logo">
-                            <img src={LeetCode} alt="Leetcode" />
+                            <a
+                                href="https://leetcode.com/u/Raj_Patel_7807/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src={LeetCode}
+                                    alt="LeetCode"
+                                    title="LeetCode"
+                                />
+                            </a>
                         </div>
                         <div className="code-profile-bio">
-                            <p className="code-profile-name">Leetcode</p>
+                            <p className="code-profile-name">
+                                <a
+                                    href="https://leetcode.com/u/Raj_Patel_7807/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Leetcode
+                                </a>
+                            </p>
                             <div className="code-profile-rating">
                                 <p>200+ Problems, [] (Max Rating : )</p>
                             </div>

@@ -32,6 +32,12 @@
             margin-bottom: 10px;
             border: 2px solid black;
 
+            a {
+                text-decoration: none;
+                color: inherit;
+                display: inline-block;
+            }
+
             .code-profile-logo {
                 width: 20%;
                 padding-left: 1vw;
