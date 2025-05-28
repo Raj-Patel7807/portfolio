@@ -2,8 +2,8 @@ import React from "react";
 
 import "./education.css";
 
-import DAU from "../assets/DAU.png";
-import Pioneer from "../assets/Pioneer.jpg";
+import DAU from "../assets/Schools/DAU.png";
+import Pioneer from "../assets/Schools/Pioneer.jpg";
 
 export const Education = () => {
     return (
