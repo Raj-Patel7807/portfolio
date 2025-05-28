@@ -2,11 +2,11 @@ import React from "react";
 
 import "./contact.css";
 
-import Google from "../assets/Google.svg";
-import LinkedIn from "../assets/LinkedIn.svg";
-import Telegram from "../assets/Telegram.svg";
-import GitHub from "../assets/GitHub.svg";
-import CodeForces from "../assets/CodeForces.svg";
+import Google from "../assets/Socials/Google.svg";
+import LinkedIn from "../assets/Socials/LinkedIn.svg";
+import Telegram from "../assets/Socials/Telegram.svg";
+import GitHub from "../assets/Socials/GitHub.svg";
+import CodeForces from "../assets/Socials/CodeForces.svg";
 
 export const Contact = () => {
     return (
