@@ -2,9 +2,9 @@ import React from "react";
 
 import "./achievements.css";
 
-import CodeForces from "../assets/CodeForces.png";
-import CodeChef from "../assets/CodeChef.png";
-import LeetCode from "../assets/LeetCode.png";
+import CodeForces from "../assets/Socials/CodeForces.png";
+import CodeChef from "../assets/Socials/CodeChef.png";
+import LeetCode from "../assets/Socials/LeetCode.png";
 
 export const Achievements = () => {
     return (
