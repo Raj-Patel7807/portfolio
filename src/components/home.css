@@ -87,8 +87,10 @@
         justify-content: center;
 
         img {
+            margin-top: 5%;
             border-radius: 5%;
-            height: 60vh;
+            height: 65%;
+            width: 40%;
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
         }
     }

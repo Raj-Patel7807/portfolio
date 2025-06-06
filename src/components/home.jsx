@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import "./home.css";
 
-import Shinchan from "../assets/Raj1.jpg";
+import Shinchan from "../assets/Raj1.png";
 import Google from "../assets/Socials/Google.svg";
 import LinkedIn from "../assets/Socials/LinkedIn.svg";
 import Telegram from "../assets/Socials/Telegram.svg";
