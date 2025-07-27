@@ -29,6 +29,7 @@ export const Education = () => {
                                 Technology
                             </p>
                             <p className="school-batch">2024 - 2028</p>
+                            {/* <p className="school-score"></p> */}
                         </div>
                     </div>
                     <div className="school pioneer">
@@ -44,6 +45,13 @@ export const Education = () => {
                                 (Physics-Chemestry-Maths)
                             </p>
                             <p className="school-batch">2020 - 2024</p>
+                            {/* <p className="school-score">
+                                <p><b>Scores :</b></p>
+                                <p> JEE (Mains) 2024 : 98.77 percentile </p>
+                                <p> 12th GSHSEB : 99.88 percentile </p>
+                                <p> GUJCET : 99.70 percentile </p>
+                                <p> 10th GSHSEB : 99.66 percentile </p>
+                            </p> */}
                         </div>
                     </div>
                 </div>
