@@ -5,6 +5,7 @@ import "./achievements.css";
 import CodeForces from "../assets/Socials/CodeForces.png";
 import CodeChef from "../assets/Socials/CodeChef.png";
 import LeetCode from "../assets/Socials/LeetCode.png";
+import Codolio from "../assets/Socials/Codolio.svg";
 
 export const Achievements = () => {
     return (
@@ -42,7 +43,7 @@ export const Achievements = () => {
                             </p>
                             <div className="code-profile-rating">
                                 <p>
-                                    1100+ Problems, [Specialist] (Max Rating :
+                                    1200+ Problems, [ Specialist ] (Max Rating :
                                     1519)
                                 </p>
                             </div>
@@ -74,7 +75,7 @@ export const Achievements = () => {
                             </p>
                             <div className="code-profile-rating">
                                 <p>
-                                    100+ Problems, [⭐⭐⭐] (Max Rating : 1606)
+                                    100+ Problems, [ ⭐⭐⭐ ] (Max Rating : 1611)
                                 </p>
                             </div>
                         </div>
@@ -108,13 +109,52 @@ export const Achievements = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="code-profile codolio">
+                        <div className="code-profile-logo">
+                            <a
+                                href="https://codolio.com/profile/Raj_Patel_7807"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src={Codolio}
+                                    alt="Codolio"
+                                    title="Codolio"
+                                />
+                            </a>
+                        </div>
+                        <div className="code-profile-bio">
+                            <p className="code-profile-name">
+                                <a
+                                    href="https://codolio.com/profile/Raj_Patel_7807"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Codolio
+                                </a>
+                            </p>
+                            <div className="code-profile-rating">
+                                <p>
+                                    1600+ Problems Solved
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <hr />
-                <div className="coding-achieve">
-                    <div className="code-ach">
+                <div className="coding-certificate">
+                    <p className="coding-certificate-title"> Certificates </p>
+                    <div className="coding-certi">
+                        <p> ICPC </p>
+                    </div>
+                </div>
+                <hr />
+                <div className="coding-achievement">
+                    <p className="coding-achievement-title"> Contest Achievements </p>
+                    <div className="coding-achieve">
                         <p>Rank 268 in Codechef Starters 186 (Div. 3)</p>
                     </div>
-                    <div className="code-ach">
+                    <div className="coding-achieve">
                         <p>Rank 685 in Codeforces Round 1021 (Div. 2)</p>
                     </div>
                 </div>

@@ -14,6 +14,7 @@
         width: 100%;
         padding-top: 13vh;
         padding-left: 10vw;
+        margin-bottom: 35px;
     }
 
     .coding-profiles {
@@ -61,13 +62,41 @@
         }
     }
 
-    .coding-achieve {
+    .coding-certificate {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
 
-        .code-ach {
+        .coding-certificate-title {
+            font-weight: 700;
+            font-size: 1.4rem; 
+            padding-right: 71%;   
+        }
+
+        .coding-certi {
+            height: 6vh;
+            width: 70%;
+            font-size: 18px;
+            border-bottom: 0.5px solid black;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+    }
+
+    .coding-achievement {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .coding-achievement-title {
+            font-weight: 700;
+            font-size: 1.4rem;  
+            padding-right: 62.5%;  
+        }
+
+        .coding-achieve {
             height: 6vh;
             width: 70%;
             font-size: 18px;
