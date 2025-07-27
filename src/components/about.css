@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 
     .myphoto {
         height: 100%;
@@ -40,10 +41,6 @@
             width: 100%;
         }
 
-        .about-name :nth-child(1) {
-            
-        }
-
         .about-name :nth-child(2) {
             margin-top: 40px;
         }
@@ -56,5 +53,9 @@
             margin-top: 10px;
             font-size: 20px;
         }
+    }
+
+    .button {
+        width: 15%;
     }
 }
