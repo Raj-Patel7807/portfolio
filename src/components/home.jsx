@@ -5,13 +5,13 @@ import { useNavigate } from "react-router-dom";
 import "./home.css";
 
 import Shinchan from "../assets/Raj1.png";
-import Google from "../assets/Socials/Google.svg";
-import LinkedIn from "../assets/Socials/LinkedIn.svg";
-import Telegram from "../assets/Socials/Telegram.svg";
-import GitHub from "../assets/Socials/GitHub.svg";
-import CodeForces from "../assets/Socials/CodeForces.svg";
-import CodeChef from "../assets/Socials/CodeChef.svg";
-import LeetCode from "../assets/Socials/LeetCode.svg";
+import Google from "../assets/Socials/Gmail_4.svg"; // 3 - 4
+import LinkedIn from "../assets/Socials/LinkedIn_3.svg"; // 2 - 3
+import Telegram from "../assets/Socials/Telegram_9.svg"; // 8 - 9
+import GitHub from "../assets/Socials/GitHub_1.svg"; // 1 - 2
+import CodeForces from "../assets/Socials/CodeForces_1.svg"; // 1 - 2
+import CodeChef from "../assets/Socials/CodeChef_2.svg";
+import LeetCode from "../assets/Socials/LeetCode_1.svg"; // 1 - 2
 
 const Typewriter = ({
     text = "I'm a Competitive Programmer...",

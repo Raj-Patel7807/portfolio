@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    /* background-color: #000; */
 
     .name {
         display: flex;
@@ -60,7 +61,7 @@
                 transition: all 0.2s ease;
                 border-radius: 25%;
                 box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.35);
-                background-color: black;
+                background-color: aliceblue;
 
                 img {
                     height: 30px;
