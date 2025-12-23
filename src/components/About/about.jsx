@@ -17,11 +17,10 @@ export const About = () => {
                         <h5 data-aos="fade-left" data-aos-duration="1000">Patan, Gujarat, India</h5>
                     </div>
                     <div className="about-bio" data-aos="fade-up" data-aos-duration="1000">
-                        I am a Second Year B.Tech(ICT) student at Dhirubhai Ambani University (Formerly DA-IICT).
-                        Data Structures are my strong suit, and I'm passionate about Competitive Programming and Problem Solving.
-                        As a Coder, I've solved 2200+ Problems across several platforms, including Codeforces, CodeChef and LeetCode.
-                        Furthermore, I am interested in Web development and have made a few web projects using my Development skills.
-                        Currently I am a 3 star Coder at CodeChef Max Rating(1721), CodeForces (Expert) Max Rating (1621).
+                        <p>I am a second-year B.Tech (ICT) student at Dhirubhai Ambani University (formerly DA-IICT). I like problem solving, algorithms, and building things that work fast and efficiently.</p>
+                        <p>Data Structures and Competitive Programming are my main strengths. I have solved 2200+ problems on Codeforces, CodeChef, and LeetCode. I am an Expert on Codeforces (max rating 1621) and a 3-star coder on CodeChef (max rating 1721). I really enjoy Competitive Programming and love learning new algorithms and techniques. I like thinking about time complexity, space usage, and edge cases.</p>
+                        <p>Apart from CP, I am interested in DBMS, OOPS, and backend server-side development. I don’t know everything yet, but I can build basic servers, work with databases, and understand core backend logic. I also know a little frontend and can build simple user interfaces when needed.</p>
+                        <p>I am always trying to learn more and improve myself—by solving harder problems, writing cleaner code, and understanding systems better.</p>
                     </div>
                 </div>
             </div>
