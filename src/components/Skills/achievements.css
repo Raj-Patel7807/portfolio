@@ -7,7 +7,7 @@
 }
 
 .achievements {
-    min-height: 150vh;
+    height: 150vh;
     width: 100vw;
     
     .achiev-title {

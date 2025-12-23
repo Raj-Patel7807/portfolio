@@ -34,18 +34,7 @@ export const Projects = () => {
                             </div>
                         </a>
                         <div className="project-one-photo">
-                            <img
-                                src={Education_Portal_01}
-                                alt="Education_Portal_01"
-                            />
-                            <img
-                                src={Education_Portal_02}
-                                alt="Education_Portal_02"
-                            />
-                            <img
-                                src={Education_Portal_03}
-                                alt="Education_Portal_03"
-                            />
+                            
                         </div>
                         <div className="project-one-desc">
                             <p>An Education Portal Web</p>
@@ -63,18 +52,7 @@ export const Projects = () => {
                             </div>
                         </a>
                         <div className="project-one-photo">
-                            <img
-                                src={Snack_Game_01}
-                                alt="Snack_Game_01"
-                            />
-                            <img
-                                src={Snack_Game_02}
-                                alt="Snack_Game_02"
-                            />
-                            <img
-                                src={Snack_Game_03}
-                                alt="Snack_Game_03"
-                            />
+                            
                         </div>
                         <div className="project-one-desc">
                             <p>Snack Game</p>
@@ -92,18 +70,7 @@ export const Projects = () => {
                             </div>
                         </a>
                         <div className="project-one-photo">
-                            <img
-                                src={Tetris_Game_01}
-                                alt="Tetris_Game_01"
-                            />
-                            <img
-                                src={Tetris_Game_02}
-                                alt="Tetris_Game_02"
-                            />
-                            <img
-                                src={Tetris_Game_03}
-                                alt="Tetris_Game_03"
-                            />
+                            
                         </div>
                         <div className="project-one-desc">
                             <p>Tetris Game</p>

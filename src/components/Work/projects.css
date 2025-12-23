@@ -7,7 +7,7 @@
 }
 
 .projects {
-    height: 100vh;
+    min-height: 150vh;
     width: 100vw;
 
     .projects-title {
@@ -27,7 +27,7 @@
 
         .project-one {
             margin-bottom: 2.5em;
-            height: 30rem;
+            height: 20rem;
             display: flex;
             justify-content: space-evenly;
             flex-direction: column;

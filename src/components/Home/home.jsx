@@ -16,8 +16,6 @@ import CodeChef from "../../assets/Socials/CodeChef_2.svg";
 import LeetCode from "../../assets/Socials/LeetCode_1.svg"; // 1 - 2
 
 export const Home = () => {
-    const navigate = useNavigate();
-
     return (
         <>
             <div className="home">

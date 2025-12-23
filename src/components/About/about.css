@@ -14,24 +14,9 @@
     justify-content: center;
     flex-wrap: wrap;
 
-    .myphoto {
-        height: 100%;
-        width: 40%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        img {
-            height: 60vh;
-            border-radius: 5%;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-        }
-    }
-
     .aboutme {
         height: 100%;
-        width: 50%;
+        width: 60%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -41,11 +26,11 @@
             width: 100%;
         }
 
-        .about-name :nth-child(2) {
+        .about-name :nth-child(1) {
             margin-top: 40px;
         }
 
-        .about-name :nth-child(3) {
+        .about-name :nth-child(2) {
             margin-top: 7px;
         }
 

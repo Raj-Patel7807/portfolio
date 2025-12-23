@@ -10,12 +10,9 @@ export const About = () => {
     return (
         <>
             <div className='about'>
-                <div className="myphoto" data-aos="fade-right" data-aos-duration="1000">
-                    <img src={Raj} alt='Raj Patel'></img>
-                </div>
                 <div className="aboutme">
+                    <h1 data-aos="fade-down" data-aos-duration="1000"><u>About Me</u> 🧑🏻‍💻</h1>
                     <div className="about-name">
-                        <h1 data-aos="fade-down" data-aos-duration="1000"><u>About Me</u> 🧑🏻‍💻</h1>
                         <h1 data-aos="fade-left" data-aos-duration="1000">Raj Patel</h1>
                         <h5 data-aos="fade-left" data-aos-duration="1000">Patan, Gujarat, India</h5>
                     </div>

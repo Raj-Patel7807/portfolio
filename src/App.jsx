@@ -18,41 +18,37 @@ import { Contact } from "./components/Contact/contact.jsx";
 function App() {
     return (
         <>
-            <Router>
-                <div className="App">
-                    <Navbar />
-                    <Routes>
-                        <Route 
-                            path="/" 
-                            element={<Home />}
-                        />
-                        <Route 
-                            path="/about" 
-                            element={<About />}
-                        />
-                        <Route 
-                            path="/education" 
-                            element={<Education />} 
-                        />
-                        <Route
-                            path="/achievements"
-                            element={<Achievements />}
-                        />
-                        <Route 
-                            path="/projects" 
-                            element={<Projects />}
-                        />
-                        <Route 
-                            path="/resume" 
-                            element={<Resume />} 
-                        />
-                        <Route 
-                            path="/contact" 
-                            element={<Contact />} 
-                        />
-                    </Routes>
-                </div>
-            </Router>
+            <div className="App">
+                <Navbar />
+
+                <section id="home">
+                    <Home />
+                </section>
+
+                <section id="about">
+                    <About />
+                </section>
+
+                <section id="education">
+                    <Education />
+                </section>
+
+                <section id="achievements">
+                    <Achievements />
+                </section>
+
+                <section id="projects">
+                    <Projects />
+                </section>
+
+                <section id="resume">
+                    <Resume />
+                </section>
+
+                <section id="contact">
+                    <Contact />
+                </section>
+            </div>
         </>
     );
 }
