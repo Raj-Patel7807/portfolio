@@ -22,14 +22,12 @@ export const Education = () => {
                         <div className="school-bio">
                             <p className="school-name">
                                 Dhirubhai Ambani University (Formerly DA-IICT),
-                                Gandhinagar
+                                Gandhinagar <p className="school-batch">2024 - 2028</p>
                             </p>
                             <p className="school-course">
                                 B.Tech - Information And Communication
-                                Technology
+                                Technology <p className="school-score">CGPA: 8.2/10</p>
                             </p>
-                            <p className="school-batch">2024 - 2028</p>
-                            {/* <p className="school-score"></p> */}
                         </div>
                     </div>
                     <div className="school pioneer" data-aos="fade-left" data-aos-duration="1000">
@@ -38,20 +36,26 @@ export const Education = () => {
                         </div>
                         <div className="school-bio">
                             <p className="school-name">
-                                Pioneer School of Science, Patan
+                                Pioneer School of Science, Patan <p className="school-batch" style={{margin:"0 0 0 445px"}}>2023 - 2024</p>
                             </p>
                             <p className="school-course">
-                                9<sup>th</sup> - 12<sup>th</sup>,
-                                (Physics-Chemestry-Maths)
+                                Class: 12<sup>th</sup> <p className="school-score" style={{margin:"0 0 0 623px"}}>Percentage: 92.92%</p>
                             </p>
-                            <p className="school-batch">2020 - 2024</p>
-                            {/* <p className="school-score">
-                                <p><b>Scores :</b></p>
-                                <p> JEE (Mains) 2024 : 98.77 percentile </p>
-                                <p> 12th GSHSEB : 99.88 percentile </p>
-                                <p> GUJCET : 99.70 percentile </p>
-                                <p> 10th GSHSEB : 99.66 percentile </p>
-                            </p> */}
+                            
+                        </div>
+                    </div>
+                    <div className="school pioneer" data-aos="fade-left" data-aos-duration="1000">
+                        <div className="school-logo">
+                            <img src={Pioneer} alt="Pioneer" />
+                        </div>
+                        <div className="school-bio">
+                            <p className="school-name">
+                                Pioneer Secondary School, Patan
+                                <p className="school-batch" style={{margin:"0 0 0 445px"}}>2021 - 2022</p>
+                            </p>
+                            <p className="school-course">
+                                Class: 10<sup>th</sup> <p className="school-score" style={{margin:"0 0 0 619px"}}>Percentage: 94.33%</p>
+                            </p>
                         </div>
                     </div>
                 </div>
