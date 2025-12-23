@@ -112,14 +112,6 @@ export const Home = () => {
                             />
                         </a>
                     </div>
-                    <button
-                        type="button"
-                        className="btn btn-primary"
-                        onClick={() => navigate("/about")}
-                        data-aos="fade-up" data-aos-duration="1000"
-                    >
-                        About Me
-                    </button>
                 </div>
 
                 <div className="home-photo" data-aos="fade-up" data-aos-duration="1000">

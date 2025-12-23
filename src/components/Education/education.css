@@ -9,7 +9,6 @@
 .education {
     height: 100vh;
     width: 100vw;
-    background-color: aliceblue;
 
     .edu-title {
         width: 100%;
@@ -28,7 +27,7 @@
         .school {
             height: 30vh;
             width: 70%;
-            background-color: #FFF;
+            /* background-color: #FFF; */
             display: flex;
             align-items: center;
             box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.3);
