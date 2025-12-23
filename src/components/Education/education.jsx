@@ -2,20 +2,20 @@ import React from "react";
 
 import "./education.css";
 
-import DAU from "../assets/Schools/DAU.png";
-import Pioneer from "../assets/Schools/Pioneer.jpg";
+import DAU from "../../assets/Schools/DAU.png";
+import Pioneer from "../../assets/Schools/Pioneer.jpg";
 
 export const Education = () => {
     return (
         <>
             <div className="education">
-                <div className="edu-title">
+                <div className="edu-title" data-aos="fade-down" data-aos-duration="1000">
                     <h1>
                         <u>Education</u> 🎓
                     </h1>
                 </div>
                 <div className="edu-schools">
-                    <div className="school dau">
+                    <div className="school dau" data-aos="fade-right" data-aos-duration="1000">
                         <div className="school-logo">
                             <img src={DAU} alt="DAU" />
                         </div>
@@ -32,7 +32,7 @@ export const Education = () => {
                             {/* <p className="school-score"></p> */}
                         </div>
                     </div>
-                    <div className="school pioneer">
+                    <div className="school pioneer" data-aos="fade-left" data-aos-duration="1000">
                         <div className="school-logo">
                             <img src={Pioneer} alt="Pioneer" />
                         </div>

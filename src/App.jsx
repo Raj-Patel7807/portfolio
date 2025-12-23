@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -5,14 +6,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import "./App.css";
-import { Navbar } from "./components/navbar.jsx";
-import { Home } from "./components/home.jsx";
-import { About } from "./components/about.jsx";
-import { Education } from "./components/education.jsx";
-import { Achievements } from "./components/achievements.jsx";
-import { Projects } from "./components/projects.jsx";
-import { Resume } from "./components/resume.jsx";
-import { Contact } from "./components/contact.jsx";
+import { Navbar } from "./components/Navbar/navbar.jsx";
+import { Home } from "./components/Home/home.jsx";
+import { About } from "./components/About/about.jsx";
+import { Education } from "./components/Education/education.jsx";
+import { Achievements } from "./components/Skills/achievements.jsx";
+import { Projects } from "./components/Work/projects.jsx";
+import { Resume } from "./components/Resume/resume.jsx";
+import { Contact } from "./components/Contact/contact.jsx";
 
 function App() {
     return (

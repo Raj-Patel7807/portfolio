@@ -2,15 +2,15 @@ import React from "react";
 
 import "./projects.css";
 
-import Education_Portal_01 from "../assets/Projects/Education_Portal_01.png";
-import Education_Portal_02 from "../assets/Projects/Education_Portal_02.png";
-import Education_Portal_03 from "../assets/Projects/Education_Portal_03.png";
-import Snack_Game_01 from "../assets/Projects/Snack_Game_01.png";
-import Snack_Game_02 from "../assets/Projects/Snack_Game_02.png";
-import Snack_Game_03 from "../assets/Projects/Snack_Game_03.png";
-import Tetris_Game_01 from "../assets/Projects/Tetris_Game_01.png";
-import Tetris_Game_02 from "../assets/Projects/Tetris_Game_02.png";
-import Tetris_Game_03 from "../assets/Projects/Tetris_Game_03.png";
+import Education_Portal_01 from "../../assets/Projects/Education_Portal_01.png";
+import Education_Portal_02 from "../../assets/Projects/Education_Portal_02.png";
+import Education_Portal_03 from "../../assets/Projects/Education_Portal_03.png";
+import Snack_Game_01 from "../../assets/Projects/Snack_Game_01.png";
+import Snack_Game_02 from "../../assets/Projects/Snack_Game_02.png";
+import Snack_Game_03 from "../../assets/Projects/Snack_Game_03.png";
+import Tetris_Game_01 from "../../assets/Projects/Tetris_Game_01.png";
+import Tetris_Game_02 from "../../assets/Projects/Tetris_Game_02.png";
+import Tetris_Game_03 from "../../assets/Projects/Tetris_Game_03.png";
 
 export const Projects = () => {
     return (

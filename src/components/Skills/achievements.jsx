@@ -2,22 +2,22 @@ import React from "react";
 
 import "./achievements.css";
 
-import CodeForces from "../assets/Socials/CodeForces.png";
-import CodeChef from "../assets/Socials/CodeChef.png";
-import LeetCode from "../assets/Socials/LeetCode.png";
-import Codolio from "../assets/Socials/Codolio.svg";
+import CodeForces from "../../assets/Socials/CodeForces.png";
+import CodeChef from "../../assets/Socials/CodeChef.png";
+import LeetCode from "../../assets/Socials/LeetCode.png";
+import Codolio from "../../assets/Socials/Codolio.svg";
 
 export const Achievements = () => {
     return (
         <>
             <div className="achievements">
-                <div className="achiev-title">
+                <div className="achiev-title" data-aos="fade-down" data-aos-duration="1000">
                     <h1>
                         <u>Achievements</u> 🎯
                     </h1>
                 </div>
                 <div className="coding-profiles">
-                    <div className="code-profile codeforces">
+                    <div className="code-profile codeforces" data-aos="fade-right" data-aos-duration="1000">
                         <div className="code-profile-logo">
                             <a
                                 href="https://codeforces.com/profile/Raj_Patel_7807"
@@ -43,13 +43,13 @@ export const Achievements = () => {
                             </p>
                             <div className="code-profile-rating">
                                 <p>
-                                    1200+ Problems, [ Specialist ] (Max Rating :
-                                    1519)
+                                    1600+ Problems, [ Expert ] (Max Rating :
+                                    1621)
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div className="code-profile codechef">
+                    <div className="code-profile codechef" data-aos="fade-left" data-aos-duration="1000">
                         <div className="code-profile-logo">
                             <a
                                 href="https://www.codechef.com/users/raj_patel_7807"
@@ -75,12 +75,12 @@ export const Achievements = () => {
                             </p>
                             <div className="code-profile-rating">
                                 <p>
-                                    100+ Problems, [ ⭐⭐⭐ ] (Max Rating : 1611)
+                                    100+ Problems, [ ⭐⭐⭐ ] (Max Rating : 1721)
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div className="code-profile leetcode">
+                    <div className="code-profile leetcode" data-aos="fade-right" data-aos-duration="1000">
                         <div className="code-profile-logo">
                             <a
                                 href="https://leetcode.com/u/Raj_Patel_7807/"
@@ -105,11 +105,11 @@ export const Achievements = () => {
                                 </a>
                             </p>
                             <div className="code-profile-rating">
-                                <p>200+ Problems, [] (Max Rating : )</p>
+                                <p>500+ Problems, [] (Max Rating : 1675)</p>
                             </div>
                         </div>
                     </div>
-                    <div className="code-profile codolio">
+                    <div className="code-profile codolio" data-aos="fade-left" data-aos-duration="1000">
                         <div className="code-profile-logo">
                             <a
                                 href="https://codolio.com/profile/Raj_Patel_7807"
@@ -135,7 +135,7 @@ export const Achievements = () => {
                             </p>
                             <div className="code-profile-rating">
                                 <p>
-                                    1600+ Problems Solved
+                                    2200+ Problems Solved
                                 </p>
                             </div>
                         </div>
@@ -143,18 +143,18 @@ export const Achievements = () => {
                 </div>
                 <hr />
                 <div className="coding-certificate">
-                    <p className="coding-certificate-title"> Certificates </p>
-                    <div className="coding-certi">
+                    <p className="coding-certificate-title" data-aos="fade-right" data-aos-duration="1000"> Certificates </p>
+                    <div className="coding-certi" data-aos="fade-left" data-aos-duration="1000">
                         <p> ICPC </p>
                     </div>
                 </div>
                 <hr />
                 <div className="coding-achievement">
-                    <p className="coding-achievement-title"> Contest Achievements </p>
-                    <div className="coding-achieve">
+                    <p className="coding-achievement-title" data-aos="fade-right" data-aos-duration="1000"> Contest Achievements </p>
+                    <div className="coding-achieve" data-aos="fade-left" data-aos-duration="1000">
                         <p>Rank 268 in Codechef Starters 186 (Div. 3)</p>
                     </div>
-                    <div className="coding-achieve">
+                    <div className="coding-achieve" data-aos="fade-left" data-aos-duration="1000">
                         <p>Rank 685 in Codeforces Round 1021 (Div. 2)</p>
                     </div>
                 </div>

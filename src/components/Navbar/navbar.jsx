@@ -2,17 +2,17 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
-import Shinchan from "../assets/Shinchan.jpg";
+import Shinchan from "../../assets/Shinchan.jpg";
 
 export const Navbar = () => {
     return (
         <>
-            <nav>
-                <div className="thumb">
+            <nav data-aos="fade-down" data-aos-duration="1000">
+                <div className="thumb" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
                     <img src={Shinchan} alt="Thumb" />
                     <p>Raj Patel</p>
                 </div>
-                <div className="links nav-underline">
+                <div className="links nav-underline" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                     <NavLink
                         to="/"
                         end

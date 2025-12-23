@@ -9,10 +9,11 @@
 .home {
     height: 100vh;
     width: 100%;
+    overflow-x: hidden;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /* background-color: #000; */
+    /* background-color: ; */
 
     .name {
         display: flex;
@@ -88,24 +89,14 @@
         justify-content: center;
 
         img {
+            margin-left: 100px;
             margin-top: 5%;
-            border-radius: 5%;
-            height: 65%;
-            width: 40%;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            height: 60%;
+            width: 55%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
         }
     }
-}
-
-.typewriter {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #000;
-    animation: blink-caret 0.9s step-end infinite;
-    font-size: 1.75rem;
-    color: #000;
-    padding-right: 2px;
 }
 
 @keyframes blink-caret {
