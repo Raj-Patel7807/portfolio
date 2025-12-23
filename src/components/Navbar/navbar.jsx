@@ -16,7 +16,7 @@ export const Navbar = () => {
                     <a href="#home" className="nav-link">Home</a>
                     <a href="#about" className="nav-link">About</a>
                     <a href="#education" className="nav-link">Education</a>
-                    <a href="#achievements" className="nav-link">Achievements</a>
+                    <a href="#achievements" className="nav-link">Skills & Achievements</a>
                     <a href="#projects" className="nav-link">Projects</a>
                     <a href="#resume" className="nav-link">Resume</a>
                     <a href="#contact" className="nav-link">Contact</a>
