@@ -7,5 +7,68 @@
 }
 
 .Resume {
-    
+    min-height: 50vh;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: hidden;
+
+    .res-title {
+        margin-bottom: 3.5vh;
+        width: 100%;
+        padding-top: 13vh;
+        padding-left: 10vw;
+    }
+
+    .get-res {
+        height: 10rem;
+        width: 50%;
+        margin-left: 25%;
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 20px 5px 15px;
+        border-radius: 7px;
+        box-shadow: 0 0 40px rgba(0, 0, 255, 0.6), 0 5px 15px rgba(255, 255, 255, 0.5);
+
+        .res-img {
+            height: 100%;
+            width: 19%;
+            
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .res-desc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-right: 30%;
+
+            h3 {
+                margin-bottom: 2rem;
+                margin-left: 6rem;
+                width: 100%;
+            }
+
+            button {
+                padding: 10px;
+                background-color: rgb(65, 4, 164);
+                margin-right: 20px;
+                margin-left: 10px;
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
+                transition: all 0.2s ease;
+            }
+
+            button:hover {
+                transform: scale(1.1);
+                transition: all 0.2s ease;
+                box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
 }
