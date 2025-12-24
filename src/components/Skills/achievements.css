@@ -13,106 +13,117 @@
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    
-    .achiev-title {
-        width: 100%;
-        padding-top: 13vh;
-        padding-left: 10vw;
-        margin-bottom: 25px;
-    }
+    overflow: hidden;
+    padding-top: 5rem;
 
-    .skills {
-        height: 18rem;
-        width: 60%;
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
-        flex-direction: column;
+    .ach-root {
         background-color: #17153B;
-        border-radius: 15px;
-        padding: 10px 10px 10px 10px;
+        width: 70%;
+        padding: 3rem;
+        border: 3px solid rgba(180, 180, 180, 0.4);
+        box-shadow: 0 0 10px rgba(180, 180, 180, 0.4);
+        border-radius: 20px;
 
-        p {
-            display: inline;
-        }
-
-        .sk-title {
-            display: inline;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-right: 10px;
-        }
-
-        .skill {
-            display: flex;
-            align-items: center;
-            justify-content: start;
-            text-align: left;
-            height: 16%;
+        .achiev-title {
             width: 100%;
-            background-color: #2E236C;
-            border-radius: 10px;
-            padding-left: 10px;
-            padding-top: 10px;
-            box-shadow: 2px 2px 2px rgba(180, 180, 180, 0.4);
-            transition: all 0.3s ease;
+            margin-bottom: 25px;
         }
 
-        .skill:hover {
-            transform: scale(1.1);
-            transition: all 0.3s ease;
-            box-shadow: 0 0 10px rgba(180, 180, 180, 0.5);
-        }
-    }
-
-    .achievs {
-        height: 25rem;
-        width: 60%;
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
-        flex-direction: column;
-        background-color: #17153B;
-        border-radius: 15px;
-        padding: 10px 10px 10px 10px;
-
-        p {
-            display: inline;
-        }
-
-        a {
-            display: inline;
-            color: #fff;
-            margin-bottom: 15px;
-            margin-left: 10px;
-        }
-
-        .ac-title {
-            display: inline;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-right: 10px;
-        }
-
-        .ach {
+        .skills {
+            height: 18rem;
+            width: 85%;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: start;
-            text-align: left;
-            height: 13%;
-            width: 100%;
-            background-color: #2E236C;
-            border-radius: 10px;
-            padding-left: 10px;
-            padding-top: 10px;
-            box-shadow: 2px 2px 2px rgba(180, 180, 180, 0.4);
-            transition: all 0.3s ease;
+            flex-direction: column;
+            background-color: #17153B;
+            border-radius: 15px;
+            padding: 10px 10px 10px 125px;
+            margin-bottom: 3rem;
+
+            p {
+                display: inline;
+            }
+
+            .sk-title {
+                display: inline;
+                font-weight: 700;
+                font-size: 1.2rem;
+                margin-right: 10px;
+            }
+
+            .skill {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                text-align: left;
+                height: 16%;
+                width: 100%;
+                background-color: #2E236C;
+                border-radius: 10px;
+                padding-left: 10px;
+                padding-top: 10px;
+                box-shadow: 2px 2px 2px rgba(180, 180, 180, 0.4);
+                transition: all 0.3s ease;
+            }
+
+            .skill:hover {
+                transform: scale(1.1);
+                transition: all 0.3s ease;
+                box-shadow: 0 0 10px rgba(180, 180, 180, 0.5);
+            }
         }
 
-        .ach:hover {
-            transform: scale(1.1);
-            transition: all 0.3s ease;
-            box-shadow: 0 0 10px rgba(180, 180, 180, 0.5);
+        .achievs {
+            height: 25rem;
+            width: 85%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            background-color: #17153B;
+            border-radius: 15px;
+            padding: 10px 10px 10px 125px;
+            margin-bottom: 3rem;
+
+            p {
+                display: inline;
+            }
+
+            a {
+                display: inline;
+                color: #fff;
+                margin-bottom: 15px;
+                margin-left: 10px;
+            }
+
+            .ac-title {
+                display: inline;
+                font-weight: 700;
+                font-size: 1.2rem;
+                margin-right: 10px;
+            }
+
+            .ach {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                text-align: left;
+                height: 13%;
+                width: 100%;
+                background-color: #2E236C;
+                border-radius: 10px;
+                padding-left: 10px;
+                padding-top: 10px;
+                box-shadow: 2px 2px 2px rgba(180, 180, 180, 0.4);
+                transition: all 0.3s ease;
+            }
+
+            .ach:hover {
+                transform: scale(1.1);
+                transition: all 0.3s ease;
+                box-shadow: 0 0 10px rgba(180, 180, 180, 0.5);
+            }
         }
     }
 }
