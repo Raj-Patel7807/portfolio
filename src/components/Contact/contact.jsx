@@ -41,7 +41,11 @@ export const Contact = () => {
         <>
             <div className="contact">
                 <div className="contact-root">
-                    <div className="title">
+                    <div
+                        className="title"
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                    >
                         <h1>
                             <u>Contact</u> 💬
                         </h1>
@@ -51,7 +55,11 @@ export const Contact = () => {
                         className="contact-form"
                         onSubmit={sendEmail}
                     >
-                        <div className="form-row">
+                        <div
+                            className="form-row"
+                            data-aos="fade-right"
+                            data-aos-duration="1000"
+                        >
                             <input
                                 type="text"
                                 name="from_name"
@@ -70,17 +78,23 @@ export const Contact = () => {
                             name="subject"
                             placeholder="Subject"
                             required
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
                         />
                         <textarea
                             name="message"
                             placeholder="Message"
                             rows="5"
                             required
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
                         ></textarea>
                         <button
                             type="submit"
                             onClick={sendEmail}
                             disabled={loading}
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
                         >
                             {loading ? "Sending..." : "Send Message"}
                         </button>
