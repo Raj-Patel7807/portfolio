@@ -6,19 +6,25 @@ import Raj from "../assets/Raj.png";
 import DAU from "../assets/Schools/DAU.png";
 import Pioneer from "../assets/Schools/Pioneer.jpg";
 
-import Google from "../assets/Socials/Gmail_4.svg"; // 3 - 4
-import LinkedIn from "../assets/Socials/LinkedIn_3.svg"; // 2 - 3
-import Telegram from "../assets/Socials/Telegram_9.svg"; // 8 - 9
-import GitHub from "../assets/Socials/GitHub_1.svg"; // 1 - 2
-import CodeForces from "../assets/Socials/CodeForces_1.svg"; // 1 - 2
+import Google from "../assets/Socials/Gmail_4.svg";
+import LinkedIn from "../assets/Socials/LinkedIn_3.svg";
+import Telegram from "../assets/Socials/Telegram_9.svg";
+import GitHub from "../assets/Socials/GitHub_1.svg";
+import CodeForces from "../assets/Socials/CodeForces_1.svg";
 import CodeChef from "../assets/Socials/CodeChef_2.svg";
-import LeetCode from "../assets/Socials/LeetCode_1.svg"; // 1 - 2
+import LeetCode from "../assets/Socials/LeetCode_1.svg";
+
+import SnackGame from "../assets/Projects/Snack_Game.png";
+import TetrisGame from "../assets/Projects/Tetris_Game.png";
+import EducationPortal from "../assets/Projects/Education_Portal.png";
 
 export const Images = {
     Shinchan,
     Raj,
+
     DAU,
     Pioneer,
+
     Google,
     LinkedIn,
     Telegram,
@@ -26,4 +32,8 @@ export const Images = {
     CodeForces,
     CodeChef,
     LeetCode,
+
+    SnackGame,
+    TetrisGame,
+    EducationPortal,
 };
