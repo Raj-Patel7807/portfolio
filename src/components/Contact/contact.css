@@ -7,83 +7,96 @@
 }
 
 .contact {
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    overflow: hidden;
+    margin-top: 5rem;
 
-    .title {
-        margin-top: 13vh;
-        width: 100%;
-        padding-left: 10vw;
-        margin-bottom: 2rem;
-    }
-
-    .contact-form {
+    .contact-root {
+        height: 100%;
         width: 70%;
-        height: 60vh;
+        background-color: #202040;
+        padding: 3rem;
+        border: 3px solid rgba(180, 180, 180, 0.4);
+        box-shadow: 0 0 10px rgba(180, 180, 180, 0.4);
+        border-radius: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 0 3vw 0 3vw;
-        background-color: #430A5D;
-        margin-bottom: 1rem;
-        border-radius: 20px;
-        box-shadow: 0 0 10px #EEE4B1;
-
-        .form-row {
+        
+        .title {
             width: 100%;
+            margin-bottom: 2.2rem;
+            text-align: center;
+        }
+
+        .contact-form {
+            width: 60%;
+            height: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            flex-direction: column;
+            padding: 0 2rem 0 2rem;
+            margin-bottom: 1rem;
+            border-radius: 20px;
+            background-color: #413C69;
+
+            .form-row {
+                width: 100%;
+
+                input {
+                    width: 100%;
+                    height: 3rem;
+                    padding-left: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
 
             input {
-                width: 49%;
-                height: 7vh;
+                width: 100%;
+                height: 3rem;
                 padding-left: 10px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin-top: 20px;
+                border-radius: 7px;
+                background-color: #413C69;
+                border: 1.5px solid #F0f0f0;
             }
-        }
 
-        input {
-            width: 100%;
-            height: 7vh;
-            padding-left: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-            border-radius: 7px;
-            background-color: #430A5D;
-            border: 1.5px solid #F0f0f0;
-        }
+            textarea {
+                width: 100%;
+                height: 22vh;
+                margin-top: 20px;
+                padding: 6px 10px 6px 10px;
+                border-radius: 7px;
+                background-color: #413C69;
+                border: 1.5px solid #F0f0f0;
+                resize: none;
+            }
 
-        textarea {
-            width: 100%;
-            height: 22vh;
-            margin-top: 20px;
-            padding: 6px 10px 6px 10px;
-            border-radius: 7px;
-            background-color: #430A5D;
-            border: 1.5px solid #F0f0f0;
-        }
+            button {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 10px;
+                background-color: #4A47A3;
+                border-radius: 7px;
+                transition: all 0.2s ease;
+            }
 
-        button {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #5F374B;
-            border-radius: 7px;
-            transition: all 0.2s ease;
-        }
-
-        button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 10px rgba(200, 200, 200, 0.5);
-            transition: all 0.2s ease;
+            button:hover {
+                transform: scale(1.1);
+                box-shadow: 0 0 10px rgba(200, 200, 200, 0.5);
+                transition: all 0.2s ease;
+            }
         }
     }
 }
