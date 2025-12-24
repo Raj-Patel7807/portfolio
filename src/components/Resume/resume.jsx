@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 import "./resume.css";
-import { Images } from "../constants"; 
+import { Images } from "../constants";
 
 const resumeURL = "../../../public/Raj_Patel_Resume.pdf";
 
@@ -9,22 +9,28 @@ export const Resume = () => {
     return (
         <>
             <div className="Resume">
-                <div className='get-res'>
-                    <div className='res-img'>
-                        <img src={Images.ResumeImg} alt="Raj_Resume" title='Raj_Resume' />
+                <div className="get-res">
+                    <div className="res-img">
+                        <img
+                            src={Images.ResumeImg}
+                            alt="Raj_Resume"
+                            title="Raj_Resume"
+                        />
                     </div>
-                    <div className='res-desc'>
+                    <div className="res-desc">
                         <h1>My Resume 📄</h1>
-                        <button onClick={() => window.open(resumeURL, "_blank")}>
+                        <button
+                            onClick={() => window.open(resumeURL, "_blank")}
+                        >
                             Open
                         </button>
 
                         <button
                             onClick={() => {
-                            const link = document.createElement("a");
-                            link.href = resumeURL;
-                            link.download = "Raj_Patel_Resume.pdf";
-                            link.click();
+                                const link = document.createElement("a");
+                                link.href = resumeURL;
+                                link.download = "Raj_Patel_Resume.pdf";
+                                link.click();
                             }}
                         >
                             Download
@@ -33,5 +39,5 @@ export const Resume = () => {
                 </div>
             </div>
         </>
-    )
+    );
 };
