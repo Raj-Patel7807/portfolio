@@ -9,7 +9,11 @@ export const Resume = () => {
     return (
         <>
             <div className="Resume">
-                <div className="get-res">
+                <div
+                    className="get-res"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                >
                     <div className="res-img">
                         <img
                             src={Images.ResumeImg}
