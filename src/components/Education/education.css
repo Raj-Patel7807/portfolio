@@ -9,85 +9,99 @@
 .education {
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
 
-    .edu-title {
-        margin-bottom: 3.5vh;
-        width: 100%;
-        padding-top: 13vh;
-        padding-left: 10vw;
-    }
+    .edu-root {
+        height: 100%;
+        width: 90%;
+        background-color: #17153B;
+        padding: 3rem;
+        border: 3px solid rgba(180, 180, 180, 0.4);
+        box-shadow: 0 0 10px rgba(180, 180, 180, 0.4);
+        border-radius: 20px;
 
-    .edu-schools {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        .edu-title {
+            width: 100%;
+            margin-bottom: 2.5rem;
+        }
 
-        .school {
-            height: 22vh;
-            width: 75%;
-            background-color: #000;
+        .edu-schools {
+            width: 100%;
             display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: start;
-            box-shadow: 7px 7px 7px rgba(255, 255, 255, 0.5);
-            transition: all 0.3s ease;
+            flex-direction: column;
 
-            .school-logo {
-                width: 20%;
-                padding-left: 1vw;
-            }
-
-            .school-bio {
-                .school-name {
-                    margin-top: 15px;
-                    font-size: 20px;
-                    font-weight: 700;
-
-                    .school-batch {
-                        margin-left: 130px;
-                        display: inline;
-                    }
-                }
-
-                .school-course {
-                    font-size: 18px;
-                    font-weight: 600;
-                    
-                    .school-score {
-                        margin-left: 280px;
-                        display: inline;
-                    }
-                }
-            }
-        }
-
-        .school:hover {
-            box-shadow: 10px 10px 10px rgba(187, 134, 252, 0.3);
-        }
-
-        .dau {
-            margin-bottom: 2vh;
-            .school-logo {
+            .school {
+                height: 22vh;
+                width: 90%;
+                background-color: #2F2F4F;
                 display: flex;
-                justify-content: center;
                 align-items: center;
-                width: 17%;
-                margin-right: 18px;
-                margin-left: 14px;
-                background-color: #fff;
-                img {
-                    width: 80%;
+                justify-content: start;
+                box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.8);
+                transition: all 0.3s ease;
+
+                .school-logo {
+                    width: 20%;
+                    padding-left: 1vw;
+                }
+
+                .school-bio {
+                    .school-name {
+                        margin-top: 15px;
+                        font-size: 20px;
+                        font-weight: 700;
+
+                        .school-batch {
+                            margin-left: 130px;
+                            display: inline;
+                        }
+                    }
+
+                    .school-course {
+                        font-size: 18px;
+                        font-weight: 600;
+                        
+                        .school-score {
+                            margin-left: 280px;
+                            display: inline;
+                        }
+                    }
                 }
             }
-        }
 
-        .pioneer {
-            margin-bottom: 2vh;
-            .school-logo img {
-                width: 50%;
-                margin-left: 30px;
+            .school:hover {
+                transform: scale(1.005);
+                box-shadow: 10px 10px 10px rgba(187, 134, 252, 0.3);
+                transition: all 0.3s ease;
+            }
+
+            .dau {
+                margin-bottom: 2vh;
+                .school-logo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 17%;
+                    margin-right: 18px;
+                    margin-left: 14px;
+                    background-color: #fff;
+                    img {
+                        width: 80%;
+                    }
+                }
+            }
+
+            .pioneer {
+                margin-bottom: 2vh;
+                .school-logo img {
+                    width: 50%;
+                    margin-left: 30px;
+                }
             }
         }
     }
