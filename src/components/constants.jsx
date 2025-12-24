@@ -18,6 +18,8 @@ import SnackGame from "../assets/Projects/Snack_Game.png";
 import TetrisGame from "../assets/Projects/Tetris_Game.png";
 import EducationPortal from "../assets/Projects/Education_Portal.png";
 
+import ResumeImg from "../assets/Resume/Raj_Patel_Resume.jpg";
+
 export const Images = {
     Shinchan,
     Raj,
@@ -36,4 +38,6 @@ export const Images = {
     SnackGame,
     TetrisGame,
     EducationPortal,
+
+    ResumeImg,
 };
