@@ -12,9 +12,17 @@ export const Home = () => {
         <>
             <div className="home">
                 <div className="name">
-                    <h1 data-aos="fade-down" data-aos-duration="1000">Hi, There 👋</h1>
-                    <h2 data-aos="zoom-in" data-aos-duration="1000">I'm <span>Raj Patel</span></h2>
-                    <h3 className="typewriter-wrapper" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 data-aos="fade-down" data-aos-duration="1000">
+                        Hi, There 👋
+                    </h1>
+                    <h2 data-aos="zoom-in" data-aos-duration="1000">
+                        I'm <span>Raj Patel</span>
+                    </h2>
+                    <h3
+                        className="typewriter-wrapper"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                    >
                         <Typewriter
                             words={["I'm a Competitive Programmer..."]}
                             loop={0}
@@ -25,7 +33,11 @@ export const Home = () => {
                             delaySpeed={1200}
                         />
                     </h3>
-                    <div className="home-socials" data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                        className="home-socials"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
                         <a
                             href="https://mail.google.com/mail/?view=cm&to=rajpatel7807@gmail.com"
                             target="_blank"
@@ -65,7 +77,7 @@ export const Home = () => {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src={Images.GitHub} 
+                                src={Images.GitHub}
                                 alt="GitHub"
                                 title="GitHub"
                             />
@@ -106,7 +118,11 @@ export const Home = () => {
                     </div>
                 </div>
 
-                <div className="home-photo" data-aos="fade-left" data-aos-duration="1000">
+                <div
+                    className="home-photo"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                >
                     <Tilt
                         tiltMaxAngleX={10}
                         tiltMaxAngleY={10}
