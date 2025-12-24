@@ -8,12 +8,20 @@ export const Projects = () => {
         <>
             <div className="projects">
                 <div className="pro-root">
-                    <div className="projects-title">
+                    <div
+                        className="projects-title"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                    >
                         <h1>
                             <u>Projects</u> 💻
                         </h1>
                     </div>
-                    <div className="all-project">
+                    <div
+                        className="all-project"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
                         <div className="project-card">
                             <div className="proj-img">
                                 <img
