@@ -77,7 +77,11 @@ export const Contact = () => {
                             rows="5"
                             required
                         ></textarea>
-                        <button type="submit" onClick={sendEmail} disabled={loading}>
+                        <button
+                            type="submit"
+                            onClick={sendEmail}
+                            disabled={loading}
+                        >
                             {loading ? "Sending..." : "Send Message"}
                         </button>
 
