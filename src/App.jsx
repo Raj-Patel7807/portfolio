@@ -14,6 +14,7 @@ import { Achievements } from "./components/Skills/achievements.jsx";
 import { Projects } from "./components/Work/projects.jsx";
 import { Resume } from "./components/Resume/resume.jsx";
 import { Contact } from "./components/Contact/contact.jsx";
+import { Footer } from "./components/Footer/footer.jsx";
 
 function App() {
     return (
@@ -47,6 +48,10 @@ function App() {
 
                 <section id="contact">
                     <Contact />
+                </section>
+
+                <section id="footer">
+                    <Footer />
                 </section>
             </div>
         </>
