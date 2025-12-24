@@ -9,17 +9,12 @@ export const Resume = () => {
     return (
         <>
             <div className="Resume">
-                <div className='res-title'>
-                    <h1>
-                        <u>Resume</u> 📄
-                    </h1>
-                </div>
                 <div className='get-res'>
                     <div className='res-img'>
                         <img src={Images.ResumeImg} alt="Raj_Resume" title='Raj_Resume' />
                     </div>
                     <div className='res-desc'>
-                        <h3>My Resume</h3>
+                        <h1>My Resume 📄</h1>
                         <button onClick={() => window.open(resumeURL, "_blank")}>
                             Open
                         </button>

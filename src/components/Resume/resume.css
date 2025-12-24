@@ -11,23 +11,19 @@
     width: 100%;
     overflow: hidden;
     overflow-x: hidden;
-
-    .res-title {
-        margin-bottom: 3.5vh;
-        width: 100%;
-        padding-top: 13vh;
-        padding-left: 10vw;
-    }
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .get-res {
-        height: 10rem;
-        width: 50%;
-        margin-left: 25%;
+        height: 20rem;
+        width: 70%;
         background-color: black;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 5px 20px 5px 15px;
+        padding: 2rem;
         border-radius: 7px;
         box-shadow: 0 0 40px rgba(0, 0, 255, 0.6), 0 5px 15px rgba(255, 255, 255, 0.5);
 
@@ -46,12 +42,11 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            margin-right: 30%;
 
-            h3 {
+            h1 {
                 margin-bottom: 2rem;
-                margin-left: 6rem;
                 width: 100%;
+                padding-left: 15rem;
             }
 
             button {
