@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    overflow: hidden;
     /* background-color: ; */
 
     .name {
@@ -91,10 +92,18 @@
         img {
             margin-left: 100px;
             margin-top: 5%;
+            border: 3px solid rgba(187, 134, 252, 0.7);
             border-radius: 50%;
             height: 60%;
             width: 55%;
             box-shadow: 0px 0px 100px rgba(100, 100, 100, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px white;
+            transition: all 0.4s ease;
         }
     }
 }
