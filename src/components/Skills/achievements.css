@@ -7,8 +7,12 @@
 }
 
 .achievements {
-    height: 150vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
     
     .achiev-title {
         width: 100%;
@@ -17,92 +21,39 @@
         margin-bottom: 35px;
     }
 
-    .coding-profiles {
-        height:75vh;
-        width: 100%;
+    .skills {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
+        flex-wrap: wrap;
+        height: 10rem;
+        width: 60%;
+        background-color: #440389;
+        border-radius: 18px;
+    }
+
+    .skill-card {
+        height: 7rem;
+        width: 7rem;
+        background: rgb(33, 1, 102);
+        border-radius: 18px;
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-        .code-profile {
-            height: 20vh;
-            width: 50%;
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            border: 2px solid black;
+        img {
+            width: 42px;
+            height: 42px;
+            margin-bottom: 12px;
+        }
 
-            a {
-                text-decoration: none;
-                color: inherit;
-                display: inline-block;
-            }
-
-            .code-profile-logo {
-                width: 20%;
-                padding-left: 1vw;
-
-                img {
-                    width: 80%;
-                }
-            }
-
-            .code-profile-bio {
-                .code-profile-name {
-                    font-size: 20px;
-                    font-weight: 700;
-                }
-
-                .code-profile-rating {
-                    font-size: 18px;
-                    font-weight: 600;
-                }
-            }
+        p {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 0.4px;
         }
     }
 
-    .coding-certificate {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        .coding-certificate-title {
-            font-weight: 700;
-            font-size: 1.4rem; 
-            padding-right: 71%;   
-        }
-
-        .coding-certi {
-            height: 6vh;
-            width: 70%;
-            font-size: 18px;
-            border-bottom: 0.5px solid black;
-            margin-bottom: 10px;
-            padding: 10px;
-        }
-    }
-
-    .coding-achievement {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        .coding-achievement-title {
-            font-weight: 700;
-            font-size: 1.4rem;  
-            padding-right: 62.5%;  
-        }
-
-        .coding-achieve {
-            height: 6vh;
-            width: 70%;
-            font-size: 18px;
-            border-bottom: 0.5px solid black;
-            margin-bottom: 10px;
-            padding: 10px;
-        }
-    }
 }
