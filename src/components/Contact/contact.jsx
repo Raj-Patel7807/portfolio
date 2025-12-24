@@ -1,75 +1,87 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 import "./contact.css";
 import { Images } from "../constants";
 
 export const Contact = () => {
+    const formRef = useRef();
+    const [status, setStatus] = useState("");
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                "rajpatel7807",
+                "template_q2dcbqy",
+                formRef.current,
+                "01p8t7vXJsDbRBx2l"
+            )
+            .then(
+                () => {
+                    setStatus("success");
+                    formRef.current.reset();
+                },
+                () => {
+                    setStatus("error");
+                }
+            );
+    };
+
     return (
         <>
             <div className="contact">
-                <div className="title">Contact -------</div>
-                <div className="contact-socials">
-                    <div className="social-title">Social Profiles</div>
-                    <div className="socials-icons"> {'>'}
-                        <a
-                            href="https://mail.google.com/mail/?view=cm&to=rajpatel7807@gmail.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img src={Images.Google} alt="Google" title="Google" />
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/raj-patel7807/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img src={Images.LinkedIn} alt="LinkedIn" title="LinkedIn" />
-                        </a>
-                        <a
-                            href="https://t.me/Raj_Patel_7807"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img src={Images.Telegram} alt="Telegram" title="Telegram" />
-                        </a>
-                        <a
-                            href="https://github.com/Raj-Patel7807"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img src={Images.GitHub} alt="GitHub" title="GitHub" />
-                        </a>
-                        <a
-                            href="https://codeforces.com/profile/Raj_Patel_7807"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                src={Images.CodeForces}
-                                alt="CodeForces"
-                                title="CodeForces"
-                            />
-                        </a>
-                    </div>
+                <div className="title">
+                    <h1>
+                        <u>Contact</u> 💬
+                    </h1>
                 </div>
-                <div className="mail">
-                    <div className="mail-title">E-mail</div>
-                    <div className="gmail">
-                        {'>'}&nbsp;&nbsp;&nbsp;&nbsp;rajpatel7807@gmail.com
-                    </div>
-                </div>
-                <form className="contact-form">
+                <form
+                    ref={formRef}
+                    className="contact-form"
+                    onSubmit={sendEmail}
+                >
                     <div className="form-row">
-                        <input type="text" placeholder="Your Name" required />
-                        <input type="email" placeholder="Your Email" required />
+                        <input
+                            type="text"
+                            name="from_name"
+                            placeholder="Your Name"
+                            required
+                        />
+                        <input
+                            type="email"
+                            name="from_email"
+                            placeholder="Your Email"
+                            required
+                        />
                     </div>
-                    <input type="text" placeholder="Subject" required />
+                    <input
+                        type="text"
+                        name="subject"
+                        placeholder="Subject"
+                        required
+                    />
                     <textarea
+                        name="message"
                         placeholder="Message"
                         rows="5"
                         required
                     ></textarea>
-                    <button type="submit">Send Message</button>
+                    <button type="button" onClick={sendEmail}>
+                        Send Message
+                    </button>
+
+                    {status === "success" && (
+                        <p className="success-msg">
+                            ✅ Message sent successfully!
+                        </p>
+                    )}
+                    {status === "error" && (
+                        <p className="error-msg">
+                            ❌ Something went wrong. Try again.
+                        </p>
+                    )}
                 </form>
             </div>
         </>

@@ -7,112 +7,31 @@
 }
 
 .contact {
-    height: 100vh;
-    width: 70vw;
-    margin: 0 auto;
-    margin-left: 15vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 
     .title {
+        margin-top: 13vh;
         width: 100%;
-        height: 5vh;
+        padding-left: 10vw;
+        margin-bottom: 2rem;
     }
 
-    .contact-socials {
-        height: 17vh;
-        width: 48%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-        padding-top: 1vh;
-        padding-bottom: 2vh;
-        border: 2px solid black;
-        margin-right: 2.5rem;
-
-        .social-title {
-            font-size: 25px;
-            font-weight: 600;
-            text-align: left;
-            width: 100%;
-            margin-left: 4vw;
-        }
-        
-        .socials-icons {
-            font-size: 25px;
-            font-weight: 500;
-            width: 100%;
-            text-align: left;
-            width: 70%;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-
-            a {
-                height: 40px;
-                width: 40px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 8px;
-                transition: all 0.2s ease;
-                border-radius: 25%;
-                box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.35);
-                background-color: black;
-
-                img {
-                    height: 23px;
-                    width:23px;
-                }
-            }
-
-            a:hover {
-                transform: scale(1.15);
-                transition: all 0.2s ease;
-            }
-        }
-    }
-
-    .mail {
-        height: 17vh;
-        width: 48%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-        padding-top: 3vh;
-        padding-bottom: 4vh;
-        border: 2px solid black;
-
-        .mail-title {
-            font-size: 25px;
-            font-weight: 600;
-            text-align: left;
-            width: 100%;
-            margin-left: 4vw;
-        }
-
-        .gmail {
-            font-size: 18px;
-            font-weight: 500;
-            width: 100%;
-            text-align: left;
-            margin-left: 9vw;
-        }
-    }
-
-    form {
-        width: 100%;
+    .contact-form {
+        width: 70%;
         height: 60vh;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         padding: 0 3vw 0 3vw;
-        border: 2px solid black;
+        background-color: #430A5D;
+        margin-bottom: 1rem;
+        border-radius: 20px;
+        box-shadow: 0 0 10px #EEE4B1;
 
         .form-row {
             width: 100%;
@@ -138,7 +57,9 @@
             justify-content: center;
             align-items: center;
             margin-top: 20px;
-            border-radius: 6px;
+            border-radius: 7px;
+            background-color: #430A5D;
+            border: 1.5px solid #F0f0f0;
         }
 
         textarea {
@@ -146,14 +67,35 @@
             height: 22vh;
             margin-top: 20px;
             padding: 6px 10px 6px 10px;
-            border-radius: 6px;
+            border-radius: 7px;
+            background-color: #430A5D;
+            border: 1.5px solid #F0f0f0;
         }
 
         button {
             margin-top: 20px;
             padding: 10px;
-            background-color: lightgreen;
+            background-color: #5F374B;
             border-radius: 7px;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(200, 200, 200, 0.5);
+            transition: all 0.2s ease;
         }
     }
+}
+
+.success-msg {
+    color: #2ecc71;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.error-msg {
+    color: #e74c3c;
+    margin-top: 10px;
+    text-align: center;
 }
