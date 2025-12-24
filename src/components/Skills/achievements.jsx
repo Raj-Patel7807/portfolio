@@ -40,7 +40,56 @@ export const Achievements = () => {
                     </h1>
                 </div>
                 <div className="achievs">
-
+                    <div className="ach">
+                        <p className="ac-title">Codeforces : </p>
+                        <p>Expert (Max Rating: 1621)</p>
+                        <a
+                            href="https://codeforces.com/profile/Raj_Patel_7807"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            [Raj_Patel_7807]
+                        </a>
+                    </div>
+                    <div className="ach">
+                        <p className="ac-title">CodeChef : </p>
+                        <p>3-Star (Max Rating: 1721)</p>
+                        <a
+                            href="https://www.codechef.com/users/raj_patel_7807"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            [raj_patel_7807]
+                        </a>
+                    </div>
+                    <div className="ach">
+                        <p className="ac-title">LeetCode : </p>
+                        <p> (Max Rating: 1675)</p>
+                        <a
+                            href="https://leetcode.com/u/Raj_Patel_7807/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            [Raj_Patel_7807]
+                        </a>
+                    </div>
+                    <div className="ach">
+                        <p>Solved <b>2200+</b> Coding Problems across the platforms</p>
+                        <a
+                            href="https://codolio.com/profile/Raj_Patel_7807"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            [Profile]
+                        </a>
+                    </div>
+                    <div className="ach">
+                        <p className="ac-title">JEE (Main) 2024 : </p>
+                        <p>98.77 Percentile</p>
+                    </div>
+                    <div className="ach">
+                        <p>Secured All Gujarat Rank <b>65</b> in 12th Science</p>
+                    </div>
                 </div>
             </div>
         </>
