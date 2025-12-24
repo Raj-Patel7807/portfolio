@@ -1,12 +1,7 @@
 import React from "react";
 
 import "./contact.css";
-
-import Google from "../../assets/Socials/Google.svg";
-import LinkedIn from "../../assets/Socials/LinkedIn.svg";
-import Telegram from "../../assets/Socials/Telegram.svg";
-import GitHub from "../../assets/Socials/GitHub.svg";
-import CodeForces from "../../assets/Socials/CodeForces.svg";
+import { Images } from "../constants";
 
 export const Contact = () => {
     return (
@@ -21,28 +16,28 @@ export const Contact = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={Google} alt="Google" title="Google" />
+                            <img src={Images.Google} alt="Google" title="Google" />
                         </a>
                         <a
                             href="https://www.linkedin.com/in/raj-patel7807/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={LinkedIn} alt="LinkedIn" title="LinkedIn" />
+                            <img src={Images.LinkedIn} alt="LinkedIn" title="LinkedIn" />
                         </a>
                         <a
                             href="https://t.me/Raj_Patel_7807"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={Telegram} alt="Telegram" title="Telegram" />
+                            <img src={Images.Telegram} alt="Telegram" title="Telegram" />
                         </a>
                         <a
                             href="https://github.com/Raj-Patel7807"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img src={GitHub} alt="GitHub" title="GitHub" />
+                            <img src={Images.GitHub} alt="GitHub" title="GitHub" />
                         </a>
                         <a
                             href="https://codeforces.com/profile/Raj_Patel_7807"
@@ -50,7 +45,7 @@ export const Contact = () => {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src={CodeForces}
+                                src={Images.CodeForces}
                                 alt="CodeForces"
                                 title="CodeForces"
                             />

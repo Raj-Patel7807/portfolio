@@ -1,11 +1,7 @@
 import React from "react";
 
 import "./achievements.css";
-
-import CodeForces from "../../assets/Socials/CodeForces.svg";
-import CodeChef from "../../assets/Socials/CodeChef.png";
-import LeetCode from "../../assets/Socials/LeetCode.png";
-import Codolio from "../../assets/Socials/Codolio.svg";
+import { Images } from "../constants"
 
 export const Achievements = () => {
     return (
@@ -18,32 +14,32 @@ export const Achievements = () => {
                 </div>
                 <div className="skills">
                     <div className="skill-card">
-                        <img src={CodeForces} alt="React" />
+                        <img src={Images.CodeForces} alt="React" />
                         <p>ReactJS</p>
                     </div>
 
                     <div className="skill-card">
-                        <img src={CodeForces} alt="React" />
+                        <img src={Images.CodeForces} alt="React" />
                         <p>ReactJS</p>
                     </div>
 
                     <div className="skill-card">
-                        <img src={CodeForces} alt="React" />
+                        <img src={Images.CodeForces} alt="React" />
                         <p>ReactJS</p>
                     </div>
 
                     <div className="skill-card">
-                        <img src="/icons/node.svg" alt="Node" />
+                        <img src={Images.CodeForces} alt="Node" />
                         <p>NodeJS</p>
                     </div>
 
                     <div className="skill-card">
-                        <img src="/icons/redux.svg" alt="Redux" />
+                        <img src={Images.CodeForces} alt="Redux" />
                         <p>Redux</p>
                     </div>
 
                     <div className="skill-card">
-                        <img src="/icons/firebase.svg" alt="Firebase" />
+                        <img src={Images.CodeForces} alt="Firebase" />
                         <p>Firebase</p>
                     </div>
                 </div>

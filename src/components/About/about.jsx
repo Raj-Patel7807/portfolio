@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import './about.css';
-
-import Raj from "../../assets/Raj.png";
+import { Images } from "../constants.jsx";
 
 export const About = () => {
     return (

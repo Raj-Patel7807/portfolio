@@ -1,9 +1,7 @@
 import React from "react";
 
 import "./education.css";
-
-import DAU from "../../assets/Schools/DAU.png";
-import Pioneer from "../../assets/Schools/Pioneer.jpg";
+import { Images } from "../constants"; 
 
 export const Education = () => {
     return (
@@ -17,7 +15,7 @@ export const Education = () => {
                 <div className="edu-schools">
                     <div className="school dau" data-aos="fade-right" data-aos-duration="1000">
                         <div className="school-logo">
-                            <img src={DAU} alt="DAU" />
+                            <img src={Images.DAU} alt="DAU" />
                         </div>
                         <div className="school-bio">
                             <p className="school-name">
@@ -32,7 +30,7 @@ export const Education = () => {
                     </div>
                     <div className="school pioneer" data-aos="fade-left" data-aos-duration="1000">
                         <div className="school-logo">
-                            <img src={Pioneer} alt="Pioneer" />
+                            <img src={Images.Pioneer} alt="Pioneer" />
                         </div>
                         <div className="school-bio">
                             <p className="school-name">
@@ -46,7 +44,7 @@ export const Education = () => {
                     </div>
                     <div className="school pioneer" data-aos="fade-left" data-aos-duration="1000">
                         <div className="school-logo">
-                            <img src={Pioneer} alt="Pioneer" />
+                            <img src={Images.Pioneer} alt="Pioneer" />
                         </div>
                         <div className="school-bio">
                             <p className="school-name">

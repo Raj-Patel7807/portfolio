@@ -5,15 +5,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./home.css";
-
-import Shinchan from "../../assets/Raj.png";
-import Google from "../../assets/Socials/Gmail_4.svg"; // 3 - 4
-import LinkedIn from "../../assets/Socials/LinkedIn_3.svg"; // 2 - 3
-import Telegram from "../../assets/Socials/Telegram_9.svg"; // 8 - 9
-import GitHub from "../../assets/Socials/GitHub_1.svg"; // 1 - 2
-import CodeForces from "../../assets/Socials/CodeForces_1.svg"; // 1 - 2
-import CodeChef from "../../assets/Socials/CodeChef_2.svg";
-import LeetCode from "../../assets/Socials/LeetCode_1.svg"; // 1 - 2
+import { Images } from "../constants";
 
 export const Home = () => {
     return (
@@ -21,7 +13,7 @@ export const Home = () => {
             <div className="home">
                 <div className="name">
                     <h1 data-aos="zoom-in" data-aos-duration="1000">Hi, There 👋</h1>
-                    <h2 data-aos="zoom-in" data-aos-duration="1000">I’m <span>Raj Patel</span></h2>
+                    <h2 data-aos="zoom-in" data-aos-duration="1000">I'm <span>Raj Patel</span></h2>
                     <h3 className="typewriter-wrapper" data-aos="zoom-in" data-aos-duration="1000">
                         <Typewriter
                             words={["I'm a Competitive Programmer... 😎"]}
@@ -40,7 +32,7 @@ export const Home = () => {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src={Google}
+                                src={Images.Google}
                                 alt="Google"
                                 title="Google"
                             />
@@ -51,7 +43,7 @@ export const Home = () => {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src={LinkedIn}
+                                src={Images.LinkedIn}
                                 alt="LinkedIn"
                                 title="LinkedIn"
                             />
@@ -62,7 +54,7 @@ export const Home = () => {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src={Telegram}
+                                src={Images.Telegram}
                                 alt="Telegram"
                                 title="Telegram"
                             />
@@ -73,7 +65,7 @@ export const Home = () => {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src={GitHub} 
+                                src={Images.GitHub} 
                                 alt="GitHub"
                                 title="GitHub"
                             />
@@ -84,7 +76,7 @@ export const Home = () => {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src={CodeForces}
+                                src={Images.CodeForces}
                                 alt="CodeForces"
                                 title="CodeForces"
                             />
@@ -95,7 +87,7 @@ export const Home = () => {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src={CodeChef}
+                                src={Images.CodeChef}
                                 alt="CodeChef"
                                 title="CodeChef"
                             />
@@ -106,7 +98,7 @@ export const Home = () => {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src={LeetCode}
+                                src={Images.LeetCode}
                                 alt="LeetCode"
                                 title="LeetCode"
                             />
@@ -122,7 +114,7 @@ export const Home = () => {
                         transitionSpeed={900}
                         scale={1.02}
                     >
-                        <img src={Shinchan} alt="Raj Patel" />
+                        <img src={Images.Raj} alt="Raj Patel" />
                     </Tilt>
                 </div>
             </div>
