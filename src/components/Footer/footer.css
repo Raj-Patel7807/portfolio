@@ -12,7 +12,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 5rem;
+    margin-top: 7rem;
 
     .foot-title {
         color: #8B5CF6;
@@ -64,5 +64,7 @@ footer {
     }
 
     .copyright {
+        font-size: 0.9rem;
+        font-weight: 300;
     }
 }
