@@ -8,6 +8,8 @@
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding: 60px 0 30px;
     margin-top: 40px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .footer-content {
@@ -32,7 +34,6 @@
     letter-spacing: 1px;
 }
 
-/* Footer Links */
 .foot-links {
     display: flex;
     list-style: none;
@@ -72,7 +73,6 @@
     width: 100%;
 }
 
-/* Social Icons */
 .foot-socials {
     display: flex;
     gap: 20px;
@@ -90,7 +90,7 @@
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy effect */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -98,7 +98,7 @@
     width: 22px;
     height: 22px;
     object-fit: contain;
-    filter: brightness(0) invert(1); /* Make icons white by default */
+    filter: brightness(0) invert(1);
     transition: filter 0.3s ease;
 }
 
@@ -109,7 +109,6 @@
     box-shadow: 0 10px 20px rgba(196, 113, 237, 0.3);
 }
 
-/* Copyright */
 .copyright {
     color: rgba(255, 255, 255, 0.4);
     font-size: 0.9rem;
@@ -121,7 +120,6 @@
     margin-bottom: -25px;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
     .foot-links {
         gap: 15px;
