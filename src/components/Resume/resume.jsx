@@ -3,45 +3,58 @@ import React from "react";
 import "./resume.css";
 import { Images } from "../constants";
 
-const resumeURL = "../../../public/Raj_Patel_Resume.pdf";
+const resumeURL = "/Raj_Patel_Resume.pdf"; // Assuming file is in public folder
 
 export const Resume = () => {
     return (
-        <>
-            <div className="Resume">
-                <div
-                    className="get-res"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                >
-                    <div className="res-img">
-                        <img
-                            src={Images.ResumeImg}
-                            alt="Raj_Resume"
-                            title="Raj_Resume"
-                        />
-                    </div>
-                    <div className="res-desc">
-                        <h1>My Resume 📄</h1>
-                        <button
-                            onClick={() => window.open(resumeURL, "_blank")}
-                        >
-                            Open
-                        </button>
+        <div className="resume-section">
+            <div className="resume-container">
+                <div className="resume-header">
+                    <h1>Resume</h1>
+                    <div className="underline"></div>
+                </div>
 
-                        <button
-                            onClick={() => {
-                                const link = document.createElement("a");
-                                link.href = resumeURL;
-                                link.download = "Raj_Patel_Resume.pdf";
-                                link.click();
-                            }}
-                        >
-                            Download
-                        </button>
+                <div className="resume-content">
+                    <div
+                        className="resume-card"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
+                        <div className="card-visual">
+                            <div className="visual-circle"></div>
+                            <div className="visual-content">
+                                <span>CV</span>
+                            </div>
+                        </div>
+                        <div className="card-info">
+                            <h2>Raj Patel</h2>
+                            <p>Competitive Programmer</p>
+                            <div className="card-actions">
+                                <button
+                                    className="res-btn view"
+                                    onClick={() =>
+                                        window.open(resumeURL, "_blank")
+                                    }
+                                >
+                                    <span>👁️ View PDF</span>
+                                </button>
+                                <button
+                                    className="res-btn download"
+                                    onClick={() => {
+                                        const link =
+                                            document.createElement("a");
+                                        link.href = resumeURL;
+                                        link.download = "Raj_Patel_Resume.pdf";
+                                        link.click();
+                                    }}
+                                >
+                                    <span>⬇️ Download</span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
