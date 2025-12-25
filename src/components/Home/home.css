@@ -26,10 +26,6 @@
         padding-top: 35vh;
         text-align: left;
 
-        h1 {
-            /* background-color: white; */
-        }
-
         h2 {
             padding-right: 35px;
             margin-bottom: 25px;
@@ -81,10 +77,10 @@
 
             a:hover {
                 transform: translateY(-5px) scale(1.1);
-                background: rgba(255, 255, 255, 0.15);
-                border-color: rgba(255, 255, 255, 0.3);
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-                    0 0 15px rgba(196, 113, 237, 0.6);
+                background: rgba(255, 255, 255, 0.1);
+                border-color: #c471ed;
+                box-shadow: 0 0 20px rgba(196, 113, 237, 0.4),
+                    0 0 40px rgba(246, 79, 89, 0.2);
             }
 
             a:hover img {
