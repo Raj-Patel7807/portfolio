@@ -12,8 +12,9 @@
     align-items: center;
     justify-content: center;
     background: transparent;
-    padding: 80px 20px; /* Add padding for top/bottom spacing */
+    padding: 80px 20px;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .aboutme {
@@ -29,7 +30,7 @@
     color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content initially */
+    align-items: center;
     text-align: center;
 }
 
@@ -87,14 +88,13 @@
     font-size: 1.1rem;
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.9);
-    text-align: justify; /* Justify text for clean block look */
+    text-align: justify;
 }
 
 .about-bio p {
     margin-bottom: 20px;
 }
 
-/* Responsiveness */
 @media screen and (max-width: 960px) {
     .aboutme {
         width: 100%;
@@ -111,6 +111,6 @@
 
     .about-bio {
         font-size: 0.95rem;
-        text-align: left; /* Easier to read on mobile than justified */
+        text-align: left;
     }
 }
