@@ -93,8 +93,9 @@
 .school:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(196, 113, 237, 0.3),
+        0 0 40px rgba(246, 79, 89, 0.1);
+    border-color: #c471ed;
 }
 
 .school:hover::before {

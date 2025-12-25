@@ -9,10 +9,16 @@ export const Education = () => {
             <div className="education">
                 <div className="edu-root">
                     <div className="edu-title">
-                        <h1>Education</h1>
+                        <h1 data-aos="fade-down" data-aos-duration="1000">
+                            Education
+                        </h1>
                     </div>
                     <div className="edu-schools">
-                        <div className="school">
+                        <div
+                            className="school"
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                        >
                             <div className="school-logo">
                                 <img src={Images.DAU} alt="DAU" />
                             </div>
@@ -39,7 +45,11 @@ export const Education = () => {
                             </div>
                         </div>
 
-                        <div className="school">
+                        <div
+                            className="school"
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                        >
                             <div className="school-logo">
                                 <img src={Images.Pioneer} alt="Pioneer" />
                             </div>
@@ -66,7 +76,11 @@ export const Education = () => {
                             </div>
                         </div>
 
-                        <div className="school">
+                        <div
+                            className="school"
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                        >
                             <div className="school-logo">
                                 <img src={Images.Pioneer} alt="Pioneer" />
                             </div>
