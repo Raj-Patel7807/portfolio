@@ -11,7 +11,7 @@ import { Home } from "./components/Home/home.jsx";
 import { About } from "./components/About/about.jsx";
 import { Education } from "./components/Education/education.jsx";
 import { Achievements } from "./components/Skills/achievements.jsx";
-import { Projects } from "./components/Work/projects.jsx";
+import { Projects } from "./components/Projects/projects.jsx";
 import { Resume } from "./components/Resume/resume.jsx";
 import { Contact } from "./components/Contact/contact.jsx";
 import { Footer } from "./components/Footer/footer.jsx";
