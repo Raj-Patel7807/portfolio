@@ -27,33 +27,59 @@ export const Navbar = () => {
                     <img src={Images.Shinchan} alt="Thumb" />
                     <p>Raj Patel</p>
                 </div>
-                
+
                 <div className="menu-icon" onClick={handleClick}>
                     {click ? <FaTimes /> : <FaBars />}
                 </div>
 
-                <div
-                    className={click ? "links active" : "links"}
-                >
-                    <a href="#home" className="nav-link" onClick={closeMobileMenu}>
+                <div className={click ? "links active" : "links"}>
+                    <a
+                        href="#home"
+                        className="nav-link"
+                        onClick={closeMobileMenu}
+                    >
                         Home
                     </a>
-                    <a href="#about" className="nav-link" onClick={closeMobileMenu}>
+                    <a
+                        href="#about"
+                        className="nav-link"
+                        onClick={closeMobileMenu}
+                    >
                         About
                     </a>
-                    <a href="#education" className="nav-link" onClick={closeMobileMenu}>
+                    <a
+                        href="#education"
+                        className="nav-link"
+                        onClick={closeMobileMenu}
+                    >
                         Education
                     </a>
-                    <a href="#achievements" className="nav-link" onClick={closeMobileMenu}>
+                    <a
+                        href="#achievements"
+                        className="nav-link"
+                        onClick={closeMobileMenu}
+                    >
                         Skills & Achievements
                     </a>
-                    <a href="#projects" className="nav-link" onClick={closeMobileMenu}>
+                    <a
+                        href="#projects"
+                        className="nav-link"
+                        onClick={closeMobileMenu}
+                    >
                         Projects
                     </a>
-                    <a href="#resume" className="nav-link" onClick={closeMobileMenu}>
+                    <a
+                        href="#resume"
+                        className="nav-link"
+                        onClick={closeMobileMenu}
+                    >
                         Resume
                     </a>
-                    <a href="#contact" className="nav-link" onClick={closeMobileMenu}>
+                    <a
+                        href="#contact"
+                        className="nav-link"
+                        onClick={closeMobileMenu}
+                    >
                         Contact
                     </a>
                 </div>
