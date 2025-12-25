@@ -3,7 +3,7 @@ import React from "react";
 import "./resume.css";
 import { Images } from "../constants";
 
-const resumeURL = "/Raj_Patel_Resume.pdf"; // Assuming file is in public folder
+const resumeURL = "/Raj_Patel_Resume.pdf";
 
 export const Resume = () => {
     return (

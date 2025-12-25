@@ -8,12 +8,13 @@
 
 .resume-section {
     width: 100%;
-    min-height: 70vh; /* Reduced height as it's a smaller section */
+    min-height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 80px 0;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .resume-container {
@@ -45,7 +46,6 @@
     border-radius: 2px;
 }
 
-/* Premium Resume Card */
 .resume-content {
     width: 100%;
     display: flex;
@@ -88,7 +88,6 @@
     border-color: rgba(196, 113, 237, 0.3);
 }
 
-/* Left Visual Circle */
 .card-visual {
     position: relative;
     width: 120px;
@@ -148,7 +147,6 @@
     }
 }
 
-/* Right Content Info */
 .card-info {
     flex-grow: 1;
     display: flex;
@@ -200,7 +198,6 @@
     box-shadow: 0 5px 15px rgba(246, 79, 89, 0.3);
 }
 
-/* Button Hover Effects */
 .res-btn:hover {
     transform: translateY(-3px);
 }
@@ -220,7 +217,6 @@
     z-index: 1;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
     .resume-section {
         padding: 50px 0;
@@ -239,7 +235,7 @@
 
     .resume-card::before {
         width: 100%;
-        height: 4px; /* Top border on mobile */
+        height: 4px;
     }
 
     .card-info {
