@@ -55,22 +55,22 @@ export const Contact = () => {
                         className="contact-form"
                         onSubmit={sendEmail}
                     >
-                        <div
-                            className="form-row"
-                            data-aos="fade-right"
-                            data-aos-duration="1000"
-                        >
+                        <div className="form-row">
                             <input
                                 type="text"
                                 name="from_name"
                                 placeholder="Your Name"
                                 required
+                                data-aos="fade-right"
+                                data-aos-duration="1000"
                             />
                             <input
                                 type="email"
                                 name="from_email"
                                 placeholder="Your Email"
                                 required
+                                data-aos="fade-left"
+                                data-aos-duration="1000"
                             />
                         </div>
                         <input
@@ -78,7 +78,7 @@ export const Contact = () => {
                             name="subject"
                             placeholder="Subject"
                             required
-                            data-aos="fade-left"
+                            data-aos="fade-right"
                             data-aos-duration="1000"
                         />
                         <textarea
@@ -93,8 +93,6 @@ export const Contact = () => {
                             type="submit"
                             onClick={sendEmail}
                             disabled={loading}
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
                         >
                             {loading ? "Sending..." : "Send Message"}
                         </button>
