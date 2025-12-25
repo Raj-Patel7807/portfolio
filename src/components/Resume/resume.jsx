@@ -10,14 +10,20 @@ export const Resume = () => {
         <div className="resume-section">
             <div className="resume-container">
                 <div className="resume-header">
-                    <h1>Resume</h1>
-                    <div className="underline"></div>
+                    <h1 data-aos="fade-down" data-aos-duration="1000">
+                        Resume
+                    </h1>
+                    <div
+                        className="underline"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                    ></div>
                 </div>
 
                 <div className="resume-content">
                     <div
                         className="resume-card"
-                        data-aos="fade-up"
+                        data-aos="zoom-in"
                         data-aos-duration="1000"
                     >
                         <div className="card-visual">

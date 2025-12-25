@@ -206,12 +206,13 @@
 }
 
 .res-btn.view:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #c471ed;
 }
 
 .res-btn.download:hover {
-    box-shadow: 0 8px 20px rgba(246, 79, 89, 0.5);
+    box-shadow: 0 0 25px rgba(246, 79, 89, 0.6),
+        0 0 10px rgba(196, 113, 237, 0.4);
 }
 
 .res-btn span {
