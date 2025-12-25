@@ -25,6 +25,8 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 0 5vw;
     transition: all 0.3s ease;
+    overflow-x: hidden;
+    overflow-y: hidden;
 
     .thumb {
         height: 100%;
