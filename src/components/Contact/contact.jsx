@@ -42,12 +42,18 @@ export const Contact = () => {
             <div className="contact">
                 <div className="contact-root">
                     <div className="contact-header">
-                        <h1>Get In Touch</h1>
+                        <h1 data-aos="fade-down" data-aos-duration="1000">
+                            Get In Touch
+                        </h1>
                         <div className="underline"></div>
                     </div>
 
                     <div className="contact-container">
-                        <div className="contact-info">
+                        <div
+                            className="contact-info"
+                            data-aos="fade-right"
+                            data-aos-duration="1000"
+                        >
                             <h3>Let's Talk</h3>
                             <p>
                                 I'm open to new opportunities and
@@ -69,6 +75,8 @@ export const Contact = () => {
                             ref={formRef}
                             className="contact-form"
                             onSubmit={sendEmail}
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
                         >
                             <div className="form-group">
                                 <label>Your Name</label>
