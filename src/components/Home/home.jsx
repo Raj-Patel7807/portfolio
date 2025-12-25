@@ -12,7 +12,7 @@ export const Home = () => {
         <>
             <div className="home">
                 <div className="name">
-                    <h1 data-aos="fade-down" data-aos-duration="1000">
+                    <h1 data-aos="" data-aos-duration="1000">
                         Hi, There 👋
                     </h1>
                     <h2 data-aos="zoom-in" data-aos-duration="1000">
