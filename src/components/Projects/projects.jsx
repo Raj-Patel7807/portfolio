@@ -9,10 +9,16 @@ export const Projects = () => {
             <div className="projects">
                 <div className="pro-root">
                     <div className="projects-title">
-                        <h1>Projects</h1>
+                        <h1 data-aos="fade-down" data-aos-duration="1000">
+                            Projects
+                        </h1>
                     </div>
                     <div className="all-project">
-                        <div className="project-card">
+                        <div
+                            className="project-card"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                        >
                             <div className="proj-img">
                                 <img
                                     src={Images.SnackGame}
@@ -47,7 +53,12 @@ export const Projects = () => {
                             </div>
                         </div>
 
-                        <div className="project-card">
+                        <div
+                            className="project-card"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="200"
+                        >
                             <div className="proj-img">
                                 <img
                                     src={Images.EducationPortal}
@@ -90,7 +101,12 @@ export const Projects = () => {
                             </div>
                         </div>
 
-                        <div className="project-card">
+                        <div
+                            className="project-card"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="400"
+                        >
                             <div className="proj-img">
                                 <img
                                     src={Images.TetrisGame}

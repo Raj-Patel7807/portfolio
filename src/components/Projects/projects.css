@@ -73,9 +73,10 @@
 
 .project-card:hover {
     transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.08); /* Slightly lighter on hover */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    border-color: rgba(196, 113, 237, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 25px rgba(196, 113, 237, 0.35),
+        0 0 50px rgba(246, 79, 89, 0.15);
+    border-color: #c471ed;
 }
 
 .proj-img {
