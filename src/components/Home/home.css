@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-evenly;
     overflow: hidden;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background: transparent;
     color: #fff;
 
     .name {
@@ -189,7 +189,7 @@
                 width: 100%;
                 margin-bottom: 20px;
                 flex-wrap: wrap;
-                gap: 15px;
+                gap: 0px;
 
                 a {
                     height: 40px;
