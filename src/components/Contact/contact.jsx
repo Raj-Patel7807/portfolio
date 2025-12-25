@@ -41,73 +41,92 @@ export const Contact = () => {
         <>
             <div className="contact">
                 <div className="contact-root">
-                    <div
-                        className="title"
-                        data-aos="fade-down"
-                        data-aos-duration="1000"
-                    >
-                        <h1>
-                            <u>Contact</u> 💬
-                        </h1>
+                    <div className="contact-header">
+                        <h1>Get In Touch</h1>
+                        <div className="underline"></div>
                     </div>
-                    <form
-                        ref={formRef}
-                        className="contact-form"
-                        onSubmit={sendEmail}
-                    >
-                        <div className="form-row">
-                            <input
-                                type="text"
-                                name="from_name"
-                                placeholder="Your Name"
-                                required
-                                data-aos="fade-right"
-                                data-aos-duration="1000"
-                            />
-                            <input
-                                type="email"
-                                name="from_email"
-                                placeholder="Your Email"
-                                required
-                                data-aos="fade-left"
-                                data-aos-duration="1000"
-                            />
-                        </div>
-                        <input
-                            type="text"
-                            name="subject"
-                            placeholder="Subject"
-                            required
-                            data-aos="fade-right"
-                            data-aos-duration="1000"
-                        />
-                        <textarea
-                            name="message"
-                            placeholder="Message"
-                            rows="5"
-                            required
-                            data-aos="fade-left"
-                            data-aos-duration="1000"
-                        ></textarea>
-                        <button
-                            type="submit"
-                            onClick={sendEmail}
-                            disabled={loading}
-                        >
-                            {loading ? "Sending..." : "Send Message"}
-                        </button>
 
-                        {status === "success" && (
-                            <p className="success-msg">
-                                ✅ Message sent successfully!
+                    <div className="contact-container">
+                        <div className="contact-info">
+                            <h3>Let's Talk</h3>
+                            <p>
+                                I'm open to new opportunities and
+                                collaborations. Whether you have a question or
+                                just want to say hi, feel free to drop a
+                                message!
                             </p>
-                        )}
-                        {status === "error" && (
-                            <p className="error-msg">
-                                ❌ Something went wrong. Try again.
-                            </p>
-                        )}
-                    </form>
+                            <div className="info-item">
+                                <span className="icon">📧</span>
+                                <span>rajpatel7807@gmail.com</span>
+                            </div>
+                            <div className="info-item">
+                                <span className="icon">📍</span>
+                                <span>Patan, Gujarat, India, 384220</span>
+                            </div>
+                        </div>
+
+                        <form
+                            ref={formRef}
+                            className="contact-form"
+                            onSubmit={sendEmail}
+                        >
+                            <div className="form-group">
+                                <label>Your Name</label>
+                                <input
+                                    type="text"
+                                    name="from_name"
+                                    placeholder="John Doe"
+                                    required
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label>Your Email</label>
+                                <input
+                                    type="email"
+                                    name="from_email"
+                                    placeholder="john@example.com"
+                                    required
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label>Subject</label>
+                                <input
+                                    type="text"
+                                    name="subject"
+                                    placeholder="Project Collaboration"
+                                    required
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label>Message</label>
+                                <textarea
+                                    name="message"
+                                    placeholder="Type your message here..."
+                                    rows="5"
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button
+                                type="submit"
+                                disabled={loading}
+                                className="send-btn"
+                            >
+                                {loading ? "Sending..." : "Send Message 🚀"}
+                            </button>
+
+                            {status === "success" && (
+                                <p className="success-msg">
+                                    ✅ Message sent successfully!
+                                </p>
+                            )}
+                            {status === "error" && (
+                                <p className="error-msg">
+                                    ❌ Something went wrong. Try again.
+                                </p>
+                            )}
+                        </form>
+                    </div>
                 </div>
             </div>
         </>
