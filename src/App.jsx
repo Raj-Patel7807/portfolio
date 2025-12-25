@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -17,6 +19,17 @@ import { Contact } from "./components/Contact/contact.jsx";
 import { Footer } from "./components/Footer/footer.jsx";
 
 function App() {
+    useEffect(() => {
+        AOS.init({
+            offset: 100,
+            duration: 1000,
+            easing: "ease-in-out",
+            once: false,
+            mirror: true,
+            anchorPlacement: "top-bottom",
+        });
+    }, []);
+
     return (
         <>
             <div className="App">
