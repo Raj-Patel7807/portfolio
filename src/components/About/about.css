@@ -1,49 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .about {
-    min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    background: transparent;
+    padding: 80px 20px; /* Add padding for top/bottom spacing */
     overflow-x: hidden;
-    overflow-y: hidden;
+}
 
+.aboutme {
+    width: 80%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content initially */
+    text-align: center;
+}
+
+.aboutme > h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+
+.aboutme > h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170px;
+    height: 3px;
+    background: linear-gradient(to right, #c471ed, #f64f59);
+    border-radius: 2px;
+}
+
+.about-name {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-name h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(to right, #c471ed, #f64f59);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-name h5 {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.about-bio {
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: justify; /* Justify text for clean block look */
+}
+
+.about-bio p {
+    margin-bottom: 20px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 960px) {
     .aboutme {
-        height: 100%;
-        width: 70%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-color: #471396;
-        padding: 20px;
-        border: 3px solid black;
-        border-radius: 20px;
-        box-shadow: 0 0 50px rgba(187, 134, 252, 0.4);
+        width: 100%;
+        padding: 20px 20px;
+    }
 
-        .about-name {
-            width: 100%;
-        }
+    .aboutme > h1 {
+        font-size: 2rem;
+    }
 
-        .about-name :nth-child(1) {
-            margin-top: 0px;
-        }
+    .about-name h1 {
+        font-size: 2rem;
+    }
 
-        .about-name :nth-child(2) {
-            margin-top: 7px;
-        }
-
-        .about-bio {
-            margin-top: 10px;
-            font-size: 20px;
-        }
+    .about-bio {
+        font-size: 0.95rem;
+        text-align: left; /* Easier to read on mobile than justified */
     }
 }

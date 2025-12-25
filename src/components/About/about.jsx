@@ -11,7 +11,7 @@ export const About = () => {
             <div className="about">
                 <div className="aboutme">
                     <h1 data-aos="fade-down" data-aos-duration="1000">
-                        <u>About Me</u> 🧑🏻‍💻
+                        About Me
                     </h1>
                     <div className="about-name">
                         <h1 data-aos="fade-right" data-aos-duration="1000">
@@ -39,12 +39,11 @@ export const About = () => {
                             on Codeforces (max rating 1621) and a 3-star coder
                             on CodeChef (max rating 1721). I really enjoy
                             Competitive Programming and love learning new
-                            algorithms and techniques. I like thinking about
-                            time complexity, space usage, and edge cases.
+                            algorithms and techniques.
                         </p>
                         <p>
                             Apart from CP, I am interested in DBMS, OOPS, and
-                            backend server-side development. I don’t know
+                            backend server-side development. I don't know
                             everything yet, but I can build basic servers, work
                             with databases, and understand core backend logic. I
                             also know a little frontend and can build simple
