@@ -14,6 +14,7 @@
     align-items: center;
     padding: 100px 0;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .contact-root {
@@ -46,7 +47,6 @@
     border-radius: 2px;
 }
 
-/* Contact Container (Split Layout) */
 .contact-container {
     width: 100%;
     display: flex;
@@ -55,7 +55,6 @@
     justify-content: center;
 }
 
-/* Info Section */
 .contact-info {
     flex: 1;
     max-width: 400px;
@@ -108,7 +107,6 @@
     font-weight: 500;
 }
 
-/* Form Section */
 .contact-form {
     flex: 1.5;
     background: rgba(255, 255, 255, 0.05);
@@ -141,7 +139,7 @@
     color: #fff;
     font-size: 1rem;
     transition: all 0.3s ease;
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
@@ -203,7 +201,6 @@
     border-radius: 8px;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 960px) {
     .contact {
         padding: 50px 0;
