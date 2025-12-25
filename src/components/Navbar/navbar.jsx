@@ -22,7 +22,7 @@ export const Navbar = () => {
                     className="thumb"
                     data-aos="fade-right"
                     data-aos-duration="1000"
-                    data-aos-delay="100"
+                    data-aos-delay="200"
                 >
                     <img src={Images.Shinchan} alt="Thumb" />
                     <p>Raj Patel</p>
