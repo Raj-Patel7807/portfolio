@@ -109,12 +109,6 @@
     box-shadow: 0 10px 20px rgba(196, 113, 237, 0.3);
 }
 
-/* Specific hover colors if desired, or keep uniform white on hover */
-.foot-socials a:hover img {
-    /* Optional: revert to original color or tint on hover if icons allow */
-    /* filter: none; */
-}
-
 /* Copyright */
 .copyright {
     color: rgba(255, 255, 255, 0.4);
