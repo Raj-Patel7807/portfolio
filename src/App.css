@@ -4,17 +4,17 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #f0f0f0;
+    /* color: #f0f0f0; */
 }
 
 section {
     min-height: 10vh;
     width: 100%;
     color: #f0f0f0;
-    background-color: #121212;
+    /* background-color: #121212; */
     overflow-x: hidden;
 }
 
-#home {
+/* #home {
     background-image: radial-gradient(circle at 50% 0, rgba(187, 134, 252, 0.15), transparent 50%);
-}
+} */
