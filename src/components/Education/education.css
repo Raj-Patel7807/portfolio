@@ -1,108 +1,238 @@
-@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .education {
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    padding: 70px 0;
+    overflow-x: hidden;
+}
 
+.edu-root {
+    width: 85%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    color: #fff;
+}
+
+.edu-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.edu-title h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.edu-title h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170px;
+    height: 3px;
+    background: linear-gradient(to right, #c471ed, #f64f59);
+    border-radius: 2px;
+}
+
+.edu-schools {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.school {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.school::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #c471ed, #f64f59);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.school:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.school:hover::before {
+    opacity: 1;
+}
+
+.school-logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 15px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 25px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.school-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.school-bio {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.school-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.school-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(to right, #fff, #e0e0e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.school-batch {
+    font-size: 1rem;
+    color: #f64f59;
+    font-weight: 600;
+    background: rgba(246, 79, 89, 0.1);
+    padding: 5px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.school-location {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    margin: 0;
+}
+
+.school-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 7px;
+}
+
+.school-course {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.school-score {
+    font-size: 0.95rem;
+    color: #c471ed;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 960px) {
     .edu-root {
-        height: 100%;
-        width: 90%;
-        background-color: #17153B;
-        padding: 3rem;
-        border: 3px solid rgba(180, 180, 180, 0.4);
-        box-shadow: 0 0 10px rgba(180, 180, 180, 0.4);
-        border-radius: 20px;
+        width: 95%;
+        padding: 1.2rem;
 
         .edu-title {
-            width: 100%;
-            margin-bottom: 2.5rem;
+            font-size: 0.1rem;
         }
+    }
 
-        .edu-schools {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+    .school {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 10px;
+    }
 
-            .school {
-                height: 22vh;
-                width: 90%;
-                background-color: #2F2F4F;
-                display: flex;
-                align-items: center;
-                justify-content: start;
-                box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.8);
-                transition: all 0.3s ease;
+    .school-logo {
+        width: 60px;
+        height: 60px;
+        margin-right: 0;
+    }
 
-                .school-logo {
-                    width: 20%;
-                    padding-left: 1vw;
-                }
+    .school-bio {
+        width: 100%;
+    }
 
-                .school-bio {
-                    .school-name {
-                        margin-top: 15px;
-                        font-size: 20px;
-                        font-weight: 700;
+    .school-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        margin-bottom: 5px;
+    }
 
-                        .school-batch {
-                            margin-left: 130px;
-                            display: inline;
-                        }
-                    }
+    .school-batch {
+        display: none;
+    }
 
-                    .school-course {
-                        font-size: 18px;
-                        font-weight: 600;
-                        
-                        .school-score {
-                            margin-left: 280px;
-                            display: inline;
-                        }
-                    }
-                }
-            }
+    .school-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
 
-            .school:hover {
-                transform: scale(1.005);
-                box-shadow: 10px 10px 10px rgba(187, 134, 252, 0.3);
-                transition: all 0.3s ease;
-            }
-
-            .dau {
-                margin-bottom: 2vh;
-                .school-logo {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 17%;
-                    margin-right: 18px;
-                    margin-left: 14px;
-                    background-color: #fff;
-                    img {
-                        width: 80%;
-                    }
-                }
-            }
-
-            .pioneer {
-                margin-bottom: 2vh;
-                .school-logo img {
-                    width: 50%;
-                    margin-left: 30px;
-                }
-            }
+        .school-course {
+            margin-bottom: 1px;
         }
+    }
+
+    .school-name {
+        font-size: 1.1rem;
     }
 }
