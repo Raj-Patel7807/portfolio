@@ -9,7 +9,6 @@ body {
     min-height: 100vh;
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -27,7 +26,6 @@ body {
     background: linear-gradient(180deg, #f64f59, #c471ed);
 }
 
-/* Text Selection */
 ::selection {
     background: #f64f59;
     color: #fff;
