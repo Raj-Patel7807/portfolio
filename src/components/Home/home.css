@@ -68,24 +68,32 @@
                 backdrop-filter: blur(5px);
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
+                @media (min-width: 961px) {
+                    &:hover {
+                        transform: translateY(-5px) scale(1.1);
+                        background: rgba(255, 255, 255, 0.1);
+                        border-color: #c471ed;
+                        box-shadow: 0 0 20px rgba(196, 113, 237, 0.4),
+                            0 0 40px rgba(246, 79, 89, 0.2);
+
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                    background: rgba(255, 255, 255, 0.15);
+                    border-color: #c471ed;
+                }
+
                 img {
                     height: 28px;
                     width: 28px;
                     filter: brightness(0) invert(1);
                     transition: transform 0.3s ease;
                 }
-            }
-
-            a:hover {
-                transform: translateY(-5px) scale(1.1);
-                background: rgba(255, 255, 255, 0.1);
-                border-color: #c471ed;
-                box-shadow: 0 0 20px rgba(196, 113, 237, 0.4),
-                    0 0 40px rgba(246, 79, 89, 0.2);
-            }
-
-            a:hover img {
-                transform: scale(1.1);
             }
         }
     }
@@ -108,12 +116,19 @@
             box-shadow: 0 0 40px rgba(15, 12, 41, 0.6);
             transition: all 0.5s ease;
             filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
-        }
 
-        img:hover {
-            transform: scale(1.03);
-            border-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 0 50px rgba(196, 113, 237, 0.4);
+            @media (min-width: 961px) {
+                &:hover {
+                    transform: scale(1.03);
+                    border-color: rgba(255, 255, 255, 0.3);
+                    box-shadow: 0 0 50px rgba(196, 113, 237, 0.4);
+                }
+            }
+
+            &:active {
+                transform: scale(0.98);
+                box-shadow: 0 0 20px rgba(196, 113, 237, 0.2);
+            }
         }
     }
 }
