@@ -9,7 +9,7 @@ export const Contact = () => {
     const [status, setStatus] = useState("");
     const [loading, setLoading] = useState(false);
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
 
         if (!formRef.current.checkValidity()) {
@@ -18,6 +18,9 @@ export const Contact = () => {
         }
 
         setLoading(true);
+        setStatus("");
+
+        await new Promise(r => setTimeout(r, 1000));
 
         emailjs
             .sendForm(
@@ -28,11 +31,12 @@ export const Contact = () => {
             )
             .then(() => {
                 setStatus("success");
-                setLoading(false);
                 formRef.current.reset();
             })
             .catch(() => {
                 setStatus("error");
+            })
+            .finally(() => {
                 setLoading(false);
             });
     };
@@ -67,7 +71,7 @@ export const Contact = () => {
                             </div>
                             <div className="info-item">
                                 <span className="icon">📍</span>
-                                <span>Patan, Gujarat, India, 384220</span>
+                                <span>Patan, Gujarat, India</span>
                             </div>
                         </div>
 
