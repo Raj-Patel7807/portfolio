@@ -34,8 +34,14 @@ nav {
         cursor: pointer;
         transition: transform 0.3s ease;
 
-        &:hover {
-            transform: scale(1.02);
+        @media (min-width: 961px) {
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        &:active {
+            transform: scale(0.95);
         }
 
         p {
@@ -66,9 +72,11 @@ nav {
         transition: transform 0.3s ease, color 0.3s ease;
         z-index: 1002;
 
-        &:hover {
+        /* Removed hover for menu-icon as it only appears on mobile */
+
+        &:active {
             color: #fff;
-            transform: scale(1.1);
+            transform: scale(0.9);
         }
     }
 
@@ -97,12 +105,18 @@ nav {
                 transition: width 0.3s ease;
             }
 
-            &:hover {
-                color: #fff;
+            @media (min-width: 961px) {
+                &:hover {
+                    color: #fff;
 
-                &::after {
-                    width: 100%;
+                    &::after {
+                        width: 100%;
+                    }
                 }
+            }
+
+            &:active {
+                color: #fff;
             }
         }
     }
@@ -117,8 +131,10 @@ nav {
             right: 5vw;
             transform: translateY(-50%);
 
-            &:hover {
-                transform: translateY(-50%) scale(1.1);
+            /* Removed hover for menu-icon mobile */
+
+            &:active {
+                transform: translateY(-50%) scale(0.9);
             }
         }
 
@@ -156,10 +172,12 @@ nav {
             color: rgba(255, 255, 255, 0.9);
             transition: all 0.2s ease;
 
-            &:hover {
-                background: rgba(255, 255, 255, 0.05);
+            /* Removed hover for nav-link mobile */
+
+            &:active {
+                background: rgba(255, 255, 255, 0.08);
                 color: #fff;
-                transform: scale(1.05);
+                transform: scale(0.98);
             }
         }
     }
