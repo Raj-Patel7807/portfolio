@@ -100,12 +100,14 @@
                 }
             }
 
-            .skill-card:hover {
-                transform: translateY(-5px);
-                background: rgba(255, 255, 255, 0.08);
-                box-shadow: 0 0 20px rgba(196, 113, 237, 0.3),
-                    0 0 40px rgba(246, 79, 89, 0.1);
-                border-color: #c471ed;
+            @media (min-width: 961px) {
+                .skill-card:hover {
+                    transform: translateY(-5px);
+                    background: rgba(255, 255, 255, 0.08);
+                    box-shadow: 0 0 20px rgba(196, 113, 237, 0.3),
+                        0 0 40px rgba(246, 79, 89, 0.1);
+                    border-color: #c471ed;
+                }
             }
         }
 
@@ -183,19 +185,21 @@
                 transition: opacity 0.3s ease;
             }
 
-            .ach-card:hover {
-                transform: translateY(-8px);
-                background: rgba(255, 255, 255, 0.1);
-                box-shadow: 0 0 25px rgba(196, 113, 237, 0.35),
-                    0 0 50px rgba(246, 79, 89, 0.15);
-            }
+            @media (min-width: 961px) {
+                .ach-card:hover {
+                    transform: translateY(-8px);
+                    background: rgba(255, 255, 255, 0.1);
+                    box-shadow: 0 0 25px rgba(196, 113, 237, 0.35),
+                        0 0 50px rgba(246, 79, 89, 0.15);
+                }
 
-            .ach-card:hover::before {
-                opacity: 1;
-            }
+                .ach-card:hover::before {
+                    opacity: 1;
+                }
 
-            .ach-card:hover .ach-link {
-                transform: translateX(5px);
+                .ach-card:hover .ach-link {
+                    transform: translateX(5px);
+                }
             }
         }
     }
@@ -223,6 +227,11 @@
 
     .skill-card {
         padding: 15px;
+
+        &:active {
+            transform: scale(0.98);
+            background: rgba(255, 255, 255, 0.08);
+        }
     }
 
     .skill-icon {
@@ -238,6 +247,19 @@
     .ach-card {
         padding: 20px;
         min-height: auto;
+
+        /* Permanent hover effect for mobile */
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 25px rgba(196, 113, 237, 0.35),
+            0 0 50px rgba(246, 79, 89, 0.15);
+
+        &::before {
+            opacity: 1;
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
 
         .ach-header {
             margin-bottom: 0px;
