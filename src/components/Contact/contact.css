@@ -93,9 +93,11 @@
     transition: transform 0.3s ease;
 }
 
-.info-item:hover {
-    transform: translateX(5px);
-    background: rgba(255, 255, 255, 0.1);
+@media (min-width: 961px) {
+    .info-item:hover {
+        transform: translateX(5px);
+        background: rgba(255, 255, 255, 0.1);
+    }
 }
 
 .info-item .icon {
@@ -170,10 +172,12 @@
     letter-spacing: 1px;
 }
 
-.send-btn:hover:not(:disabled) {
-    transform: translateY(-3px);
-    box-shadow: 0 0 25px rgba(246, 79, 89, 0.6),
-        0 0 10px rgba(196, 113, 237, 0.4);
+@media (min-width: 961px) {
+    .send-btn:hover:not(:disabled) {
+        transform: translateY(-3px);
+        box-shadow: 0 0 25px rgba(246, 79, 89, 0.6),
+            0 0 10px rgba(196, 113, 237, 0.4);
+    }
 }
 
 .send-btn:disabled {
@@ -230,5 +234,9 @@
 
     .contact-header h1 {
         font-size: 2rem;
+    }
+
+    .send-btn:active {
+        transform: scale(0.95);
     }
 }
