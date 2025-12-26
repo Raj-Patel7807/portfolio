@@ -81,11 +81,13 @@
     opacity: 0.7;
 }
 
-.resume-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border-color: rgba(196, 113, 237, 0.3);
+@media (min-width: 961px) {
+    .resume-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border-color: rgba(196, 113, 237, 0.3);
+    }
 }
 
 .card-visual {
@@ -198,18 +200,20 @@
     box-shadow: 0 5px 15px rgba(246, 79, 89, 0.3);
 }
 
-.res-btn:hover {
-    transform: translateY(-3px);
-}
+@media (min-width: 961px) {
+    .res-btn:hover {
+        transform: translateY(-3px);
+    }
 
-.res-btn.view:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: #c471ed;
-}
+    .res-btn.view:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: #c471ed;
+    }
 
-.res-btn.download:hover {
-    box-shadow: 0 0 25px rgba(246, 79, 89, 0.6),
-        0 0 10px rgba(196, 113, 237, 0.4);
+    .res-btn.download:hover {
+        box-shadow: 0 0 25px rgba(246, 79, 89, 0.6),
+            0 0 10px rgba(196, 113, 237, 0.4);
+    }
 }
 
 .res-btn span {
@@ -231,6 +235,11 @@
         text-align: center;
         padding: 30px 20px;
         gap: 25px;
+
+        /* Permanent hover effect for mobile */
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border-color: rgba(196, 113, 237, 0.3);
     }
 
     .resume-card::before {
@@ -251,5 +260,9 @@
     .res-btn {
         width: 100%;
         justify-content: center;
+
+        &:active {
+            transform: scale(0.95);
+        }
     }
 }
