@@ -91,16 +91,18 @@
     transition: opacity 0.3s ease;
 }
 
-.school:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 0 20px rgba(196, 113, 237, 0.3),
-        0 0 40px rgba(246, 79, 89, 0.1);
-    border-color: #c471ed;
-}
+@media (min-width: 961px) {
+    .school:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 20px rgba(196, 113, 237, 0.3),
+            0 0 40px rgba(246, 79, 89, 0.1);
+        border-color: #c471ed;
+    }
 
-.school:hover::before {
-    opacity: 1;
+    .school:hover::before {
+        opacity: 1;
+    }
 }
 
 .school-logo {
@@ -200,6 +202,20 @@
         align-items: flex-start;
         padding: 20px;
         gap: 10px;
+
+        /* Permanent hover effect for mobile */
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 20px rgba(196, 113, 237, 0.3),
+            0 0 40px rgba(246, 79, 89, 0.1);
+        border-color: #c471ed;
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+
+    .school::before {
+        opacity: 1;
     }
 
     .school-logo {
