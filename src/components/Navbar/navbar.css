@@ -72,8 +72,6 @@ nav {
         transition: transform 0.3s ease, color 0.3s ease;
         z-index: 1002;
 
-        /* Removed hover for menu-icon as it only appears on mobile */
-
         &:active {
             color: #fff;
             transform: scale(0.9);
@@ -131,8 +129,6 @@ nav {
             right: 5vw;
             transform: translateY(-50%);
 
-            /* Removed hover for menu-icon mobile */
-
             &:active {
                 transform: translateY(-50%) scale(0.9);
             }
@@ -171,8 +167,6 @@ nav {
             letter-spacing: 1px;
             color: rgba(255, 255, 255, 0.9);
             transition: all 0.2s ease;
-
-            /* Removed hover for nav-link mobile */
 
             &:active {
                 background: rgba(255, 255, 255, 0.08);
