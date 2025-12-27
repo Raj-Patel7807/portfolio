@@ -71,12 +71,14 @@
     flex-direction: column;
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 0 25px rgba(196, 113, 237, 0.35),
-        0 0 50px rgba(246, 79, 89, 0.15);
-    border-color: #c471ed;
+@media (min-width: 961px) {
+    .project-card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 25px rgba(196, 113, 237, 0.35),
+            0 0 50px rgba(246, 79, 89, 0.15);
+        border-color: #c471ed;
+    }
 }
 
 .proj-img {
@@ -93,8 +95,10 @@
     transition: transform 0.5s ease;
 }
 
-.project-card:hover .proj-img img {
-    transform: scale(1.1);
+@media (min-width: 961px) {
+    .project-card:hover .proj-img img {
+        transform: scale(1.1);
+    }
 }
 
 .proj-overlay {
@@ -112,8 +116,10 @@
     transition: opacity 0.3s ease;
 }
 
-.project-card:hover .proj-overlay {
-    opacity: 1;
+@media (min-width: 961px) {
+    .project-card:hover .proj-overlay {
+        opacity: 1;
+    }
 }
 
 .proj-btn {
@@ -128,16 +134,18 @@
     opacity: 0;
 }
 
-.project-card:hover .proj-btn {
-    transform: translateY(0);
-    opacity: 1;
-}
+@media (min-width: 961px) {
+    .project-card:hover .proj-btn {
+        transform: translateY(0);
+        opacity: 1;
+    }
 
-.project-card:hover .proj-btn:nth-child(1) {
-    transition-delay: 0.1s;
-}
-.project-card:hover .proj-btn:nth-child(2) {
-    transition-delay: 0.2s;
+    .project-card:hover .proj-btn:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+    .project-card:hover .proj-btn:nth-child(2) {
+        transition-delay: 0.2s;
+    }
 }
 
 .proj-btn.github {
@@ -150,8 +158,10 @@
     border: none;
 }
 
-.proj-btn:hover {
-    transform: scale(1.05);
+@media (min-width: 961px) {
+    .proj-btn:hover {
+        transform: scale(1.05);
+    }
 }
 
 .proj-content {
@@ -209,6 +219,11 @@
         max-width: 400px;
         margin: 0 auto;
         width: 100%;
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 25px rgba(196, 113, 237, 0.35),
+            0 0 50px rgba(246, 79, 89, 0.15);
+        border-color: #c471ed;
 
         .proj-content {
             padding: 20px;
