@@ -235,8 +235,6 @@
         text-align: center;
         padding: 30px 20px;
         gap: 25px;
-
-        /* Permanent hover effect for mobile */
         background: rgba(255, 255, 255, 0.08);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         border-color: rgba(196, 113, 237, 0.3);
