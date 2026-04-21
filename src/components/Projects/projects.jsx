@@ -1,146 +1,92 @@
 import React from "react";
-
 import "./projects.css";
-import { Images } from "../constants";
 
 export const Projects = () => {
-    return (
-        <>
-            <div className="projects">
-                <div className="pro-root">
-                    <div className="projects-title">
-                        <h1 data-aos="fade-down" data-aos-duration="1000">
-                            Projects
-                        </h1>
-                    </div>
-                    <div className="all-project">
-                        <div
-                            className="project-card"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                        >
-                            <div className="proj-img">
-                                <img
-                                    src={Images.SnackGame}
-                                    alt="Snake Game"
-                                    loading="lazy"
-                                />
-                                <div className="proj-overlay">
-                                    <a
-                                        href="https://github.com/Raj-Patel7807/Snake_Game"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="proj-btn github"
-                                    >
-                                        GitHub
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="proj-content">
-                                <h3>Snake++</h3>
-                                <div className="proj-tech">
-                                    <span>C++</span>
-                                    <span>STL</span>
-                                    <span>OOPs</span>
-                                    <span>Linux</span>
-                                </div>
-                                <p>
-                                    Terminal-based real-time Snake game
-                                    featuring object-oriented design patterns,
-                                    cross-platform compatibility, and smooth
-                                    rendering logic.
-                                </p>
-                            </div>
-                        </div>
+    const projects = [
+        {
+            name: "R++ Lang.",
+            description:
+                "A custom programming language (R++) with lexer, parser, and AST-based interpreter.",
+            stack: ["Java", "OOPs"],
+            github: "https://github.com/Raj-Patel7807/RppLang",
+            live: "",
+        },
+        {
+            name: "RepoPulse",
+            description:
+                "A GitHub like Console based system with 25+ database tables (mostly BCNF normalized).",
+            stack: ["Java", "DBMS", "PostgreSQL", "JDBC"],
+            github: "https://github.com/Raj-Patel7807/RepoPulse",
+            live: "",
+        },
+        {
+            name: "Snake++",
+            description:
+                "Build a terminal-based real time cross-platform (Windows & Linux) Snake Game in C++ using OOPs concepts.",
+            stack: ["C++", "STL", "OOP", "Linux"],
+            github: "https://github.com/Raj-Patel7807/snake-game",
+            live: "",
+        },
+    ];
 
-                        <div
-                            className="project-card"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="200"
-                        >
-                            <div className="proj-img">
-                                <img
-                                    src={Images.EducationPortal}
-                                    alt="Education Portal"
-                                    loading="lazy"
-                                />
-                                <div className="proj-overlay">
+    return (
+        <div className="projects-container">
+            <div
+                className="section-title"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+            >
+                <h1>
+                    <span className="sec-num">05.</span> Projects
+                </h1>
+                <div className="line"></div>
+            </div>
+
+            <div className="projects-zigzag">
+                {projects.map((project, index) => (
+                    <article
+                        key={project.name}
+                        className={`project-card ${index % 2 === 1 ? "reverse" : ""}`}
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay={index * 100}
+                    >
+                        <div className="project-index">0{index + 1}</div>
+                        <div className="project-content">
+                            <h3>{project.name}</h3>
+                            <p>{project.description}</p>
+                            <div className="project-meta">
+                                {/* <h4>Stack</h4> */}
+                                <ul className="project-stack">
+                                    {project.stack.map((item) => (
+                                        <li key={`${project.name}-${item}`}>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="project-links">
+                                <a
+                                    href={project.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    GitHub
+                                </a>
+                                {project.live && (
                                     <a
-                                        href="https://github.com/Raj-Patel7807/Education_Portal"
+                                        href={project.live}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="proj-btn github"
-                                    >
-                                        GitHub
-                                    </a>
-                                    <a
-                                        href="https://raj-patel7807.github.io/Education_Portal/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="proj-btn live"
                                     >
                                         Live Demo
                                     </a>
-                                </div>
-                            </div>
-                            <div className="proj-content">
-                                <h3>Education Portal</h3>
-                                <div className="proj-tech">
-                                    <span>HTML</span>
-                                    <span>CSS</span>
-                                    <span>JS</span>
-                                    <span>LocalStorage</span>
-                                </div>
-                                <p>
-                                    A comprehensive multi-page educational
-                                    platform featuring interactive UI
-                                    components, smooth animations, and
-                                    responsive design.
-                                </p>
+                                )}
                             </div>
                         </div>
-
-                        <div
-                            className="project-card"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="400"
-                        >
-                            <div className="proj-img">
-                                <img
-                                    src={Images.TetrisGame}
-                                    alt="Tetris Game"
-                                    loading="lazy"
-                                />
-                                <div className="proj-overlay">
-                                    <a
-                                        href="https://github.com/Raj-Patel7807/Tetris_Game"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="proj-btn github"
-                                    >
-                                        GitHub
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="proj-content">
-                                <h3>BlockFall++</h3>
-                                <div className="proj-tech">
-                                    <span>C++</span>
-                                    <span>STL</span>
-                                    <span>OOPs</span>
-                                </div>
-                                <p>
-                                    Modern terminal-based Tetris implementation
-                                    with advanced collision detection, score
-                                    tracking, and performance optimization.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </article>
+                ))}
             </div>
-        </>
+        </div>
     );
 };

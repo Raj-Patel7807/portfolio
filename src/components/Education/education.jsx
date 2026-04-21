@@ -1,114 +1,81 @@
 import React from "react";
-
 import "./education.css";
-import { Images } from "../constants";
 
 export const Education = () => {
     return (
-        <>
-            <div className="education">
-                <div className="edu-root">
-                    <div className="edu-title">
-                        <h1 data-aos="fade-down" data-aos-duration="1000">
-                            Education
-                        </h1>
+        <div className="education-container">
+            <div
+                className="section-title"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+            >
+                <h1>
+                    <span className="sec-num">02.</span> Education
+                </h1>
+                <div className="line"></div>
+            </div>
+
+            <div className="edu-list">
+                <div
+                    className="edu-row"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
+                    <div className="edu-date">2024 — 2028</div>
+                    <div className="edu-details">
+                        <div className="edu-header">
+                            <h3>Dhirubhai Ambani University (DA-IICT)</h3>
+                            <p className="edu-location">Gandhinagar, Gujarat</p>
+                        </div>
+                        <h4>
+                            B.Tech - Information and Communication Technology
+                        </h4>
+                        <p>
+                            CGPA: <span className="edu-score"> 8.45 / 10</span>
+                        </p>
                     </div>
-                    <div className="edu-schools">
-                        <div
-                            className="school"
-                            data-aos="fade-left"
-                            data-aos-duration="1000"
-                        >
-                            <div className="school-logo">
-                                <img src={Images.DAU} alt="DAU" />
-                            </div>
-                            <div className="school-bio">
-                                <div className="school-header">
-                                    <h3 className="school-name">
-                                        Dhirubhai Ambani University
-                                    </h3>
-                                    <span className="school-batch">
-                                        2024 - 2028
-                                    </span>
-                                </div>
-                                <h4 className="school-location">
-                                    Gandhinagar, Gujarat
-                                </h4>
-                                <div className="school-details">
-                                    <p className="school-course">
-                                        B.Tech - ICT
-                                    </p>
-                                    <span className="school-score">
-                                        CGPA: 8.2/10
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                </div>
 
-                        <div
-                            className="school"
-                            data-aos="fade-left"
-                            data-aos-duration="1000"
-                        >
-                            <div className="school-logo">
-                                <img src={Images.Pioneer} alt="Pioneer" />
-                            </div>
-                            <div className="school-bio">
-                                <div className="school-header">
-                                    <h3 className="school-name">
-                                        Pioneer School of Science
-                                    </h3>
-                                    <span className="school-batch">
-                                        2023 - 2024
-                                    </span>
-                                </div>
-                                <h4 className="school-location">
-                                    Patan, Gujarat
-                                </h4>
-                                <div className="school-details">
-                                    <p className="school-course">
-                                        Class: 12<sup>th</sup> (GHSEB)
-                                    </p>
-                                    <span className="school-score">
-                                        Percentage: 92.92%
-                                    </span>
-                                </div>
-                            </div>
+                <div
+                    className="edu-row"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="100"
+                >
+                    <div className="edu-date">2023 — 2024</div>
+                    <div className="edu-details">
+                        <div className="edu-header">
+                            <h3>Pioneer School of Science</h3>
+                            <p className="edu-location">Patan, Gujarat</p>
                         </div>
+                        <h4>Class: 12th (GHSEB)</h4>
+                        <p>
+                            Percentage:{" "}
+                            <span className="edu-score"> 92.92 %</span>
+                        </p>
+                    </div>
+                </div>
 
-                        <div
-                            className="school"
-                            data-aos="fade-left"
-                            data-aos-duration="1000"
-                        >
-                            <div className="school-logo">
-                                <img src={Images.Pioneer} alt="Pioneer" />
-                            </div>
-                            <div className="school-bio">
-                                <div className="school-header">
-                                    <h3 className="school-name">
-                                        Pioneer Secondary School
-                                    </h3>
-                                    <span className="school-batch">
-                                        2021 - 2022
-                                    </span>
-                                </div>
-                                <h4 className="school-location">
-                                    Patan, Gujarat
-                                </h4>
-                                <div className="school-details">
-                                    <p className="school-course">
-                                        Class: 10<sup>th</sup> (GSEB)
-                                    </p>
-                                    <span className="school-score">
-                                        Percentage: 94.33%
-                                    </span>
-                                </div>
-                            </div>
+                <div
+                    className="edu-row"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                >
+                    <div className="edu-date">2021 — 2022</div>
+                    <div className="edu-details">
+                        <div className="edu-header">
+                            <h3>Pioneer Secondary School</h3>
+                            <p className="edu-location">Patan, Gujarat</p>
                         </div>
+                        <h4>Class: 10th (GSEB)</h4>
+                        <p>
+                            Percentage:{" "}
+                            <span className="edu-score"> 94.33 %</span>
+                        </p>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };

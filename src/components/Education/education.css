@@ -1,255 +1,189 @@
-@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-}
-
-.education {
+.education-container {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 70px 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 100px 20px;
 }
 
-.edu-root {
-    width: 85%;
-    max-width: 1000px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 2.5rem;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    color: #fff;
-}
-
-.edu-title {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 2rem;
+.edu-list {
     position: relative;
-    z-index: 10;
+    display: grid;
+    gap: 20px;
+    margin-top: 40px;
 }
 
-.edu-title h1 {
-    font-size: 2.5rem;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    padding-bottom: 10px;
-    display: inline-block;
-}
-
-.edu-title h1::after {
+.edu-list::before {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 170px;
-    height: 3px;
-    background: linear-gradient(to right, #c471ed, #f64f59);
-    border-radius: 2px;
+    left: 145px;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: linear-gradient(
+        180deg,
+        rgba(125, 211, 252, 0.4),
+        rgba(196, 181, 253, 0.25)
+    );
 }
 
-.edu-schools {
-    width: 100%;
+.edu-row {
     display: flex;
-    flex-direction: column;
-    gap: 25px;
+    gap: 32px;
+    align-items: flex-start;
+    background: linear-gradient(150deg, #090909, #050505);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 24px;
+    transition: all 0.3s ease;
 }
 
-.school {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    overflow: hidden;
-}
-
-.school::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(to bottom, #c471ed, #f64f59);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-@media (min-width: 961px) {
-    .school:hover {
-        transform: translateY(-5px);
-        background: rgba(255, 255, 255, 0.08);
-        box-shadow: 0 0 20px rgba(196, 113, 237, 0.3),
-            0 0 40px rgba(246, 79, 89, 0.1);
-        border-color: #c471ed;
-    }
-
-    .school:hover::before {
-        opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+    .edu-row:hover {
+        transform: translateY(-4px);
+        border-color: rgba(125, 211, 252, 0.55);
+        box-shadow: 0 14px 28px rgba(125, 211, 252, 0.13);
     }
 }
 
-.school-logo {
+@media (hover: none), (pointer: coarse) {
+    .edu-row {
+        border-color: rgba(125, 211, 252, 0.18);
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.32);
+    }
+
+    .edu-row:active {
+        transform: scale(0.99);
+        border-color: rgba(125, 211, 252, 0.42);
+    }
+}
+
+.edu-date {
     width: 110px;
-    height: 110px;
-    border-radius: 15px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #a2cbf0;
+    font-family: "Inter", monospace;
+    font-size: 0.9rem;
+    padding-top: 6px;
+    position: relative;
     flex-shrink: 0;
-    margin-right: 25px;
-    overflow: hidden;
-    padding: 5px;
 }
 
-.school-logo img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+.edu-date::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -17px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow:
+        0 0 0 6px #0a0a0a,
+        0 0 14px rgba(125, 211, 252, 0.55);
 }
 
-.school-bio {
-    flex-grow: 1;
+.edu-details {
+    padding-left: 10px;
+    min-width: 0;
+}
+
+.edu-header {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.school-header {
-    display: flex;
+    align-items: baseline;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0px;
+    gap: 12px;
 }
 
-.school-name {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin: 0;
-    background: linear-gradient(to right, #fff, #e0e0e0);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.edu-details h3 {
+    color: #f8fafc;
+    font-size: clamp(1.05rem, 2.8vw, 1.3rem);
+    line-height: 1.35;
+    margin-bottom: 5px;
 }
 
-.school-batch {
+.edu-details h4 {
+    color: #ddd6fe;
     font-size: 1rem;
-    color: #f64f59;
-    font-weight: 600;
-    background: rgba(246, 79, 89, 0.1);
-    padding: 5px 12px;
-    border-radius: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.edu-location {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    margin-left: 1rem;
     white-space: nowrap;
 }
 
-.school-location {
+.edu-details p {
+    color: #a1a1a1;
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 400;
-    margin: 0;
 }
 
-.school-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 7px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 7px;
-}
-
-.school-course {
-    font-size: 1rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.school-score {
-    font-size: 0.95rem;
-    color: #c471ed;
+.edu-score {
+    color: var(--accent);
     font-weight: 600;
 }
 
-@media screen and (max-width: 960px) {
-    .edu-root {
-        width: 95%;
-        padding: 1.2rem;
-
-        .edu-title {
-            font-size: 0.1rem;
-        }
+@media screen and (max-width: 900px) {
+    .education-container {
+        padding: 88px 18px;
     }
 
-    .school {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-        gap: 10px;
-
-        /* Permanent hover effect for mobile */
-        background: rgba(255, 255, 255, 0.08);
-        box-shadow: 0 0 20px rgba(196, 113, 237, 0.3),
-            0 0 40px rgba(246, 79, 89, 0.1);
-        border-color: #c471ed;
-
-        &:active {
-            transform: scale(0.98);
-        }
-    }
-
-    .school::before {
-        opacity: 1;
-    }
-
-    .school-logo {
-        width: 60px;
-        height: 60px;
-        margin-right: 0;
-    }
-
-    .school-bio {
-        width: 100%;
-    }
-
-    .school-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-        margin-bottom: 5px;
-    }
-
-    .school-batch {
+    .edu-list::before {
         display: none;
     }
 
-    .school-details {
+    .edu-row {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0px;
-
-        .school-course {
-            margin-bottom: 1px;
-        }
+        align-items: stretch;
+        gap: 14px;
+        padding: 20px 18px;
     }
 
-    .school-name {
-        font-size: 1.1rem;
+    .edu-date {
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 10px;
+        margin-bottom: 2px;
+        border-bottom: 1px solid rgba(125, 211, 252, 0.18);
+        font-size: 0.88rem;
+    }
+
+    .edu-date::after {
+        display: none;
+    }
+
+    .edu-details {
+        padding-left: 0;
+    }
+
+    .edu-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .edu-location {
+        margin-left: 0;
+        white-space: normal;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .education-container {
+        padding: 76px 14px;
+    }
+
+    .edu-row {
+        gap: 12px;
+        padding: 16px 14px;
+    }
+
+    .edu-details h4 {
+        font-size: 0.95rem;
+    }
+
+    .edu-details p {
+        font-size: 0.9rem;
     }
 }

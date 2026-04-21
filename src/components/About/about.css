@@ -1,116 +1,134 @@
-@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-}
-
-.about {
+.about-container {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    padding: 80px 20px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 20px;
 }
 
-.aboutme {
-    width: 80%;
-    max-width: 900px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    color: #fff;
+.about-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 1.5;
+    min-width: 0;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-text strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.about-stats {
+    margin-top: 20px;
+    flex: 1;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.stat-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px 20px;
     text-align: center;
-}
-
-.aboutme > h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    padding-bottom: 10px;
-    margin-left: 10px;
-}
-
-.aboutme > h1::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 170px;
-    height: 3px;
-    background: linear-gradient(to right, #c471ed, #f64f59);
-    border-radius: 2px;
-}
-
-.about-name {
-    width: 100%;
-    margin-bottom: 30px;
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
-.about-name h1 {
-    font-size: 2.5rem;
+.stat-box:nth-child(1) {
+    grid-column: span 2;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .stat-box:hover {
+        border-color: rgba(125, 211, 252, 0.6);
+        transform: translateY(-5px);
+        box-shadow: 0 14px 24px rgba(125, 211, 252, 0.11);
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .stat-box {
+        border-color: rgba(125, 211, 252, 0.22);
+        box-shadow:
+            0 6px 20px rgba(0, 0, 0, 0.35),
+            0 0 0 1px rgba(125, 211, 252, 0.06);
+    }
+
+    .stat-box:active {
+        transform: scale(0.98);
+        border-color: rgba(125, 211, 252, 0.45);
+    }
+}
+
+.stat-box h3 {
+    color: #e0f2fe;
+    font-size: clamp(1.35rem, 5vw, 2.5rem);
+    margin-bottom: 5px;
+    font-family: "Inter", monospace;
     font-weight: 700;
-    margin: 0;
-    background: linear-gradient(to right, #c471ed, #f64f59);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
-.about-name h5 {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 400;
-    margin-top: 10px;
-    letter-spacing: 1px;
+.stat-box p {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-weight: 500;
 }
 
-.about-bio {
-    width: 100%;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.9);
-    text-align: justify;
-}
+@media screen and (max-width: 900px) {
+    .about-container {
+        padding: 80px 18px;
+    }
 
-.about-bio p {
-    margin-bottom: 20px;
-}
+    .about-content {
+        flex-direction: column;
+        gap: 36px;
+    }
 
-@media screen and (max-width: 960px) {
-    .aboutme {
+    .about-stats {
         width: 100%;
-        padding: 20px 20px;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .about-container {
+        padding: 72px 14px;
     }
 
-    .aboutme > h1 {
-        font-size: 2rem;
+    .about-text {
+        font-size: 1rem;
     }
 
-    .about-name h1 {
-        font-size: 2rem;
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 14px;
     }
 
-    .about-bio {
-        font-size: 0.95rem;
-        text-align: left;
+    .stat-box:nth-child(1) {
+        grid-column: span 1;
+    }
+
+    .stat-box {
+        padding: 22px 16px;
+    }
+
+    .stat-box p {
+        font-size: 0.9rem;
     }
 }

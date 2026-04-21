@@ -18,7 +18,9 @@ import SnackGame from "../assets/Projects/Snack_Game.png";
 import TetrisGame from "../assets/Projects/Tetris_Game.png";
 import EducationPortal from "../assets/Projects/Education_Portal.png";
 
-import ResumeImg from "../assets/Resume/Raj_Patel_Resume.jpg";
+// import ResumeImg from "../assets/Resume/Raj_Patel_Resume.jpg";
+
+export const ResumeURL = "/Raj_Patel_Resume.pdf";
 
 export const Images = {
     Shinchan,
@@ -39,5 +41,5 @@ export const Images = {
     TetrisGame,
     EducationPortal,
 
-    ResumeImg,
+    // ResumeImg,
 };

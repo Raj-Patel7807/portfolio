@@ -1,266 +1,122 @@
-@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-}
-
-.resume-section {
-    width: 100%;
-    min-height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
 .resume-container {
-    width: 85%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-}
-
-.resume-header {
-    text-align: center;
-}
-
-.resume-header h1 {
-    font-size: 2.5rem;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.resume-header .underline {
-    width: 100px;
-    height: 3px;
-    background: linear-gradient(to right, #c471ed, #f64f59);
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
-    border-radius: 2px;
+    padding: 100px 20px;
 }
 
-.resume-content {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.resume-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 25px;
-    padding: 40px;
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s ease;
+.resume-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 60px 40px;
+    text-align: center;
     position: relative;
     overflow: hidden;
 }
 
-.resume-card::before {
+.resume-box::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(to bottom, #c471ed, #f64f59);
-    opacity: 0.7;
-}
-
-@media (min-width: 961px) {
-    .resume-card:hover {
-        transform: translateY(-5px);
-        background: rgba(255, 255, 255, 0.08);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        border-color: rgba(196, 113, 237, 0.3);
-    }
-}
-
-.card-visual {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    flex-shrink: 0;
-}
-
-.visual-circle {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
+    height: 4px;
     background: linear-gradient(
-        135deg,
-        rgba(196, 113, 237, 0.2),
-        rgba(246, 79, 89, 0.2)
+        90deg,
+        rgba(125, 211, 252, 0.95),
+        rgba(125, 211, 252, 0.25)
     );
-    animation: pulse 3s infinite ease-in-out;
 }
 
-.visual-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: linear-gradient(135deg, #c471ed, #f64f59);
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
+.resume-content h2 {
+    color: var(--text-main);
+    font-size: clamp(1.45rem, 4.5vw, 2rem);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.resume-content p {
+    color: var(--text-muted);
+    font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+    line-height: 1.55;
+    margin-bottom: 40px;
+}
+
+.resume-actions {
     display: flex;
     justify-content: center;
-    align-items: center;
-    box-shadow: 0 5px 15px rgba(246, 79, 89, 0.4);
+    gap: 20px;
 }
 
-.visual-content span {
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 0.5;
-    }
-    50% {
-        transform: scale(1.15);
-        opacity: 0.8;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 0.5;
-    }
-}
-
-.card-info {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-info h2 {
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: 5px;
-}
-
-.card-info p {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 25px;
-    font-weight: 300;
-}
-
-.card-actions {
-    display: flex;
-    gap: 15px;
-}
-
-.res-btn {
-    padding: 12px 24px;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
+.resume-btn {
+    padding: 15px 30px;
     font-size: 1rem;
-    font-weight: 600;
+    font-family: "Inter", monospace;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px;
     transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-    overflow: hidden;
+    cursor: pointer;
 }
 
-.res-btn.view {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+.resume-btn.outline {
+    color: var(--accent);
+    border: 1px solid rgba(125, 211, 252, 0.8);
+    background: transparent;
 }
 
-.res-btn.download {
-    background: linear-gradient(to right, #c471ed, #f64f59);
-    color: #fff;
-    box-shadow: 0 5px 15px rgba(246, 79, 89, 0.3);
-}
-
-@media (min-width: 961px) {
-    .res-btn:hover {
-        transform: translateY(-3px);
-    }
-
-    .res-btn.view:hover {
-        background: rgba(255, 255, 255, 0.15);
-        border-color: #c471ed;
-    }
-
-    .res-btn.download:hover {
-        box-shadow: 0 0 25px rgba(246, 79, 89, 0.6),
-            0 0 10px rgba(196, 113, 237, 0.4);
+@media (hover: hover) and (pointer: fine) {
+    .resume-btn.outline:hover {
+        background: rgba(125, 211, 252, 0.15);
     }
 }
 
-.res-btn span {
-    position: relative;
-    z-index: 1;
+.resume-btn.solid {
+    color: #061018;
+    background: linear-gradient(
+        90deg,
+        rgba(125, 211, 252, 0.95),
+        rgba(125, 211, 252, 0.55)
+    );
+    border: 1px solid rgba(125, 211, 252, 0.7);
 }
 
-@media screen and (max-width: 768px) {
-    .resume-section {
-        padding: 50px 0;
+@media (hover: hover) and (pointer: fine) {
+    .resume-btn.solid:hover {
+        background: rgba(125, 211, 252, 0.08);
+        color: #eaf7ff;
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .resume-btn.outline {
+        background: rgba(125, 211, 252, 0.07);
     }
 
-    .resume-header h1 {
-        font-size: 2rem;
+    .resume-btn.solid {
+        box-shadow: 0 2px 14px rgba(125, 211, 252, 0.18);
+    }
+}
+
+.resume-btn:active {
+    transform: scale(0.98);
+}
+
+@media screen and (max-width: 600px) {
+    .resume-container {
+        padding: 80px 14px;
     }
 
-    .resume-card {
+    .resume-box {
+        padding: 36px 18px;
+    }
+
+    .resume-content h2 {
+        font-size: 1.55rem;
+    }
+
+    .resume-actions {
         flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-        gap: 25px;
-        background: rgba(255, 255, 255, 0.08);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        border-color: rgba(196, 113, 237, 0.3);
-    }
-
-    .resume-card::before {
-        width: 100%;
-        height: 4px;
-    }
-
-    .card-info {
-        align-items: center;
-        width: 100%;
-    }
-
-    .card-actions {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .res-btn {
-        width: 100%;
-        justify-content: center;
-
-        &:active {
-            transform: scale(0.95);
-        }
     }
 }

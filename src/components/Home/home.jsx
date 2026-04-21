@@ -1,28 +1,30 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import Tilt from "react-parallax-tilt";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 import "./home.css";
-import { Images } from "../constants";
+import { Images, ResumeURL } from "../constants";
 
 export const Home = () => {
     return (
         <>
             <div className="home">
                 <div className="name">
-                    <h1 data-aos="fade-down" data-aos-duration="1000">
+                    <h1 data-aos="fade-down" data-aos-duration="850">
                         Hi, There 👋
                     </h1>
-                    <h2 data-aos="fade-right" data-aos-duration="1000">
+                    <h2
+                        data-aos="fade-up"
+                        data-aos-duration="850"
+                        data-aos-delay="80"
+                    >
                         I'm <span>Raj Patel</span>
                     </h2>
                     <h3
                         className="typewriter-wrapper"
-                        data-aos="fade-right"
-                        data-aos-duration="1000"
-                        data-aos-delay="200"
+                        data-aos="fade-up"
+                        data-aos-duration="850"
+                        data-aos-delay="160"
                     >
                         <Typewriter
                             words={["I'm a Competitive Programmer..."]}
@@ -35,10 +37,25 @@ export const Home = () => {
                         />
                     </h3>
                     <div
+                        className="hero-actions"
+                        data-aos="fade-up"
+                        data-aos-duration="850"
+                        data-aos-delay="260"
+                    >
+                        <a
+                            href={ResumeURL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            My Resume
+                        </a>
+                        <a href="#projects">View Projects</a>
+                    </div>
+                    <div
                         className="home-socials"
                         data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="400"
+                        data-aos-duration="850"
+                        data-aos-delay="340"
                     >
                         <a
                             href="https://mail.google.com/mail/?view=cm&to=rajpatel7807@gmail.com"
@@ -122,17 +139,22 @@ export const Home = () => {
 
                 <div
                     className="home-photo"
-                    data-aos="fade-left"
-                    data-aos-duration="1000"
+                    data-aos="zoom-in"
+                    data-aos-duration="900"
+                    data-aos-delay="120"
+                    data-aos-easing="ease-out-cubic"
                 >
                     <Tilt
-                        tiltMaxAngleX={10}
-                        tiltMaxAngleY={10}
-                        perspective={4000}
-                        transitionSpeed={900}
-                        scale={1.02}
+                        className="home-tilt"
+                        tiltMaxAngleX={6}
+                        tiltMaxAngleY={6}
+                        perspective={4200}
+                        transitionSpeed={750}
+                        scale={1.015}
                     >
-                        <img src={Images.Raj} alt="Raj Patel" />
+                        <div className="home-photo-frame">
+                            <img src={Images.Raj} alt="Raj Patel" />
+                        </div>
                     </Tilt>
                 </div>
             </div>

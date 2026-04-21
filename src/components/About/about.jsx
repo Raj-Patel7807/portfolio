@@ -1,62 +1,72 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-
 import "./about.css";
-import { Images } from "../constants.jsx";
 
 export const About = () => {
     return (
-        <>
-            <div className="about">
-                <div className="aboutme">
-                    <h1 data-aos="fade-down" data-aos-duration="1000">
-                        About Me
-                    </h1>
-                    <div className="about-name">
-                        <h1 data-aos="fade-right" data-aos-duration="1000">
-                            Raj Patel
-                        </h1>
-                        <h5 data-aos="fade-right" data-aos-duration="1000">
-                            Patan, Gujarat, India
-                        </h5>
+        <div className="about-container">
+            <div
+                className="section-title"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+            >
+                <h1>
+                    <span className="sec-num">01.</span> About Me
+                </h1>
+                <div className="line"></div>
+            </div>
+
+            <div className="about-content">
+                <div
+                    className="about-text"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                >
+                    <p>
+                        I am a third-year B.Tech (ICT) student at Dhirubhai
+                        Ambani University (formerly DA-IICT). I like problem
+                        solving, problem setting and learning new algorithms and
+                        tricks.
+                    </p>
+                    <p>
+                        Data Structures and Competitive Programming are my main
+                        strengths. I have solved <strong>2800+ problems</strong>{" "}
+                        across platforms including Codeforces, LeetCode,
+                        CodeChef. I am an{" "}
+                        <strong>Expert on Codeforces (max rating 1642)</strong>{" "}
+                        ,{" "}
+                        <strong>
+                            3-star rated on CodeChef (max rating 1769)
+                        </strong>
+                        and a{" "}
+                        <strong>Knight on LeetCode (max rating 2018)</strong>.
+                    </p>
+                    <p>
+                        Apart from CP, I am interested in DBMS, OOPS, and
+                        backend server-side development, low level design, How
+                        various systems works and etc.. I don't know everything
+                        yet, but I'm very Curious about that.
+                    </p>
+                </div>
+
+                <div
+                    className="about-stats"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                >
+                    <div className="stat-box">
+                        <h3>Competitive Programmer</h3>
+                        <p></p>
                     </div>
-                    <div
-                        className="about-bio"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                    >
-                        <p>
-                            I am a second-year B.Tech (ICT) student at Dhirubhai
-                            Ambani University (formerly DA-IICT). I like problem
-                            solving, algorithms, and building things that work
-                            fast and efficiently.
-                        </p>
-                        <p>
-                            Data Structures and Competitive Programming are my
-                            main strengths. I have solved 2200+ problems on
-                            Codeforces, CodeChef, and LeetCode. I am an Expert
-                            on Codeforces (max rating 1621) and a 3-star coder
-                            on CodeChef (max rating 1721). I really enjoy
-                            Competitive Programming and love learning new
-                            algorithms and techniques.
-                        </p>
-                        <p>
-                            Apart from CP, I am interested in DBMS, OOPS, and
-                            backend server-side development. I don't know
-                            everything yet, but I can build basic servers, work
-                            with databases, and understand core backend logic. I
-                            also know a little frontend and can build simple
-                            user interfaces when needed.
-                        </p>
-                        <p>
-                            I am always trying to learn more and improve
-                            myself—by solving harder problems, writing cleaner
-                            code, and understanding systems better.
-                        </p>
+                    <div className="stat-box">
+                        <h3>2800+</h3>
+                        <p>Problems Solved</p>
+                    </div>
+                    <div className="stat-box">
+                        <h3>Curious</h3>
+                        <p>Backend & Systems</p>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };

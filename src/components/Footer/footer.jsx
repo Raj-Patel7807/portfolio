@@ -9,16 +9,10 @@ export const Footer = () => {
             <footer className="footer">
                 <div className="footer-content">
                     <div className="foot-title">
-                        <h3 data-aos="fade-down" data-aos-duration="1000">
-                            Raj Patel
-                        </h3>
+                        <h3>Raj Patel</h3>
                     </div>
 
-                    <ul
-                        className="foot-links"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                    >
+                    <ul className="foot-links">
                         <li>
                             <a href="#home" className="nav-link">
                                 Home
@@ -34,14 +28,29 @@ export const Footer = () => {
                                 Education
                             </a>
                         </li>
+                        {/* <li>
+                            <a href="#experience" className="nav-link">
+                                Experience
+                            </a>
+                        </li> */}
                         <li>
-                            <a href="#achievements" className="nav-link">
+                            <a href="#skills" className="nav-link">
                                 Skills
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#achievements-list" className="nav-link">
+                                Achievements
                             </a>
                         </li>
                         <li>
                             <a href="#projects" className="nav-link">
                                 Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#responsibility" className="nav-link">
+                                POR
                             </a>
                         </li>
                         <li>
@@ -56,11 +65,7 @@ export const Footer = () => {
                         </li>
                     </ul>
 
-                    <div
-                        className="foot-socials"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                    >
+                    <div className="foot-socials">
                         <a
                             href="https://mail.google.com/mail/?view=cm&to=rajpatel7807@gmail.com"
                             target="_blank"

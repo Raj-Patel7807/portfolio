@@ -1,0 +1,138 @@
+.experience-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 4px;
+    height: 100%;
+    width: 2px;
+    background: var(--border-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 5px;
+    left: -32px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--bg-dark);
+    border: 2px solid var(--primary);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .timeline-item:hover .timeline-dot {
+        background: var(--primary);
+        box-shadow: 0 0 10px var(--primary);
+    }
+}
+
+.timeline-content {
+    background: #070707;
+    padding: 18px 20px;
+    border: 1px solid #242424;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .timeline-item:hover .timeline-content {
+        transform: translateX(10px);
+        border-color: rgba(125, 211, 252, 0.65);
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .timeline-dot {
+        box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.2);
+    }
+
+    .timeline-content {
+        border-color: rgba(125, 211, 252, 0.2);
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+    }
+
+    .timeline-item:active .timeline-content {
+        border-color: rgba(125, 211, 252, 0.45);
+    }
+}
+
+.timeline-header h3 {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+.timeline-header h3 span {
+    color: var(--accent);
+}
+
+.timeline-date {
+    font-family: "Inter", monospace;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.timeline-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 768px) {
+    .experience-container {
+        padding: 80px 14px;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-dot {
+        left: -22px;
+    }
+
+    .timeline-desc {
+        font-size: 0.98rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .timeline {
+        padding-left: 14px;
+    }
+
+    .timeline-dot {
+        left: -18px;
+    }
+
+    .timeline-desc {
+        font-size: 0.92rem;
+    }
+}

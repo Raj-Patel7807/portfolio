@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./navbar.css";
 import { Images } from "../constants";
@@ -7,23 +6,16 @@ import { Images } from "../constants";
 export const Navbar = () => {
     const [click, setClick] = React.useState(false);
     const handleClick = () => {
-        console.log("Menu icon clicked. Current state:", !click);
         setClick(!click);
     };
     const closeMobileMenu = () => {
-        console.log("Link clicked. Closing menu.");
         setClick(false);
     };
 
     return (
         <>
-            <nav data-aos="fade-down" data-aos-duration="1000">
-                <div
-                    className="thumb"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"
-                >
+            <nav data-aos="fade-down" data-aos-duration="850">
+                <div className="thumb">
                     <img src={Images.Shinchan} alt="Thumb" />
                     <p>Raj Patel</p>
                 </div>
@@ -54,12 +46,26 @@ export const Navbar = () => {
                     >
                         Education
                     </a>
-                    <a
-                        href="#achievements"
+                    {/* <a
+                        href="#experience"
                         className="nav-link"
                         onClick={closeMobileMenu}
                     >
-                        Skills & Achievements
+                        Experience
+                    </a> */}
+                    <a
+                        href="#skills"
+                        className="nav-link"
+                        onClick={closeMobileMenu}
+                    >
+                        Skills
+                    </a>
+                    <a
+                        href="#achievements-list"
+                        className="nav-link"
+                        onClick={closeMobileMenu}
+                    >
+                        Achievements
                     </a>
                     <a
                         href="#projects"
@@ -67,6 +73,13 @@ export const Navbar = () => {
                         onClick={closeMobileMenu}
                     >
                         Projects
+                    </a>
+                    <a
+                        href="#responsibility"
+                        className="nav-link"
+                        onClick={closeMobileMenu}
+                    >
+                        POR
                     </a>
                     <a
                         href="#resume"
