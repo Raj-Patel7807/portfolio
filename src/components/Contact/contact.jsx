@@ -24,10 +24,10 @@ export const Contact = () => {
 
         emailjs
             .sendForm(
-                "rajpatel7807",
-                "template_q2dcbqy",
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 formRef.current,
-                "01p8t7vXJsDbRBx2l",
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
             )
             .then(() => {
                 setStatus("success");
