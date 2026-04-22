@@ -5,12 +5,12 @@ import "./responsibility.css";
 export const Responsibility = () => {
     const roles = [
         {
-            title: "Convener",
+            title: "Deputy Convener",
             organization: "Programming Club, DAU",
             duration: "April 2026 - Present",
             points: [
-                "Leading the Programming Club and organizing various competitive programming contests (intra-college).",
-                "Helping juniors through sessions and post-contest discussions; building an active competitive programming community.",
+                "Assisting in leading the Programming Club and organizing various competitive programming contests (intra-college).",
+                "Helping juniors through sessions and post-contest discussions; contributing to building an active competitive programming community.",
             ],
         },
         {
