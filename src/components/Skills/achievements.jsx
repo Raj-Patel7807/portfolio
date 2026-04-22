@@ -11,7 +11,7 @@ export const Achievements = () => {
                 data-aos-duration="1000"
             >
                 <h1>
-                    <span className="sec-num">03.</span> Skills & Arsenal
+                    <span className="sec-num">03.</span> Technical Skills
                 </h1>
                 <div className="line"></div>
             </div>
