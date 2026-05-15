@@ -4,11 +4,11 @@ import "./projects.css";
 export const Projects = () => {
     const projects = [
         {
-            name: "R++ Lang.",
+            name: "RFlow - API Gateway",
             description:
-                "A custom programming language (R++) with lexer, parser, and AST-based interpreter.",
-            stack: ["Java", "OOPs"],
-            github: "https://github.com/Raj-Patel7807/RppLang",
+                "Built a basic multi-tenant API Gateway with request routing, rate limiting, logging, health monitoring, and request forwarding across backend services.",
+            stack: ["Java", "Spring Boot", "PostgreSQL"],
+            github: "https://github.com/Raj-Patel7807/rflow",
             live: "",
         },
         {
@@ -17,6 +17,14 @@ export const Projects = () => {
                 "A GitHub like Console based system with 25+ database tables (mostly BCNF normalized).",
             stack: ["Java", "DBMS", "PostgreSQL", "JDBC"],
             github: "https://github.com/Raj-Patel7807/RepoPulse",
+            live: "",
+        },
+        {
+            name: "R++ Lang.",
+            description:
+                "A custom programming language (R++) with lexer, parser, and AST-based interpreter.",
+            stack: ["Java", "OOPs"],
+            github: "https://github.com/Raj-Patel7807/RppLang",
             live: "",
         },
         {
