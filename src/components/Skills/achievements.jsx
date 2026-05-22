@@ -30,10 +30,16 @@ export const Achievements = () => {
                     </div>
                 </div>
                 <div className="skill-category">
+                    <h3>Backend/Frameworks</h3>
+                    <div className="badge-list">
+                        <span className="skill-badge">Spring Boot</span>
+                    </div>
+                </div>
+                <div className="skill-category">
                     <h3>Databases</h3>
                     <div className="badge-list">
-                        <span className="skill-badge">SQL</span>
                         <span className="skill-badge">PostgreSQL</span>
+                        <span className="skill-badge">SQL</span>
                     </div>
                 </div>
                 <div className="skill-category">
@@ -41,9 +47,10 @@ export const Achievements = () => {
                     <div className="badge-list">
                         <span className="skill-badge">Git</span>
                         <span className="skill-badge">GitHub</span>
-                        <span className="skill-badge">Linux</span>
-                        <span className="skill-badge">pgAdmin</span>
+                        <span className="skill-badge">Postman</span>
                         <span className="skill-badge">VS Code</span>
+                        <span className="skill-badge">pgAdmin</span>
+                        <span className="skill-badge">Ubuntu</span>
                         <span className="skill-badge">IntelliJ IDEA</span>
                         <span className="skill-badge">CLion</span>
                     </div>
@@ -132,7 +139,7 @@ export const Achievements = () => {
                         <h3>LeetCode</h3>
                         <span className="ach-badge">Knight</span>
                     </div>
-                    <p className="ach-stat">Max Rating: 2018</p>
+                    <p className="ach-stat">Max Rating: 2057</p>
                     <div className="ach-link">View Profile &rarr;</div>
                 </a>
 
