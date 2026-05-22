@@ -15,7 +15,7 @@ npm run dev
 
 ## Live Demo
 
-[🔗Portfolio](https://rajpatel7807.netlify.app/)
+🔗[Portfolio](https://rajpatel7807.netlify.app/)
 
 ---
 
