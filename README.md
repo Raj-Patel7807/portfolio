@@ -15,7 +15,7 @@ npm run dev
 
 ## Live Demo
 
-🔗[Portfolio](https://rajpatel7807.netlify.app/)
+🔗<a href="https://rajpatel7807.netlify.app/" target="_blank" rel="noopener noreferrer">Portfolio</a>
 
 ---
 
