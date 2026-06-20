@@ -31,7 +31,7 @@ export const Education = () => {
                             B.Tech - Information and Communication Technology
                         </h4>
                         <p>
-                            CGPA: <span className="edu-score"> 8.45 / 10</span>
+                            CGPA: <span className="edu-score"> 8.51 / 10</span>
                         </p>
                     </div>
                 </div>

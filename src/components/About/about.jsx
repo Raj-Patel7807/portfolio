@@ -29,16 +29,16 @@ export const About = () => {
                     </p>
                     <p>
                         Data Structures and Competitive Programming are my main
-                        strengths. I have solved <strong>2800+ problems</strong>{" "}
+                        strengths. I have solved <strong>3000+ problems</strong>{" "}
                         across platforms including Codeforces, LeetCode,
                         CodeChef. I am an{" "}
                         <strong>Expert on Codeforces (max rating 1642)</strong>{" "}
                         ,{" "}
                         <strong>
-                            3-star rated on CodeChef (max rating 1769)
+                            3-star rated on CodeChef (max rating 1795)
                         </strong>
                         and a{" "}
-                        <strong>Knight on LeetCode (max rating 2018)</strong>.
+                        <strong>Knight on LeetCode (max rating 2059)</strong>.
                     </p>
                     <p>
                         Apart from CP, I am interested in DBMS, OOPS, and
@@ -58,7 +58,7 @@ export const About = () => {
                         <p></p>
                     </div>
                     <div className="stat-box">
-                        <h3>2800+</h3>
+                        <h3>3000+</h3>
                         <p>Problems Solved</p>
                     </div>
                     <div className="stat-box">

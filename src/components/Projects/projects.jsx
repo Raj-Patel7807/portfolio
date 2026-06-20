@@ -6,10 +6,10 @@ export const Projects = () => {
         {
             name: "RFlow - API Gateway",
             description:
-                "Built a basic multi-tenant API Gateway with request routing, rate limiting, logging, health monitoring, and request forwarding across backend services.",
-            stack: ["Java", "Spring Boot", "PostgreSQL"],
+                "Built a multi-tenant API Gateway with Spring Boot, PostgreSQL, and Docker, featuring rate limiting, request logging, health monitoring, and traffic control. Developed 55+ REST APIs with JSESSIONID-based authentication and centralized tenant/service management.",
+            stack: ["Java", "Spring Boot", "Hibernate/JPA", "Docker", "PostgreSQL"],
             github: "https://github.com/Raj-Patel7807/rflow",
-            live: "",
+            live: "https://rflow-lovat.vercel.app/login",
         },
         {
             name: "RepoPulse",

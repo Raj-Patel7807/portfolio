@@ -27,19 +27,21 @@ export const Achievements = () => {
                         <span className="skill-badge">C</span>
                         <span className="skill-badge">C++</span>
                         <span className="skill-badge">Java</span>
+                        <span className="skill-badge">SQL</span>
                     </div>
                 </div>
                 <div className="skill-category">
                     <h3>Backend/Frameworks</h3>
                     <div className="badge-list">
                         <span className="skill-badge">Spring Boot</span>
+                        <span className="skill-badge">Hibernate/JPA</span>
+                        <span className="skill-badge">REST APIs</span>
                     </div>
                 </div>
                 <div className="skill-category">
                     <h3>Databases</h3>
                     <div className="badge-list">
                         <span className="skill-badge">PostgreSQL</span>
-                        <span className="skill-badge">SQL</span>
                     </div>
                 </div>
                 <div className="skill-category">
@@ -47,7 +49,11 @@ export const Achievements = () => {
                     <div className="badge-list">
                         <span className="skill-badge">Git</span>
                         <span className="skill-badge">GitHub</span>
+                        <span className="skill-badge">Docker</span>
                         <span className="skill-badge">Postman</span>
+                        <span className="skill-badge">Render</span>
+                        <span className="skill-badge">Vercel</span>
+                        <span className="skill-badge">Neon</span>
                         <span className="skill-badge">VS Code</span>
                         <span className="skill-badge">pgAdmin</span>
                         <span className="skill-badge">Ubuntu</span>
@@ -122,7 +128,7 @@ export const Achievements = () => {
                         <h3>CodeChef</h3>
                         <span className="ach-badge">3-Star</span>
                     </div>
-                    <p className="ach-stat">Max Rating: 1769</p>
+                    <p className="ach-stat">Max Rating: 1795</p>
                     <div className="ach-link">View Profile &rarr;</div>
                 </a>
 
@@ -139,7 +145,7 @@ export const Achievements = () => {
                         <h3>LeetCode</h3>
                         <span className="ach-badge">Knight</span>
                     </div>
-                    <p className="ach-stat">Max Rating: 2057</p>
+                    <p className="ach-stat">Max Rating: 2059</p>
                     <div className="ach-link">View Profile &rarr;</div>
                 </a>
 
@@ -156,7 +162,7 @@ export const Achievements = () => {
                         <h3>Coding Profiles</h3>
                         <span className="ach-badge"></span>
                     </div>
-                    <p className="ach-stat">2800+ Problems Solved</p>
+                    <p className="ach-stat">3000+ Problems Solved</p>
                     <div className="ach-link">View Profile &rarr;</div>
                 </a>
 

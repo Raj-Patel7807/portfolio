@@ -9,8 +9,7 @@ export const Responsibility = () => {
             organization: "Programming Club, DAU",
             duration: "April 2026 - Present",
             points: [
-                "Assisting in leading the Programming Club and organizing various competitive programming contests (intra-college).",
-                "Helping juniors through sessions and post-contest discussions; contributing to building an active competitive programming community.",
+                "Assisting in leading the Programming Club, organizing Pre-Placement Tests and CP contests.",
             ],
         },
         {
@@ -18,8 +17,7 @@ export const Responsibility = () => {
             organization: "Programming Club, DAU",
             duration: "August 2025 - April 2026",
             points: [
-                "Conducted sessions for juniors, led post-contest discussions, and organized intra-college programming contests, including problem setting and testing.",
-                "Coordinated 2 events as team lead at i.Fest’25 and Synapse’25 (institute’s technical and techno-cultural fests).",
+                "Conducted CP sessions and post-contest discussions, organized 5+ intra-college contests, set and tested problems for 10+ contests; also coordinated events as team lead at i.Fest’25 and Synapse’25.",
             ],
         },
     ];
