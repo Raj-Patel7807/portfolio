@@ -126,9 +126,9 @@ export const Achievements = () => {
                 >
                     <div className="ach-header">
                         <h3>CodeChef</h3>
-                        <span className="ach-badge">3-Star</span>
+                        <span className="ach-badge">4-Star</span>
                     </div>
-                    <p className="ach-stat">Max Rating: 1795</p>
+                    <p className="ach-stat">Max Rating: 1816</p>
                     <div className="ach-link">View Profile &rarr;</div>
                 </a>
 
