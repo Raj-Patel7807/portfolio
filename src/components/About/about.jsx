@@ -35,7 +35,7 @@ export const About = () => {
                         <strong>Expert on Codeforces (max rating 1642)</strong>{" "}
                         ,{" "}
                         <strong>
-                            3-star rated on CodeChef (max rating 1795)
+                            4-star rated on CodeChef (max rating 1817)
                         </strong>
                         and a{" "}
                         <strong>Knight on LeetCode (max rating 2059)</strong>.
