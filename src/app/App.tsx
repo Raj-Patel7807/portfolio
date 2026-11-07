@@ -11,22 +11,23 @@ import {
     TechStackSection,
     ContactSection,
 } from '@/sections';
-import { navigationConfig, heroConfig, marqueeConfig } from '@/data/hero';
-import { projectsData, projectsSectionConfig } from '@/data/projects';
 import {
+    navigationConfig,
+    heroConfig,
+    marqueeConfig,
+    projectsData,
+    projectsSectionConfig,
     metricAchievementsData,
     competitiveProfilesData,
     milestonesData,
     achievementsSectionConfig,
-} from '@/data/achievements';
-import {
     aboutConfig,
     currentlyBuildingData,
     experienceData,
     skillsData,
     contactConfig,
     footerConfig,
-} from '@/data/sections';
+} from '@/data';
 
 export const App: React.FC = () => {
     return (
