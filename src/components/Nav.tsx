@@ -13,7 +13,7 @@ export function Nav() {
     return (
         <nav className="nav" aria-label="Main">
             <a href="#top" className="nav__logo">
-                shane.
+                raj.
             </a>
             <div className="nav__links">
                 {links.map(l => (

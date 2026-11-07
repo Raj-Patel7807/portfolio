@@ -9,30 +9,30 @@ export const proof = {
 };
 
 export const codeforces = {
-    handle: 'Raj_Patel7807',
-    url: 'https://codeforces.com/profile/Raj_Patel7807',
-    note: 'Active Contestant',
-    scale: 3000,
-    fallback: { rating: 1400, rank: 'specialist', maxRating: 1400 },
+    handle: 'Raj_Patel_7807',
+    url: 'https://codeforces.com/profile/Raj_Patel_7807',
+    note: 'Top 1000 in india',
+    scale: 4000,
+    fallback: { rating: 1642, rank: 'expert', maxRating: 1642 },
 };
 
 export const platforms = [
     {
         platform: 'LeetCode',
-        handle: 'Raj-Patel7807',
-        href: 'https://leetcode.com/u/Raj-Patel7807/',
+        handle: 'Raj_Patel_7807',
+        href: 'https://leetcode.com/u/Raj_Patel_7807/',
         rating: 2059,
-        scale: 3200,
+        scale: 3500,
         title: 'Knight',
-        note: 'Algorithmic Problem Solving',
+        note: 'Top 1.8% globally',
     },
     {
         platform: 'CodeChef',
-        handle: 'raj_patel7807',
-        href: 'https://www.codechef.com/users/raj_patel7807',
-        rating: 1650,
-        scale: 3000,
-        title: '3 Star',
+        handle: 'raj_patel_7807',
+        href: 'https://www.codechef.com/users/raj_patel_7807',
+        rating: 1817,
+        scale: 3400,
+        title: '4 Star',
         note: 'Contestant',
     },
 ];
@@ -47,34 +47,18 @@ export type Milestone = {
     post?: { url: string; image?: string };
 };
 
-export const timeline: { year: string; items: Milestone[] }[] = [
-    {
-        year: '2026',
-        items: [
-            {
-                kind: 'Academics',
-                title: 'DAU (formerly DA-IICT)',
-                detail: 'B.Tech in Information and Communication Technology.',
-                stat: 'DAU',
-                of: 'Gandhinagar',
-            },
-        ],
-    },
-    {
-        year: 'Competitive',
-        items: [
-            {
-                kind: 'Algorithms',
-                title: 'Competitive Programming Milestones',
-                detail: 'Active problem solver across Codeforces, LeetCode, and CodeChef.',
-                stat: '1K+',
-                of: 'problems solved',
-            },
-        ],
-    },
-];
+export type RoleItem = {
+    org: string;
+    role: string;
+    when: string;
+    where: string;
+    bullets: string[];
+};
 
-export const experience = [
+export const timeline: { year: string; items: Milestone[] }[] = [];
+
+// Technical Work & Professional Experience
+export const experience: RoleItem[] = [
     {
         org: 'Software Development & Systems',
         role: 'Full-Stack Developer & Systems Builder',
@@ -84,6 +68,30 @@ export const experience = [
             'Architecting modern frontend applications with React 19, TypeScript, and fluid CSS.',
             'Building performant backend services and database systems with PostgreSQL.',
             'Practicing algorithmic problem solving and clean software craft.',
+        ],
+    },
+];
+
+// Positions of Responsibility (Leadership, Clubs, TA & Community Mentoring)
+export const positionsOfResponsibility: RoleItem[] = [
+    {
+        org: 'Programming Club',
+        role: 'Deputy Convener: Club Leadership, Mentoring, Event Organization & Problem Setting',
+        when: 'April 2026 - Present',
+        where: 'DA-IICT',
+        bullets: [
+            'Assisting in leading the Programming Club, organizing Pre-Placement Tests for 450+ students and the club’s flagship event with 120+ participants. Mentoring juniors through sessions and post-contest discussions.',
+            'Organized 10+ intra-college contests (80+ participants), handling problem setting, testing.',
+        ],
+    },
+    {
+        org: 'ACM India Summer School on CP',
+        role: 'Teaching Assistant: Mentor, Organizer',
+        when: 'June 2026',
+        where: 'DA-IICT',
+        bullets: [
+            'Assisted Prof. Rachit Chhaya and Anup Kalbalia (former CEO of CodeChef) in 10+ sessions and 10+ contests.',
+            'Mentored 50+ students by resolving CP and coding doubts during lectures, practice sessions, and contests.',
         ],
     },
 ];
