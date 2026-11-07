@@ -1,45 +1,32 @@
-/* Interactive Engineering Filter Deck */
-.stack__control-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding-bottom: 24px;
-    border-bottom: 1.5px solid var(--rule);
-    margin-bottom: 32px;
-}
-
-.stack__tabs {
+/* Minimal Filter Header */
+.stack__filter-bar {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin-bottom: 36px;
 }
 
 .stack__tab {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 16px;
+    padding: 7px 16px;
     border-radius: 999px;
     border: 1.5px solid var(--line);
     background: transparent;
     color: var(--mute);
     font-family: var(--font-mono);
     font-size: 13px;
-    font-weight: 500;
     cursor: pointer;
     transition:
-        border-color 0.2s var(--ease-out),
-        color 0.2s var(--ease-out),
-        background 0.2s var(--ease-out),
-        transform 0.2s;
+        border-color 0.25s var(--ease-out),
+        color 0.25s var(--ease-out),
+        background 0.25s var(--ease-out);
 }
 
 .stack__tab:hover {
     border-color: var(--fg);
     color: var(--fg);
-    transform: translateY(-1px);
 }
 
 .stack__tab.is-active {
@@ -50,216 +37,81 @@
 
 .stack__tab-count {
     font-size: 11px;
-    padding: 2px 6px;
-    border-radius: 999px;
-    background: rgba(125, 125, 125, 0.15);
+    opacity: 0.65;
 }
 
-.is-active .stack__tab-count {
-    background: rgba(255, 255, 255, 0.2);
-    color: inherit;
-}
-
-:root[data-theme='light'] .is-active .stack__tab-count {
-    background: rgba(255, 255, 255, 0.25);
-    color: #fff;
-}
-
-/* CLI style filter search input */
-.stack__search {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 14px;
-    border: 1.5px solid var(--line);
-    border-radius: 999px;
-    background: var(--card);
-    font-family: var(--font-mono);
-    font-size: 13px;
-    transition: border-color 0.2s;
-}
-
-.stack__search:focus-within {
-    border-color: var(--ink);
-}
-
-.stack__search-prompt {
-    color: var(--ink);
-    font-weight: 700;
-    user-select: none;
-}
-
-.stack__search-input {
-    border: none;
-    outline: none;
-    background: transparent;
-    color: var(--fg);
-    font-family: var(--font-mono);
-    font-size: 13px;
-    width: 130px;
-}
-
-.stack__search-input::placeholder {
-    color: var(--mute);
-    opacity: 0.6;
-}
-
-.stack__search-clear {
-    border: none;
-    background: transparent;
-    color: var(--mute);
-    cursor: pointer;
-    padding: 0 4px;
-    font-size: 12px;
-}
-
-.stack__search-clear:hover {
-    color: var(--fg);
-}
-
-/* Matrix Engineering Grid */
-.stack__matrix {
+/* Minimal Editorial Grid (borders blend seamlessly with portfolio layout) */
+.stack__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
 }
 
-.stack__tile {
-    position: relative;
-    padding: 20px;
-    border: 1.5px solid var(--line);
-    background: var(--card);
+.stack__item {
+    padding: 24px 20px;
+    border-bottom: 1.5px solid var(--rule);
+    border-right: 1.5px solid var(--rule);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 128px;
-    border-radius: 4px;
+    min-height: 110px;
     transition:
-        border-color 0.3s var(--ease-out),
-        transform 0.3s var(--ease-out),
-        box-shadow 0.3s var(--ease-out);
-    will-change: transform;
+        background 0.3s var(--ease-out),
+        padding-left 0.3s var(--ease-out);
 }
 
-.stack__tile:hover {
-    border-color: var(--ink);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+.stack__item:hover {
+    background: var(--bg2);
+    padding-left: 26px;
 }
 
-:root[data-theme='light'] .stack__tile:hover {
-    box-shadow: 0 12px 28px rgba(109, 63, 224, 0.1);
-}
-
-.stack__tile-header {
+.stack__item-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: 11.5px;
     color: var(--mute);
 }
 
-.stack__tile-code {
-    letter-spacing: 0.08em;
+.stack__item-num {
     opacity: 0.7;
 }
 
-.stack__tile-tag {
-    padding: 2px 7px;
-    border-radius: 999px;
-    background: var(--bg2);
+.stack__item-tag {
     font-size: 10.5px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
-.stack__tile-body {
-    margin: 14px 0 10px;
-}
-
-.stack__tile-name {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 22px;
-    letter-spacing: -0.03em;
-    color: var(--fg);
-    transition: color 0.25s;
-}
-
-.stack__tile:hover .stack__tile-name {
-    color: var(--ink);
-}
-
-.stack__tile-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--mute);
-}
-
-.stack__tile-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-}
-
-.stack__tile-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #22c55e;
-    box-shadow: 0 0 6px #22c55e;
-}
-
-.stack__tile-bracket {
-    opacity: 0.4;
-    transition:
-        opacity 0.2s,
-        transform 0.2s;
-}
-
-.stack__tile:hover .stack__tile-bracket {
-    opacity: 1;
     color: var(--ink);
-    transform: scale(1.15);
+    opacity: 0.85;
 }
 
-.stack__empty {
-    grid-column: 1 / -1;
-    padding: 60px 20px;
-    text-align: center;
+.stack__item-name {
+    margin: 12px 0 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(20px, 2.2vw, 26px);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--fg);
+    transition: transform 0.3s var(--ease-out);
+}
+
+.stack__item:hover .stack__item-name {
+    transform: translateX(4px);
 }
 
 @media (max-width: 640px) {
-    .stack__control-bar {
-        flex-direction: column;
-        align-items: stretch;
+    .stack__grid {
+        grid-template-columns: 1fr;
     }
 
-    .stack__search {
-        width: 100%;
+    .stack__item {
+        border-right: none;
+        padding: 20px 0;
     }
 
-    .stack__search-input {
-        width: 100%;
-    }
-
-    .stack__matrix {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 12px;
-    }
-
-    .stack__tile {
-        padding: 16px;
-        min-height: 114px;
-    }
-
-    .stack__tile-name {
-        font-size: 19px;
+    .stack__item:hover {
+        padding-left: 12px;
+        background: transparent;
     }
 }
