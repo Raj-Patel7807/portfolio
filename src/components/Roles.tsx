@@ -25,9 +25,9 @@ export function Roles() {
                                     <div className="roles__role">{formatRichText(e.role)}</div>
                                 </div>
                                 <ul className="arrow-list roles__bullets">
-                                    {e.bullets.map(b => (
-                                        <li key={b} className="arrow-row">
-                                            {formatRichText(b)}
+                                    {e.bullets.map((b, bIdx) => (
+                                        <li key={bIdx} className="arrow-row">
+                                            <span className="arrow-text">{formatRichText(b)}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -56,9 +56,9 @@ export function Roles() {
                                     <div className="roles__role">{formatRichText(e.role)}</div>
                                 </div>
                                 <ul className="arrow-list roles__bullets">
-                                    {e.bullets.map(b => (
-                                        <li key={b} className="arrow-row">
-                                            {formatRichText(b)}
+                                    {e.bullets.map((b, bIdx) => (
+                                        <li key={bIdx} className="arrow-row">
+                                            <span className="arrow-text">{formatRichText(b)}</span>
                                         </li>
                                     ))}
                                 </ul>

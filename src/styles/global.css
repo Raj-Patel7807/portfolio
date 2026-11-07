@@ -262,11 +262,17 @@ img {
     display: grid;
     grid-template-columns: 22px 1fr;
     gap: 10px;
+    align-items: baseline;
 }
 
 .arrow-row::before {
     content: '→';
     font-family: var(--font-mono);
+}
+
+.arrow-text {
+    min-width: 0;
+    display: inline;
 }
 
 @media (prefers-reduced-motion: reduce) {

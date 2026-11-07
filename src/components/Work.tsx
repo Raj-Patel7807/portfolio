@@ -71,9 +71,11 @@ export function Work() {
                                             <div className="work__block">
                                                 <h4 className="work__label">What it does</h4>
                                                 <ul className="arrow-list work__features">
-                                                    {p.features.map(f => (
-                                                        <li key={f} className="arrow-row">
-                                                            {formatRichText(f)}
+                                                    {p.features.map((f, fIdx) => (
+                                                        <li key={fIdx} className="arrow-row">
+                                                            <span className="arrow-text">
+                                                                {formatRichText(f)}
+                                                            </span>
                                                         </li>
                                                     ))}
                                                 </ul>
