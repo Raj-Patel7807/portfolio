@@ -1,8 +1,14 @@
 import React from 'react';
 import { Navbar, Container, Divider } from '@/components';
-import { Hero, Marquee, ProjectsSection } from '@/sections';
+import { Hero, Marquee, ProjectsSection, AchievementsSection } from '@/sections';
 import { navigationConfig, heroConfig, marqueeConfig } from '@/data/hero';
 import { projectsData, projectsSectionConfig } from '@/data/projects';
+import {
+    metricAchievementsData,
+    competitiveProfilesData,
+    milestonesData,
+    achievementsSectionConfig,
+} from '@/data/achievements';
 
 export const App: React.FC = () => {
     return (
@@ -44,27 +50,13 @@ export const App: React.FC = () => {
 
                 <Divider spacing="none" />
 
-                {/* Anchor Achievements placeholder section */}
-                <section id="achievements" style={{ padding: 'var(--section-gap) 0' }}>
-                    <Container>
-                        <span
-                            style={{
-                                fontFamily: 'var(--font-mono)',
-                                fontSize: 'var(--font-size-xs)',
-                                color: 'var(--color-accent-highlight)',
-                            }}
-                        >
-                            SECTION 03
-                        </span>
-                        <h2 style={{ marginTop: 'var(--space-2)' }}>
-                            Achievements & Competitive Programming
-                        </h2>
-                        <p style={{ marginTop: 'var(--space-2)' }}>
-                            Competitive programming profiles and metrics will be structured in Phase
-                            5.
-                        </p>
-                    </Container>
-                </section>
+                {/* Editorial Achievements & Competitive Programming System */}
+                <AchievementsSection
+                    config={achievementsSectionConfig}
+                    metrics={metricAchievementsData}
+                    profiles={competitiveProfilesData}
+                    milestones={milestonesData}
+                />
 
                 <Divider spacing="none" />
 
