@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { skillCategories, skills } from '../data/content';
 import { DisplayHeading } from './DisplayHeading';
+import { TechIcon } from './TechIcon';
 import './Stack.css';
 
 export function Stack() {
@@ -48,17 +49,14 @@ export function Stack() {
                 })}
             </div>
 
-            {/* Clean Editorial Wireframe Grid */}
+            {/* Compact Minimal Logo Grid */}
             <div className="rule-top stack__grid" data-reveal="">
-                {filteredSkills.map((tech, idx) => (
+                {filteredSkills.map(tech => (
                     <div key={tech.name} className="stack__item" data-cursor={tech.category}>
-                        <div className="stack__item-meta">
-                            <span className="stack__item-num">
-                                {String(idx + 1).padStart(2, '0')}
-                            </span>
-                            <span className="stack__item-tag">{tech.category}</span>
+                        <div className="stack__icon-wrap">
+                            <TechIcon name={tech.name} className="stack__icon" />
                         </div>
-                        <h3 className="stack__item-name">{tech.name}</h3>
+                        <span className="stack__item-name">{tech.name}</span>
                     </div>
                 ))}
             </div>
