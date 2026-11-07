@@ -9,9 +9,9 @@ An editorial developer portfolio built with React 19, TypeScript, and Vite. Craf
 ## Current Status
 
 - **Phase 0 (Repository Cleanup, Git Audit & Documentation Setup)**: **Completed**
-  - Legacy implementations, conflicting dependencies, and duplicate assets cleaned.
-  - Media assets and resume consolidated in `public/`.
-  - Architecture, design specifications, and implementation prompts established in `docs/`.
+    - Legacy implementations, conflicting dependencies, and duplicate assets cleaned.
+    - Media assets and resume consolidated in `public/`.
+    - Architecture, design specifications, and implementation prompts established in `docs/`.
 - **Sprint 1 (TypeScript & Vite Foundation)**: **Ready to implement**
 
 ---

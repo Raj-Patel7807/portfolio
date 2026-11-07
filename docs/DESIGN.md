@@ -5,6 +5,7 @@
 The portfolio is designed as an **editorial developer portfolio**. Rather than a template-heavy, generic developer site filled with neon badges and high-saturation cards, this aesthetic draws inspiration from high-end technical journals, architectural monographs, and contemporary typography-first publications.
 
 ### Core Principles
+
 - **Typography-Led Hierarchy**: Large, confident headings with refined leading and proportional letter-spacing.
 - **Generous & Intentional Whitespace**: Ample breathing room between sections, drawing focus toward craft, code, and case studies.
 - **Restrained Materiality**: Minimalist borders, delicate hair-thin dividers (`1px`), and subtle background tint shifts instead of heavy drop shadows.
@@ -17,6 +18,7 @@ The portfolio is designed as an **editorial developer portfolio**. Rather than a
 The design system is built around three supported modes: **Light**, **Dark**, and **System** (defaulting to system preference with local storage persistence and zero flicker).
 
 ### Light Theme Palette
+
 - **Canvas / Background**: `#fbfbfb` (Warm alabaster / editorial paper)
 - **Surface / Card**: `#ffffff` (Pure white)
 - **Elevated Surface**: `#f3f4f6` (Subtle off-white)
@@ -29,6 +31,7 @@ The design system is built around three supported modes: **Light**, **Dark**, an
 - **Accent Soft**: `rgba(37, 99, 235, 0.08)`
 
 ### Dark Theme Palette
+
 - **Canvas / Background**: `#0a0b0e` (Deep obsidian)
 - **Surface / Card**: `#111318` (Dark charcoal slate)
 - **Elevated Surface**: `#181b22` (Subtle lifted dark slate)
@@ -49,6 +52,7 @@ The design system is built around three supported modes: **Light**, **Dark**, an
 - **Monospace / Technical Labels**: `JetBrains Mono` or clean monospace stack for timestamps, git hashes, tags, and code elements.
 
 ### Fluid Typography Scale (`clamp()`)
+
 - **Display 1 (Hero Title)**: `clamp(2.75rem, 6vw + 1rem, 5.25rem)`
 - **Heading 1 (Section Title)**: `clamp(2rem, 3.5vw + 0.5rem, 3.25rem)`
 - **Heading 2 (Subsections/Project Titles)**: `clamp(1.35rem, 2vw + 0.5rem, 2rem)`
@@ -72,8 +76,8 @@ The design system is built around three supported modes: **Light**, **Dark**, an
 
 - **Dividers**: Minimalist `1px` lines utilizing `--border-color`.
 - **Buttons**:
-  - *Primary*: Solid contrast fill with tactile active state (`transform: translateY(1px)`).
-  - *Secondary / Ghost*: Clean hairline border with transparent backdrop and subtle hover fill.
+    - _Primary_: Solid contrast fill with tactile active state (`transform: translateY(1px)`).
+    - _Secondary / Ghost_: Clean hairline border with transparent backdrop and subtle hover fill.
 - **Cards & Items**: Editorial rows and grid blocks with subtle border boundaries, generous internal padding, and structured metadata headers.
 - **Tags & Badges**: Monospace or clean micro-sans badges with subtle background tint and hairline border.
 
@@ -102,4 +106,3 @@ The design system is built around three supported modes: **Light**, **Dark**, an
 - Clear `:focus-visible` outlines with high contrast and ring offsets.
 - Semantic HTML elements (`<main>`, `<nav>`, `<header>`, `<article>`, `<section>`, `<footer>`).
 - Screen reader accessible buttons with descriptive `aria-label`s.
-

@@ -3,6 +3,7 @@
 ## 1. Overall Application Architecture
 
 The portfolio application is being rebuilt as a clean, performant, static Single Page Application (SPA) utilizing:
+
 - **React 19**: Modern component architecture using native Hooks.
 - **TypeScript 5 (Strict Mode)**: Full type safety across all data structures, props, services, and hooks.
 - **Vite 6**: Fast bundling, ESM-first development environment, and optimized production builds.
@@ -75,10 +76,10 @@ portfolio/
 
 - **Decoupled Data**: No hardcoded personal or project information inside presentation components. Everything resides in `src/data/*.ts`.
 - **Contracts in `src/types/`**:
-  - `project.ts`: Schemas for featured projects, case studies, and tech stack tags.
-  - `achievement.ts`: Academic achievements, competitive programming profiles, and ratings.
-  - `experience.ts`: Work history, leadership roles, and timelines.
-  - `content.ts`: Site-wide metadata, author details, social links, and status.
+    - `project.ts`: Schemas for featured projects, case studies, and tech stack tags.
+    - `achievement.ts`: Academic achievements, competitive programming profiles, and ratings.
+    - `experience.ts`: Work history, leadership roles, and timelines.
+    - `content.ts`: Site-wide metadata, author details, social links, and status.
 
 ---
 
@@ -86,21 +87,21 @@ portfolio/
 
 - **CSS Variables as Single Source of Truth**: All colors, spaces, typography, and borders are defined as CSS variables in `src/styles/tokens.css` or `src/styles/themes.css`.
 - **Theme Mechanism**:
-  - Controlled via `data-theme="light"` or `data-theme="dark"` attribute set on `<html>` or `<body>`.
-  - Stored in `localStorage` under `portfolio_theme`.
-  - Responds to `window.matchMedia('(prefers-color-scheme: dark)')` when set to `system`.
-  - Zero-flash inline script or CSS default avoids unstyled flash on initial render.
+    - Controlled via `data-theme="light"` or `data-theme="dark"` attribute set on `<html>` or `<body>`.
+    - Stored in `localStorage` under `portfolio_theme`.
+    - Responds to `window.matchMedia('(prefers-color-scheme: dark)')` when set to `system`.
+    - Zero-flash inline script or CSS default avoids unstyled flash on initial render.
 
 ---
 
 ## 6. Service and Hook Responsibilities
 
 - **`src/services/`**:
-  - Pure functions or lightweight modules.
-  - No direct UI side-effects.
-  - Return typed Promises and handle errors gracefully with fallbacks.
+    - Pure functions or lightweight modules.
+    - No direct UI side-effects.
+    - Return typed Promises and handle errors gracefully with fallbacks.
 - **`src/hooks/`**:
-  - Encapsulate browser APIs (e.g., `useTheme`, `useScrollSpy`, `useMediaQuery`, `useReducedMotion`).
+    - Encapsulate browser APIs (e.g., `useTheme`, `useScrollSpy`, `useMediaQuery`, `useReducedMotion`).
 
 ---
 
