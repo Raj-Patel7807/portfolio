@@ -30,11 +30,11 @@ export function Cursor() {
             ring.style.width = ring.style.height = `${size}px`;
             ring.style.margin = `-${size / 2}px 0 0 -${size / 2}px`;
             ring.style.background = big
-                ? 'linear-gradient(135deg, #00f0ff, #8b5cf6)'
+                ? '#ffffff'
                 : m === 'link'
-                  ? 'rgba(0, 240, 255, 0.18)'
+                  ? 'rgba(255, 255, 255, 0.15)'
                   : 'transparent';
-            ring.style.borderColor = big ? 'transparent' : 'rgba(0, 240, 255, 0.8)';
+            ring.style.borderColor = big ? 'transparent' : 'rgba(255, 255, 255, 0.85)';
             label.textContent = big ? m : '';
             label.style.color = big ? '#0b0914' : '#fff';
             label.style.fontWeight = '800';

@@ -47,6 +47,13 @@ export function Hero() {
             <div className="hero__shade" />
 
             <div ref={topRef} className="hero__top">
+                <div className="hero__meta-top" data-reveal="">
+                    <span className="hero__status-badge">
+                        <span className="hero__status-pulse" /> Available for Opportunities
+                    </span>
+                    <span className="hero__role-badge">ICT ’28 · Dhirubhai Ambani University</span>
+                </div>
+
                 <h1 className="hero__name" aria-label={profile.name}>
                     <span aria-hidden="true" className="hero__line">
                         {[...firstName].map((ch, i) => (
