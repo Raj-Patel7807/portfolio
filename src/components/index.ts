@@ -4,6 +4,9 @@ export type { ContainerProps } from './layout/Container';
 export { Navbar } from './layout/Navbar';
 export type { NavbarProps } from './layout/Navbar';
 
+export { Footer } from './layout/Footer';
+export type { FooterProps } from './layout/Footer';
+
 export { Button } from './ui/Button';
 export type { ButtonProps } from './ui/Button';
 

@@ -1,6 +1,16 @@
 import React from 'react';
-import { Navbar, Container, Divider } from '@/components';
-import { Hero, Marquee, ProjectsSection, AchievementsSection } from '@/sections';
+import { Navbar, Footer } from '@/components';
+import {
+    Hero,
+    Marquee,
+    AboutSection,
+    ProjectsSection,
+    AchievementsSection,
+    CurrentlyBuildingSection,
+    ExperienceSection,
+    TechStackSection,
+    ContactSection,
+} from '@/sections';
 import { navigationConfig, heroConfig, marqueeConfig } from '@/data/hero';
 import { projectsData, projectsSectionConfig } from '@/data/projects';
 import {
@@ -9,6 +19,14 @@ import {
     milestonesData,
     achievementsSectionConfig,
 } from '@/data/achievements';
+import {
+    aboutConfig,
+    currentlyBuildingData,
+    experienceData,
+    skillsData,
+    contactConfig,
+    footerConfig,
+} from '@/data/sections';
 
 export const App: React.FC = () => {
     return (
@@ -23,34 +41,13 @@ export const App: React.FC = () => {
                 {/* Seamless Continuous Marquee */}
                 <Marquee config={marqueeConfig} />
 
-                {/* Anchor About placeholder section */}
-                <section id="about" style={{ padding: 'var(--section-gap) 0' }}>
-                    <Container>
-                        <span
-                            style={{
-                                fontFamily: 'var(--font-mono)',
-                                fontSize: 'var(--font-size-xs)',
-                                color: 'var(--color-accent-highlight)',
-                            }}
-                        >
-                            SECTION 01
-                        </span>
-                        <h2 style={{ marginTop: 'var(--space-2)' }}>About</h2>
-                        <p style={{ marginTop: 'var(--space-2)' }}>
-                            Editorial narrative and biographical details will be rendered in
-                            subsequent phases.
-                        </p>
-                    </Container>
-                </section>
+                {/* About Section */}
+                <AboutSection config={aboutConfig} />
 
-                <Divider spacing="none" />
-
-                {/* Editorial Projects & Case Studies System */}
+                {/* Featured Case Studies & Systems */}
                 <ProjectsSection config={projectsSectionConfig} projects={projectsData} />
 
-                <Divider spacing="none" />
-
-                {/* Editorial Achievements & Competitive Programming System */}
+                {/* Achievements & Competitive Programming */}
                 <AchievementsSection
                     config={achievementsSectionConfig}
                     metrics={metricAchievementsData}
@@ -58,68 +55,21 @@ export const App: React.FC = () => {
                     milestones={milestonesData}
                 />
 
-                <Divider spacing="none" />
+                {/* Currently Building */}
+                <CurrentlyBuildingSection items={currentlyBuildingData} />
 
-                {/* Anchor Experience placeholder section */}
-                <section id="experience" style={{ padding: 'var(--section-gap) 0' }}>
-                    <Container>
-                        <span
-                            style={{
-                                fontFamily: 'var(--font-mono)',
-                                fontSize: 'var(--font-size-xs)',
-                                color: 'var(--color-accent-highlight)',
-                            }}
-                        >
-                            SECTION 04
-                        </span>
-                        <h2 style={{ marginTop: 'var(--space-2)' }}>Experience</h2>
-                        <p style={{ marginTop: 'var(--space-2)' }}>
-                            Professional journey and leadership timeline will be structured in Phase
-                            6.
-                        </p>
-                    </Container>
-                </section>
+                {/* Experience & Leadership */}
+                <ExperienceSection experiences={experienceData} />
 
-                <Divider spacing="none" />
+                {/* Technical Stack */}
+                <TechStackSection categories={skillsData} />
 
-                {/* Anchor Contact placeholder section */}
-                <section id="contact" style={{ padding: 'var(--section-gap) 0' }}>
-                    <Container>
-                        <span
-                            style={{
-                                fontFamily: 'var(--font-mono)',
-                                fontSize: 'var(--font-size-xs)',
-                                color: 'var(--color-accent-highlight)',
-                            }}
-                        >
-                            SECTION 05
-                        </span>
-                        <h2 style={{ marginTop: 'var(--space-2)' }}>Contact</h2>
-                        <p style={{ marginTop: 'var(--space-2)' }}>
-                            Inquiries and direct channels will be connected in Phase 6.
-                        </p>
-                    </Container>
-                </section>
+                {/* Contact Section */}
+                <ContactSection config={contactConfig} />
             </main>
 
-            <footer
-                style={{
-                    borderTop: '1px solid var(--color-border)',
-                    padding: 'var(--space-8) 0',
-                    backgroundColor: 'var(--color-surface)',
-                }}
-            >
-                <Container>
-                    <p
-                        style={{
-                            fontSize: 'var(--font-size-sm)',
-                            color: 'var(--color-text-tertiary)',
-                        }}
-                    >
-                        © {new Date().getFullYear()} {navigationConfig.name}. All rights reserved.
-                    </p>
-                </Container>
-            </footer>
+            {/* Editorial Footer */}
+            <Footer config={footerConfig} />
         </div>
     );
 };

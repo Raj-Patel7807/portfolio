@@ -15,3 +15,18 @@ export { MetricCard } from './Achievements/MetricCard';
 export type { MetricCardProps } from './Achievements/MetricCard';
 export { CompetitiveProfileCard } from './Achievements/CompetitiveProfileCard';
 export type { CompetitiveProfileCardProps } from './Achievements/CompetitiveProfileCard';
+
+export { AboutSection } from './About/AboutSection';
+export type { AboutSectionProps } from './About/AboutSection';
+
+export { CurrentlyBuildingSection } from './CurrentlyBuilding/CurrentlyBuildingSection';
+export type { CurrentlyBuildingSectionProps } from './CurrentlyBuilding/CurrentlyBuildingSection';
+
+export { ExperienceSection } from './Experience/ExperienceSection';
+export type { ExperienceSectionProps } from './Experience/ExperienceSection';
+
+export { TechStackSection } from './TechStack/TechStackSection';
+export type { TechStackSectionProps } from './TechStack/TechStackSection';
+
+export { ContactSection } from './Contact/ContactSection';
+export type { ContactSectionProps } from './Contact/ContactSection';
