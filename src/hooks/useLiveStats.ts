@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { codeforces, featuredRepos, profile } from '../data/content';
 
-export type CfUser = { rating: number; maxRating: number; rank: string };
+export type CfUser = { rating: number; maxRating: number; rank: string; maxRank: string };
 export type RepoCard = {
     name: string;
     desc: string;
@@ -89,6 +89,7 @@ export function useLiveStats() {
                         rating: u.rating,
                         maxRating: u.maxRating ?? u.rating,
                         rank: u.rank ?? '',
+                        maxRank: u.maxRank ?? '',
                     });
                 }
             })

@@ -13,7 +13,7 @@ export const codeforces = {
     url: 'https://codeforces.com/profile/Raj_Patel_7807',
     note: 'Top 1000 in india',
     scale: 4000,
-    fallback: { rating: 1642, rank: 'expert', maxRating: 1642 },
+    fallback: { rating: 1642, rank: 'expert', maxRating: 1642, maxRank: 'expert' },
 };
 
 export const platforms = [
@@ -76,12 +76,14 @@ export const experience: RoleItem[] = [
 export const positionsOfResponsibility: RoleItem[] = [
     {
         org: 'Programming Club',
-        role: 'Deputy Convener: Club Leadership, Mentoring, Event Organization & Problem Setting',
+        role: 'Deputy Convener: Club Leadership, Mentoring, Problem Setting',
         when: 'April 2026 - Present',
         where: 'DA-IICT',
         bullets: [
-            'Assisting in leading the Programming Club, organizing Pre-Placement Tests for 450+ students and the club’s flagship event with 120+ participants. Mentoring juniors through sessions and post-contest discussions.',
-            'Organized 10+ intra-college contests (80+ participants), handling problem setting, testing.',
+            '**Assisting in leading the Programming Club**, organizing **Pre-Placement Tests** for 450+ students and the club’s flagship event with 120+ participants.',
+            'Organized **10+ intra-college contests** (80+ participants) and programming events at college tech-fests (100+ participants), handling **problem setting, testing**.',
+            '**Mentoring juniors** through sessions and post-contest discussions.',
+            '**Previously served as Batch Representative (August 2025 – March 2026).**',
         ],
     },
     {
@@ -90,26 +92,62 @@ export const positionsOfResponsibility: RoleItem[] = [
         when: 'June 2026',
         where: 'DA-IICT',
         bullets: [
-            'Assisted Prof. Rachit Chhaya and Anup Kalbalia (former CEO of CodeChef) in 10+ sessions and 10+ contests.',
-            'Mentored 50+ students by resolving CP and coding doubts during lectures, practice sessions, and contests.',
+            'Assisted **Prof. Rachit Chhaya** and **Anup Kalbalia (former CEO of CodeChef)** in 10+ sessions and 10+ contests.',
+            '**Mentored** 50+ students by resolving CP and coding doubts during lectures, practice sessions, and contests.',
         ],
     },
 ];
 
+// Flat list maintained for backward compatibility
+export type SkillCategory = {
+    category: string;
+    items: string[];
+};
+
+export const skillCategories: SkillCategory[] = [
+    {
+        category: 'Languages',
+        items: ['Java', 'C++', 'Python', 'C', 'TypeScript', 'SQL'],
+    },
+    {
+        category: 'Backend & Frameworks',
+        items: ['Spring Boot', 'Spring Security', 'FastAPI', 'LangGraph'],
+    },
+    {
+        category: 'Frontend & UI',
+        items: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'HTML5 Canvas'],
+    },
+    {
+        category: 'Databases & Cloud',
+        items: ['PostgreSQL', 'Supabase', 'Cloudflare', 'Redis'],
+    },
+    {
+        category: 'DevOps & Tools',
+        items: ['Git', 'GitHub', 'CI/CD', 'Docker', 'Linux'],
+    },
+];
+
+// Flat list maintained for backward compatibility
 export const skills = [
+    'Java',
     'C++',
-    'TypeScript',
-    'JavaScript',
     'Python',
+    'C',
+    'TypeScript',
     'SQL',
-    'React 19',
-    'Node.js',
+    'Spring Boot',
+    'Spring Security',
     'PostgreSQL',
-    'Vite',
+    'React',
+    'Tailwind CSS',
+    'FastAPI',
+    'Supabase',
+    'LangGraph',
     'Git',
+    'GitHub',
+    'CI/CD',
     'Docker',
-    'Data Structures & Algorithms',
-    'System Design',
+    'Cloudflare',
 ];
 
 export const featuredRepos = [
