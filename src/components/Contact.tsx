@@ -96,7 +96,7 @@ export function Contact() {
             </span>
 
             <div aria-hidden="true" className="contact__wordmark">
-                shane.
+                Raj 7807.
             </div>
 
             <footer className="contact__footer">

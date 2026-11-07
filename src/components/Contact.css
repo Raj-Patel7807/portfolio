@@ -133,9 +133,9 @@
     white-space: nowrap;
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: clamp(90px, 30vw, 520px);
+    font-size: clamp(90px, 27vw, 520px);
     letter-spacing: -0.07em;
-    line-height: 0.74;
+    line-height: 1;
     color: transparent;
     -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.7);
 }

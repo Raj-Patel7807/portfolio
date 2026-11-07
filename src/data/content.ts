@@ -6,8 +6,7 @@ export const profile = {
     email: 'rajpatel7807@gmail.com',
     resume: '/resume.pdf',
     city: 'Gandhinagar',
-    pitch:
-        'I build backend systems, scalable web applications and solve algorithmic challenges. Student at DAU (formerly DA-IICT).',
+    pitch: 'I build backend systems, scalable web applications and solve algorithmic challenges. Student at DAU (formerly DA-IICT).',
     portrait: '/images/Raj.png' as string | undefined,
     github: { user: 'Raj-Patel7807', url: 'https://github.com/Raj-Patel7807' },
     linkedin: 'https://www.linkedin.com/in/raj-patel7807',
@@ -61,12 +60,9 @@ export const projects: Project[] = [
             'Role-based access for students, educators, and administrators.',
             'Real-time announcements and notification boards.',
         ],
-        build:
-            'Full-stack architecture built with React, TypeScript, Node.js backend, and PostgreSQL database with optimized queries and role security.',
+        build: 'Full-stack architecture built with React, TypeScript, Node.js backend, and PostgreSQL database with optimized queries and role security.',
         stack: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Express', 'Vite'],
-        links: [
-            { label: 'Source', href: 'https://github.com/Raj-Patel7807' },
-        ],
+        links: [{ label: 'Source', href: 'https://github.com/Raj-Patel7807' }],
         image: '/images/Education_Portal.png',
     },
     {
@@ -82,12 +78,9 @@ export const projects: Project[] = [
             'Custom spatial grid collision detection.',
             'Local storage high-score persistence and keyboard/touch navigation.',
         ],
-        build:
-            'Zero-dependency canvas rendering with modular entity-component logic, optimizing draw calls and memory allocations.',
+        build: 'Zero-dependency canvas rendering with modular entity-component logic, optimizing draw calls and memory allocations.',
         stack: ['JavaScript', 'HTML5 Canvas', 'CSS3', 'Algorithms'],
-        links: [
-            { label: 'Source', href: 'https://github.com/Raj-Patel7807' },
-        ],
+        links: [{ label: 'Source', href: 'https://github.com/Raj-Patel7807' }],
         image: '/images/Snack_Game.png',
     },
     {
@@ -103,12 +96,9 @@ export const projects: Project[] = [
             'Ghost piece drop projection and hold-queue mechanic.',
             'Progressive speed curve and multi-line clear combo multiplier.',
         ],
-        build:
-            'Implemented with immutable board state transformations, discrete coordinate grids, and efficient line-clearing sweeps.',
+        build: 'Implemented with immutable board state transformations, discrete coordinate grids, and efficient line-clearing sweeps.',
         stack: ['JavaScript', 'HTML5 Canvas', 'Matrix Math', 'CSS3'],
-        links: [
-            { label: 'Source', href: 'https://github.com/Raj-Patel7807' },
-        ],
+        links: [{ label: 'Source', href: 'https://github.com/Raj-Patel7807' }],
         image: '/images/Tetris_Game.png',
     },
 ];
@@ -231,7 +221,9 @@ export const githubFallback = { publicRepos: 12, followers: 10 };
 
 export const showGallery = false;
 
-export const gallery: { cap: string; width: string; tilt: string; image?: string }[] = [];
+export type GalleryItem = { cap: string; width: string; tilt: string; image?: string };
+
+export const gallery: GalleryItem[] = [];
 
 export const about = {
     headline: 'Hi, I’m Raj.',
