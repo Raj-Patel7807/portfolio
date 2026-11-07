@@ -1,58 +1,144 @@
 import React from 'react';
-import { Container, Button, TextLink, Divider, SectionLabel, ThemeToggle } from '@/components';
-import { useTheme } from '@/hooks/useTheme';
+import { Navbar, Container, Divider } from '@/components';
+import { Hero, Marquee } from '@/sections';
+import { navigationConfig, heroConfig, marqueeConfig } from '@/data/hero';
 
 export const App: React.FC = () => {
-    const { theme, resolvedTheme } = useTheme();
-
     return (
-        <div style={{ minHeight: '100vh', padding: 'var(--space-8) 0' }}>
-            <Container>
-                <header
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        marginBottom: 'var(--space-12)',
-                    }}
-                >
-                    <div>
-                        <SectionLabel number="00" label="Editorial Foundation" />
-                        <h1>Raj Patel</h1>
-                        <p>Design System & Theme Architecture Active</p>
-                    </div>
-                    <ThemeToggle />
-                </header>
+        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+            {/* Editorial Navigation */}
+            <Navbar config={navigationConfig} />
 
-                <Divider spacing="md" />
+            <main style={{ flex: 1 }}>
+                {/* Editorial Hero Section */}
+                <Hero config={heroConfig} />
 
-                <section style={{ marginBottom: 'var(--space-12)' }}>
-                    <SectionLabel number="01" label="Theme Status" />
-                    <h2>
-                        Current Mode: {theme} ({resolvedTheme})
-                    </h2>
-                    <p style={{ margin: 'var(--space-4) 0' }}>
-                        Typography scale, responsive clamps, CSS variables, and zero-runtime tokens
-                        are functioning.
-                    </p>
-                    <div style={{ display: 'flex', gap: 'var(--space-4)', flexWrap: 'wrap' }}>
-                        <Button variant="primary">Primary Action</Button>
-                        <Button variant="secondary">Secondary Action</Button>
-                        <Button variant="ghost">Ghost Action</Button>
-                    </div>
+                {/* Seamless Continuous Marquee */}
+                <Marquee config={marqueeConfig} />
+
+                {/* Anchor placeholder sections for smooth navigation target preview */}
+                <section id="about" style={{ padding: 'var(--section-gap) 0' }}>
+                    <Container>
+                        <span
+                            style={{
+                                fontFamily: 'var(--font-mono)',
+                                fontSize: 'var(--font-size-xs)',
+                                color: 'var(--color-accent-highlight)',
+                            }}
+                        >
+                            SECTION 02
+                        </span>
+                        <h2 style={{ marginTop: 'var(--space-2)' }}>About</h2>
+                        <p style={{ marginTop: 'var(--space-2)' }}>
+                            Editorial narrative and biographical details will be rendered in
+                            subsequent phases.
+                        </p>
+                    </Container>
                 </section>
 
-                <Divider spacing="md" />
+                <Divider spacing="none" />
 
-                <footer>
-                    <p>
-                        Explore{' '}
-                        <TextLink href="#editorial" isExternal>
-                            Editorial Architecture
-                        </TextLink>
+                <section id="projects" style={{ padding: 'var(--section-gap) 0' }}>
+                    <Container>
+                        <span
+                            style={{
+                                fontFamily: 'var(--font-mono)',
+                                fontSize: 'var(--font-size-xs)',
+                                color: 'var(--color-accent-highlight)',
+                            }}
+                        >
+                            SECTION 03
+                        </span>
+                        <h2 style={{ marginTop: 'var(--space-2)' }}>Featured Projects</h2>
+                        <p style={{ marginTop: 'var(--space-2)' }}>
+                            Case studies and engineering breakdowns will be structured in Phase 4.
+                        </p>
+                    </Container>
+                </section>
+
+                <Divider spacing="none" />
+
+                <section id="achievements" style={{ padding: 'var(--section-gap) 0' }}>
+                    <Container>
+                        <span
+                            style={{
+                                fontFamily: 'var(--font-mono)',
+                                fontSize: 'var(--font-size-xs)',
+                                color: 'var(--color-accent-highlight)',
+                            }}
+                        >
+                            SECTION 04
+                        </span>
+                        <h2 style={{ marginTop: 'var(--space-2)' }}>
+                            Achievements & Competitive Programming
+                        </h2>
+                        <p style={{ marginTop: 'var(--space-2)' }}>
+                            Competitive programming profiles and metrics will be structured in Phase
+                            5.
+                        </p>
+                    </Container>
+                </section>
+
+                <Divider spacing="none" />
+
+                <section id="experience" style={{ padding: 'var(--section-gap) 0' }}>
+                    <Container>
+                        <span
+                            style={{
+                                fontFamily: 'var(--font-mono)',
+                                fontSize: 'var(--font-size-xs)',
+                                color: 'var(--color-accent-highlight)',
+                            }}
+                        >
+                            SECTION 05
+                        </span>
+                        <h2 style={{ marginTop: 'var(--space-2)' }}>Experience</h2>
+                        <p style={{ marginTop: 'var(--space-2)' }}>
+                            Professional journey and leadership timeline will be structured in Phase
+                            6.
+                        </p>
+                    </Container>
+                </section>
+
+                <Divider spacing="none" />
+
+                <section id="contact" style={{ padding: 'var(--section-gap) 0' }}>
+                    <Container>
+                        <span
+                            style={{
+                                fontFamily: 'var(--font-mono)',
+                                fontSize: 'var(--font-size-xs)',
+                                color: 'var(--color-accent-highlight)',
+                            }}
+                        >
+                            SECTION 06
+                        </span>
+                        <h2 style={{ marginTop: 'var(--space-2)' }}>Contact</h2>
+                        <p style={{ marginTop: 'var(--space-2)' }}>
+                            Inquiries and direct channels will be connected in Phase 6.
+                        </p>
+                    </Container>
+                </section>
+            </main>
+
+            <footer
+                style={{
+                    borderTop: '1px solid var(--color-border)',
+                    padding: 'var(--space-8) 0',
+                    backgroundColor: 'var(--color-surface)',
+                }}
+            >
+                <Container>
+                    <p
+                        style={{
+                            fontSize: 'var(--font-size-sm)',
+                            color: 'var(--color-text-tertiary)',
+                        }}
+                    >
+                        © {new Date().getFullYear()} {navigationConfig.name}. All rights reserved.
                     </p>
-                </footer>
-            </Container>
+                </Container>
+            </footer>
         </div>
     );
 };
