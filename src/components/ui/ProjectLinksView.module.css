@@ -1,7 +1,0 @@
-.linksContainer {
-    display: flex;
-    align-items: center;
-    gap: var(--space-6);
-    flex-wrap: wrap;
-    padding-top: var(--space-4);
-}

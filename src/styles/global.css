@@ -1,77 +1,50 @@
 :root {
-    /* Editorial Light Mode Palette - Rich Ink, Indigo & Warm Paper */
-    --bg: #fbfaf8;
-    --bg2: #f2efe9;
-    --fg: #131217;
-    --mute: #5f5a6e;
-    --line: rgba(19, 18, 23, 0.12);
-    --rule: #131217;
-    --track: #e8e3d9;
+    --bg: #faf9fc;
+    --bg2: #f1eef8;
+    --fg: #121018;
+    --mute: #5e5a6b;
+    --line: rgba(18, 16, 24, 0.14);
+    --rule: #121018;
+    --track: #e9e4f4;
     --card: #ffffff;
-    --ink: #4f46e5;
-    --accent: #6366f1;
-    --accent-deep: #1e1b4b;
-    --hero: #181432;
-    --glow: rgba(99, 102, 241, 0.25);
-
+    --ink: #6d3fe0;
+    --accent: #8b5cf6;
+    --accent-deep: #1a0b45;
+    --hero: #2a1466;
     --font-display: 'Bricolage Grotesque', sans-serif;
-    --font-body: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    --gutter: clamp(20px, 3.5vw, 56px);
+    --font-body: 'Geist', system-ui, sans-serif;
+    --font-mono: 'Geist Mono', ui-monospace, monospace;
+    --gutter: clamp(20px, 3vw, 40px);
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
     color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme='light']) {
-        /* Premium Midnight Obsidian & Electric Violet */
-        --bg: #09080e;
-        --bg2: #12101b;
-        --fg: #f5f3fa;
-        --mute: #a39eb5;
-        --line: rgba(255, 255, 255, 0.1);
-        --rule: rgba(245, 243, 250, 0.22);
-        --track: #1b1728;
-        --card: #13101e;
-        --ink: #a5b4fc;
-        --accent: #7c3aed;
-        --hero: #0e0c18;
-        --glow: rgba(124, 58, 237, 0.35);
+        --bg: #0c0a12;
+        --bg2: #15121d;
+        --fg: #f4f2fa;
+        --mute: #ada8bc;
+        --line: rgba(255, 255, 255, 0.12);
+        --rule: rgba(244, 242, 250, 0.26);
+        --track: #211d2c;
+        --card: #16131f;
+        --ink: #b9a1ff;
         color-scheme: dark;
     }
 }
 
 :root[data-theme='dark'] {
-    --bg: #09080e;
-    --bg2: #12101b;
-    --fg: #f5f3fa;
-    --mute: #a39eb5;
-    --line: rgba(255, 255, 255, 0.1);
-    --rule: rgba(245, 243, 250, 0.22);
-    --track: #1b1728;
-    --card: #13101e;
-    --ink: #a5b4fc;
-    --accent: #7c3aed;
-    --hero: #0e0c18;
-    --glow: rgba(124, 58, 237, 0.35);
+    --bg: #0c0a12;
+    --bg2: #15121d;
+    --fg: #f4f2fa;
+    --mute: #ada8bc;
+    --line: rgba(255, 255, 255, 0.12);
+    --rule: rgba(244, 242, 250, 0.26);
+    --track: #211d2c;
+    --card: #16131f;
+    --ink: #b9a1ff;
     color-scheme: dark;
-}
-
-:root[data-theme='light'] {
-    --bg: #fbfaf8;
-    --bg2: #f2efe9;
-    --fg: #131217;
-    --mute: #5f5a6e;
-    --line: rgba(19, 18, 23, 0.12);
-    --rule: #131217;
-    --track: #e8e3d9;
-    --card: #ffffff;
-    --ink: #4f46e5;
-    --accent: #6366f1;
-    --accent-deep: #1e1b4b;
-    --hero: #181432;
-    --glow: rgba(99, 102, 241, 0.25);
-    color-scheme: light;
 }
 
 *,
@@ -83,7 +56,6 @@
 html {
     scroll-behavior: smooth;
     background: var(--bg);
-    text-rendering: optimizeLegibility;
 }
 
 body {
@@ -92,19 +64,15 @@ body {
     color: var(--fg);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     transition:
-        background 0.4s var(--ease-out),
-        color 0.4s var(--ease-out);
+        background 0.4s,
+        color 0.4s;
 }
 
 a {
     color: var(--ink);
     text-decoration: none;
-    transition:
-        color 0.2s var(--ease-out),
-        opacity 0.2s;
 }
 
 a:hover {
@@ -129,25 +97,6 @@ img {
 ::selection {
     background: var(--accent);
     color: #fff;
-}
-
-/* Custom Scrollbars */
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--bg);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--line);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--mute);
 }
 
 ::view-transition-old(root),
@@ -178,13 +127,13 @@ img {
     border: 0;
 }
 
-/* Scroll reveals */
+/* Scroll reveals. `.js` is set in index.html before first paint. */
 .js [data-reveal] {
     opacity: 0;
-    transform: translateY(32px);
+    transform: translateY(40px);
     transition:
-        opacity 0.9s var(--ease-out),
-        transform 0.9s var(--ease-out);
+        opacity 1s var(--ease-out),
+        transform 1s var(--ease-out);
 }
 
 .js [data-reveal][data-in] {
@@ -204,7 +153,7 @@ img {
 .js [data-reveal] [data-bar] {
     transform: scaleX(0);
     transform-origin: 0 50%;
-    transition: transform 1.5s var(--ease-out) 0.2s;
+    transition: transform 1.6s var(--ease-out) 0.25s;
 }
 
 .js [data-reveal][data-in] [data-bar] {
@@ -215,8 +164,8 @@ img {
     opacity: 0;
     transform: translateY(-8px);
     transition:
-        opacity 0.6s ease 0.9s,
-        transform 0.6s var(--ease-out) 0.9s;
+        opacity 0.6s ease 1s,
+        transform 0.6s var(--ease-out) 1s;
 }
 
 .js [data-reveal][data-in] [data-mark] {
@@ -242,11 +191,11 @@ img {
 
 /* Shared layout pieces */
 .section {
-    padding: clamp(72px, 9vw, 130px) var(--gutter) clamp(48px, 6vw, 72px);
+    padding: clamp(80px, 10vw, 140px) var(--gutter) 60px;
 }
 
 .section--lg {
-    padding-top: clamp(96px, 12vw, 160px);
+    padding-top: clamp(100px, 14vw, 180px);
 }
 
 .section-head {
@@ -259,16 +208,16 @@ img {
 }
 
 .section-head--tight {
-    margin-bottom: 36px;
+    margin-bottom: 40px;
 }
 
 .display {
     margin: 0;
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: clamp(52px, 11vw, 200px);
-    letter-spacing: -0.055em;
-    line-height: 0.85;
+    font-size: clamp(64px, 13vw, 220px);
+    letter-spacing: -0.06em;
+    line-height: 0.82;
     overflow: hidden;
     padding-bottom: 0.04em;
 }

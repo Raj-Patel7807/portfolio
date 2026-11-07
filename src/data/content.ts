@@ -217,7 +217,7 @@ export const featuredRepos = [
     },
 ];
 
-export const githubFallback = { publicRepos: 12, followers: 10 };
+export const githubFallback = { publicRepos: 15, followers: 52 };
 
 export const showGallery = false;
 

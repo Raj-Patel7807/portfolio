@@ -5,7 +5,7 @@ import './Work.css';
 
 // Accordion: hovering, clicking or keyboard-activating a row opens that project.
 export function Work() {
-    const [active, setActive] = useState(0);
+    const [active, setActive] = useState<number | null>(null);
 
     return (
         <section id="work" className="section section--lg">
@@ -18,7 +18,7 @@ export function Work() {
                 </div>
             </div>
 
-            <div className="rule-top">
+            <div className="rule-top" onMouseLeave={() => setActive(null)}>
                 {projects.map((p, i) => {
                     const open = i === active;
                     const panelId = `project-${i}`;
@@ -26,10 +26,10 @@ export function Work() {
                         <article
                             key={p.name}
                             data-reveal=""
-                            data-cursor="Open"
+                            data-cursor={open ? 'Close' : 'Open'}
                             className={open ? 'work__item is-open' : 'work__item'}
                             onMouseEnter={() => setActive(i)}
-                            onClick={() => setActive(i)}
+                            onClick={() => setActive(prev => (prev === i ? null : i))}
                         >
                             <div
                                 className="work__row"
@@ -40,7 +40,7 @@ export function Work() {
                                 onKeyDown={e => {
                                     if (e.key === 'Enter' || e.key === ' ') {
                                         e.preventDefault();
-                                        setActive(i);
+                                        setActive(prev => (prev === i ? null : i));
                                     }
                                 }}
                             >

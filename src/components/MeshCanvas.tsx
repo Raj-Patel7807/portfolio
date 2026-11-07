@@ -1,14 +1,15 @@
 import { useEffect, useRef } from 'react';
 import { prefersReducedMotion } from '../hooks/motion';
 
-// Refined glowing radial blobs with deeper indigo and electric violet tones
+// Drifting radial blobs; the first and third lean toward the pointer. Drawn at quarter
+// resolution and blurred in CSS, so it stays cheap. Pauses while off-screen.
 const BLOBS = [
-    { c: '#6366F1', x: 0.2, y: 0.28, r: 0.55, sx: 0.12, sy: 0.16, p: 0, pull: 0.35 },
-    { c: '#4338CA', x: 0.75, y: 0.18, r: 0.52, sx: 0.1, sy: 0.08, p: 2, pull: 0 },
-    { c: '#8B5CF6', x: 0.58, y: 0.72, r: 0.48, sx: 0.14, sy: 0.11, p: 4, pull: 0.15 },
-    { c: '#38BDF8', x: 0.88, y: 0.55, r: 0.38, sx: 0.08, sy: 0.13, p: 1, pull: 0 },
-    { c: '#A78BFA', x: 0.32, y: 0.82, r: 0.36, sx: 0.15, sy: 0.1, p: 3, pull: 0 },
-    { c: '#1E1B4B', x: 0.08, y: 0.88, r: 0.52, sx: 0.07, sy: 0.07, p: 5, pull: 0 },
+    { c: '#8B5CF6', x: 0.2, y: 0.3, r: 0.55, sx: 0.13, sy: 0.17, p: 0, pull: 0.35 },
+    { c: '#5B3DF5', x: 0.75, y: 0.2, r: 0.5, sx: 0.11, sy: 0.09, p: 2, pull: 0 },
+    { c: '#E05CC8', x: 0.6, y: 0.75, r: 0.45, sx: 0.15, sy: 0.12, p: 4, pull: 0.12 },
+    { c: '#3FA7FF', x: 0.9, y: 0.6, r: 0.4, sx: 0.09, sy: 0.14, p: 1, pull: 0 },
+    { c: '#C4B5FD', x: 0.35, y: 0.85, r: 0.35, sx: 0.17, sy: 0.1, p: 3, pull: 0 },
+    { c: '#2A1466', x: 0.05, y: 0.9, r: 0.5, sx: 0.08, sy: 0.08, p: 5, pull: 0 },
 ];
 
 export function MeshCanvas({ speed = 1 }: { speed?: number }) {
@@ -36,7 +37,7 @@ export function MeshCanvas({ speed = 1 }: { speed?: number }) {
                 h = canvas.height;
             sx += (mx - sx) * 0.04;
             sy += (my - sy) * 0.04;
-            ctx.fillStyle = '#1e1938';
+            ctx.fillStyle = '#3B1E9E';
             ctx.fillRect(0, 0, w, h);
             for (const b of BLOBS) {
                 const x =
