@@ -4,7 +4,6 @@ import { prefersReducedMotion } from '../hooks/motion';
 import { MeshCanvas } from './MeshCanvas';
 import './Hero.css';
 
-const [firstName, lastName] = profile.name.split(' ');
 const delay = (i: number) => ({ transitionDelay: `${(i * 0.04).toFixed(2)}s` });
 
 export function Hero() {
@@ -47,32 +46,20 @@ export function Hero() {
             <div className="hero__shade" />
 
             <div ref={topRef} className="hero__top">
-                <div className="hero__meta-top" data-reveal="">
-                    <span className="hero__status-badge">
-                        <span className="hero__status-pulse" /> Available for Opportunities
-                    </span>
-                    <span className="hero__role-badge">ICT ’28 · Dhirubhai Ambani University</span>
-                </div>
-
-                <h1 className="hero__name" aria-label={profile.name}>
+                <h1 className="hero__name" aria-label={`${profile.name}.`}>
                     <span aria-hidden="true" className="hero__line">
-                        {[...firstName].map((ch, i) => (
-                            <span key={i} data-rise="" style={delay(i)}>
-                                {ch}
-                            </span>
-                        ))}
-                    </span>
-                    <span aria-hidden="true" className="hero__line hero__line--end">
-                        {[...lastName].map((ch, i) => (
-                            <span key={i} data-rise="" style={delay(firstName.length + i)}>
-                                {ch}
-                            </span>
-                        ))}
-                        <span
-                            data-rise=""
-                            className="hero__dot"
-                            style={delay(firstName.length + lastName.length)}
-                        >
+                        {[...profile.name].map((ch, i) =>
+                            ch === ' ' ? (
+                                <span key={i} className="hero__space">
+                                    &nbsp;
+                                </span>
+                            ) : (
+                                <span key={i} data-rise="" style={delay(i)}>
+                                    {ch}
+                                </span>
+                            )
+                        )}
+                        <span data-rise="" className="hero__dot" style={delay(profile.name.length)}>
                             .
                         </span>
                     </span>
