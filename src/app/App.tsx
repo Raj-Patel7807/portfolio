@@ -1,7 +1,8 @@
 import React from 'react';
 import { Navbar, Container, Divider } from '@/components';
-import { Hero, Marquee } from '@/sections';
+import { Hero, Marquee, ProjectsSection } from '@/sections';
 import { navigationConfig, heroConfig, marqueeConfig } from '@/data/hero';
+import { projectsData, projectsSectionConfig } from '@/data/projects';
 
 export const App: React.FC = () => {
     return (
@@ -16,7 +17,7 @@ export const App: React.FC = () => {
                 {/* Seamless Continuous Marquee */}
                 <Marquee config={marqueeConfig} />
 
-                {/* Anchor placeholder sections for smooth navigation target preview */}
+                {/* Anchor About placeholder section */}
                 <section id="about" style={{ padding: 'var(--section-gap) 0' }}>
                     <Container>
                         <span
@@ -26,7 +27,7 @@ export const App: React.FC = () => {
                                 color: 'var(--color-accent-highlight)',
                             }}
                         >
-                            SECTION 02
+                            SECTION 01
                         </span>
                         <h2 style={{ marginTop: 'var(--space-2)' }}>About</h2>
                         <p style={{ marginTop: 'var(--space-2)' }}>
@@ -38,26 +39,12 @@ export const App: React.FC = () => {
 
                 <Divider spacing="none" />
 
-                <section id="projects" style={{ padding: 'var(--section-gap) 0' }}>
-                    <Container>
-                        <span
-                            style={{
-                                fontFamily: 'var(--font-mono)',
-                                fontSize: 'var(--font-size-xs)',
-                                color: 'var(--color-accent-highlight)',
-                            }}
-                        >
-                            SECTION 03
-                        </span>
-                        <h2 style={{ marginTop: 'var(--space-2)' }}>Featured Projects</h2>
-                        <p style={{ marginTop: 'var(--space-2)' }}>
-                            Case studies and engineering breakdowns will be structured in Phase 4.
-                        </p>
-                    </Container>
-                </section>
+                {/* Editorial Projects & Case Studies System */}
+                <ProjectsSection config={projectsSectionConfig} projects={projectsData} />
 
                 <Divider spacing="none" />
 
+                {/* Anchor Achievements placeholder section */}
                 <section id="achievements" style={{ padding: 'var(--section-gap) 0' }}>
                     <Container>
                         <span
@@ -67,7 +54,7 @@ export const App: React.FC = () => {
                                 color: 'var(--color-accent-highlight)',
                             }}
                         >
-                            SECTION 04
+                            SECTION 03
                         </span>
                         <h2 style={{ marginTop: 'var(--space-2)' }}>
                             Achievements & Competitive Programming
@@ -81,6 +68,7 @@ export const App: React.FC = () => {
 
                 <Divider spacing="none" />
 
+                {/* Anchor Experience placeholder section */}
                 <section id="experience" style={{ padding: 'var(--section-gap) 0' }}>
                     <Container>
                         <span
@@ -90,7 +78,7 @@ export const App: React.FC = () => {
                                 color: 'var(--color-accent-highlight)',
                             }}
                         >
-                            SECTION 05
+                            SECTION 04
                         </span>
                         <h2 style={{ marginTop: 'var(--space-2)' }}>Experience</h2>
                         <p style={{ marginTop: 'var(--space-2)' }}>
@@ -102,6 +90,7 @@ export const App: React.FC = () => {
 
                 <Divider spacing="none" />
 
+                {/* Anchor Contact placeholder section */}
                 <section id="contact" style={{ padding: 'var(--section-gap) 0' }}>
                     <Container>
                         <span
@@ -111,7 +100,7 @@ export const App: React.FC = () => {
                                 color: 'var(--color-accent-highlight)',
                             }}
                         >
-                            SECTION 06
+                            SECTION 05
                         </span>
                         <h2 style={{ marginTop: 'var(--space-2)' }}>Contact</h2>
                         <p style={{ marginTop: 'var(--space-2)' }}>

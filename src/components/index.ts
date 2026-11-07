@@ -18,3 +18,9 @@ export type { SectionLabelProps } from './ui/SectionLabel';
 
 export { ThemeToggle } from './ui/ThemeToggle';
 export type { ThemeToggleProps } from './ui/ThemeToggle';
+
+export { TechBadge } from './ui/TechBadge';
+export type { TechBadgeProps } from './ui/TechBadge';
+
+export { ProjectLinksView } from './ui/ProjectLinksView';
+export type { ProjectLinksViewProps } from './ui/ProjectLinksView';
