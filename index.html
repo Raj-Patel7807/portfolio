@@ -11,6 +11,21 @@
             rel="stylesheet"
         />
         <title>Raj Patel — Developer Portfolio</title>
+        <script>
+            (function () {
+                try {
+                    var saved = localStorage.getItem('portfolio_theme');
+                    var theme = saved || 'system';
+                    var resolved = theme;
+                    if (theme === 'system') {
+                        resolved = window.matchMedia('(prefers-color-scheme: light)').matches
+                            ? 'light'
+                            : 'dark';
+                    }
+                    document.documentElement.setAttribute('data-theme', resolved);
+                } catch (e) {}
+            })();
+        </script>
     </head>
     <body>
         <div id="root"></div>

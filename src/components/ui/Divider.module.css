@@ -1,0 +1,22 @@
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--color-border);
+    width: 100%;
+}
+
+.none {
+    margin: 0;
+}
+
+.sm {
+    margin: var(--space-4) 0;
+}
+
+.md {
+    margin: var(--space-8) 0;
+}
+
+.lg {
+    margin: var(--space-16) 0;
+}

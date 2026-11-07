@@ -1,0 +1,29 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent-highlight);
+    margin-bottom: var(--space-4);
+    width: 100%;
+}
+
+.number {
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.label {
+    font-weight: 500;
+    color: var(--color-text-secondary);
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--color-border) 0%, transparent 100%);
+    max-width: 120px;
+}
