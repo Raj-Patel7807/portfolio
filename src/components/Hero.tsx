@@ -67,6 +67,10 @@ export function Hero() {
             </div>
 
             <div className="hero__bottom">
+                <div aria-hidden="true" className="hero__scroll-indicator">
+                    <span className="hero__scroll-text">Scroll</span>
+                    <span className="hero__scroll-arrow">↓</span>
+                </div>
                 <p data-reveal="" className="hero__pitch">
                     {profile.pitch}
                 </p>
@@ -78,9 +82,6 @@ export function Hero() {
                         Get in touch
                     </a>
                 </div>
-            </div>
-            <div aria-hidden="true" className="hero__scroll">
-                Scroll
             </div>
         </section>
     );
