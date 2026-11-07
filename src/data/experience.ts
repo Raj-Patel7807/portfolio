@@ -115,15 +115,15 @@ export const skillCategories: SkillCategory[] = [
     },
     {
         category: 'Frontend & UI',
-        items: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'HTML5 Canvas'],
+        items: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
     },
     {
         category: 'Databases & Cloud',
-        items: ['PostgreSQL', 'Supabase', 'Cloudflare', 'Redis'],
+        items: ['PostgreSQL', 'Supabase', 'Redis'],
     },
     {
         category: 'DevOps & Tools',
-        items: ['Git', 'GitHub', 'CI/CD', 'Docker', 'Linux'],
+        items: ['Git', 'GitHub', 'CI/CD', 'Docker', 'Linux', 'Cloudflare', 'Render'],
     },
 ];
 

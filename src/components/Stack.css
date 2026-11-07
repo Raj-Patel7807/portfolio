@@ -3,7 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 28px;
+    margin-bottom: 17px;
 }
 
 .stack__tab {
@@ -42,19 +42,20 @@
 
 /* Compact Minimal Logo Cards */
 .stack__grid {
+    width: 85%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-    gap: 12px;
-    padding-top: 28px;
+    gap: 10px;
+    padding-top: 20px;
 }
 
 .stack__item {
     display: flex;
     align-items: center;
     gap: 14px;
-    padding: 14px 18px;
+    padding: 15px 15px;
     border: 1.5px solid var(--line);
-    border-radius: 999px;
+    border-radius: 5px;
     background: var(--card);
     transition:
         border-color 0.25s var(--ease-out),
