@@ -1,14 +1,20 @@
 .hero {
     position: relative;
-    min-height: 100vh;
     min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    background: var(--hero);
+    background: #0a0812;
     color: #fff;
-    transition: background 0.5s ease-out;
+    transition:
+        background 0.4s ease-out,
+        color 0.4s ease-out;
+}
+
+:root[data-theme='light'] .hero {
+    background: #faf9fc;
+    color: #121018;
 }
 
 .hero__mesh {
@@ -33,17 +39,17 @@
         radial-gradient(circle at 50% 40%, rgba(10, 8, 18, 0.1) 0%, rgba(10, 8, 18, 0.7) 100%),
         linear-gradient(180deg, rgba(10, 8, 18, 0.05) 0%, rgba(10, 8, 18, 0.8) 100%);
     pointer-events: none;
-    transition: background 0.5s ease-out;
+    transition: background 0.4s ease-out;
 }
 
 :root[data-theme='light'] .hero__shade {
     background:
         radial-gradient(
             circle at 50% 40%,
-            rgba(255, 255, 255, 0.05) 0%,
-            rgba(46, 16, 101, 0.4) 100%
+            rgba(250, 249, 252, 0) 0%,
+            rgba(250, 249, 252, 0.5) 100%
         ),
-        linear-gradient(180deg, rgba(46, 16, 101, 0.1) 0%, rgba(46, 16, 101, 0.6) 100%);
+        linear-gradient(180deg, rgba(250, 249, 252, 0) 0%, rgba(250, 249, 252, 0.75) 100%);
 }
 
 .hero__top {
@@ -54,18 +60,19 @@
 
 .hero__name {
     margin: 0.17em 0 0 0;
-    text-align: center;
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: clamp(392px, 16.5vw, 260px);
+    font-size: clamp(48px, 16vw, 260px);
     line-height: 0.88;
     letter-spacing: -0.06em;
     width: 100%;
+    color: inherit;
 }
 
 .hero__line {
     display: flex;
     align-items: baseline;
+    justify-content: center;
     flex-wrap: nowrap;
     overflow: visible;
     padding-bottom: 0.04em;
@@ -87,6 +94,11 @@
     margin-left: 0.02em;
 }
 
+:root[data-theme='light'] .hero__dot {
+    color: #8b5cf6;
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
 .hero__bottom {
     position: relative;
     margin: 0 var(--gutter);
@@ -96,6 +108,10 @@
     gap: 32px;
     align-items: end;
     border-top: 1.5px solid rgba(255, 255, 255, 0.28);
+}
+
+:root[data-theme='light'] .hero__bottom {
+    border-top-color: var(--rule);
 }
 
 .hero__scroll-indicator {
@@ -115,6 +131,10 @@
     animation: bob 2.25s ease-in-out infinite;
 }
 
+:root[data-theme='light'] .hero__scroll-indicator {
+    color: var(--mute);
+}
+
 .hero__scroll-arrow {
     font-size: 13px;
     opacity: 0.85;
@@ -129,6 +149,7 @@
     line-height: 1.1;
     letter-spacing: -0.03em;
     text-wrap: pretty;
+    color: inherit;
 }
 
 .hero__ctas {
@@ -154,19 +175,26 @@
     color: var(--accent-deep);
 }
 
+:root[data-theme='light'] .btn--solid {
+    background: var(--fg);
+    color: #fff;
+}
+
 .btn--solid:hover {
     transform: translateY(-3px);
-    color: var(--accent-deep);
 }
 
 .btn--ghost {
-    border: 1.5px solid #fff;
-    color: #fff;
+    border: 1.5px solid currentColor;
+    color: inherit;
 }
 
 .btn--ghost:hover {
+    background: rgba(18, 16, 24, 0.08);
+}
+
+:root:not([data-theme='light']) .btn--ghost:hover {
     background: rgba(255, 255, 255, 0.14);
-    color: #fff;
 }
 
 /* `translate` composes with the bob animation's `transform`, so centering survives it. */
