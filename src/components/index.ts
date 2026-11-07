@@ -7,6 +7,9 @@ export type { NavbarProps } from './layout/Navbar';
 export { Footer } from './layout/Footer';
 export type { FooterProps } from './layout/Footer';
 
+export { RevealOnScroll } from './common/RevealOnScroll';
+export type { RevealOnScrollProps } from './common/RevealOnScroll';
+
 export { Button } from './ui/Button';
 export type { ButtonProps } from './ui/Button';
 
