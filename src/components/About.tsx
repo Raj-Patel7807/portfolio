@@ -1,4 +1,5 @@
 import { about, profile } from '../data/content';
+import { formatRichText } from './RichText';
 import './About.css';
 
 export function About() {
@@ -42,7 +43,7 @@ export function About() {
                     </h2>
                     <div data-reveal="" className="about__body">
                         {about.body.map(para => (
-                            <p key={para}>{para}</p>
+                            <p key={para}>{formatRichText(para)}</p>
                         ))}
                     </div>
                     <div data-reveal="" className="about__stats">

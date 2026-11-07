@@ -1,5 +1,6 @@
 import { experience, positionsOfResponsibility } from '../data/content';
 import { DisplayHeading } from './DisplayHeading';
+import { formatRichText } from './RichText';
 import './Roles.css';
 
 export function Roles() {
@@ -20,13 +21,13 @@ export function Roles() {
                                     <div className="mono-label">
                                         {e.when} · {e.where}
                                     </div>
-                                    <h3 className="roles__org">{e.org}</h3>
-                                    <div className="roles__role">{e.role}</div>
+                                    <h3 className="roles__org">{formatRichText(e.org)}</h3>
+                                    <div className="roles__role">{formatRichText(e.role)}</div>
                                 </div>
                                 <ul className="arrow-list roles__bullets">
                                     {e.bullets.map(b => (
                                         <li key={b} className="arrow-row">
-                                            {b}
+                                            {formatRichText(b)}
                                         </li>
                                     ))}
                                 </ul>
@@ -51,13 +52,13 @@ export function Roles() {
                                     <div className="mono-label">
                                         {e.when} · {e.where}
                                     </div>
-                                    <h3 className="roles__org">{e.org}</h3>
-                                    <div className="roles__role">{e.role}</div>
+                                    <h3 className="roles__org">{formatRichText(e.org)}</h3>
+                                    <div className="roles__role">{formatRichText(e.role)}</div>
                                 </div>
                                 <ul className="arrow-list roles__bullets">
                                     {e.bullets.map(b => (
                                         <li key={b} className="arrow-row">
-                                            {b}
+                                            {formatRichText(b)}
                                         </li>
                                     ))}
                                 </ul>

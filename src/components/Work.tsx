@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { projects } from '../data/content';
 import { DisplayHeading } from './DisplayHeading';
+import { formatRichText } from './RichText';
 import './Work.css';
 
 // Accordion: hovering, clicking or keyboard-activating a row opens that project.
@@ -60,24 +61,26 @@ export function Work() {
                                 <div className="work__expand-inner">
                                     <div className="work__body">
                                         <div className="work__text">
-                                            <p className="work__summary">{p.summary}</p>
+                                            <p className="work__summary">
+                                                {formatRichText(p.summary)}
+                                            </p>
                                             <div className="work__block">
                                                 <h4 className="work__label">What it’s for</h4>
-                                                <p>{p.purpose}</p>
+                                                <p>{formatRichText(p.purpose)}</p>
                                             </div>
                                             <div className="work__block">
                                                 <h4 className="work__label">What it does</h4>
                                                 <ul className="arrow-list work__features">
                                                     {p.features.map(f => (
                                                         <li key={f} className="arrow-row">
-                                                            {f}
+                                                            {formatRichText(f)}
                                                         </li>
                                                     ))}
                                                 </ul>
                                             </div>
                                             <div className="work__block">
                                                 <h4 className="work__label">How it’s built</h4>
-                                                <p>{p.build}</p>
+                                                <p>{formatRichText(p.build)}</p>
                                             </div>
                                             <ul className="work__stack" aria-label="Built with">
                                                 {p.stack.map(s => (
