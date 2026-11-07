@@ -1,0 +1,40 @@
+.roles__item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+    gap: 24px 48px;
+    padding: 36px 0;
+    border-bottom: 1.5px solid var(--rule);
+}
+
+.roles__org {
+    margin: 12px 0 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(40px, 5vw, 76px);
+    letter-spacing: -0.055em;
+    line-height: 0.9;
+}
+
+.roles__role {
+    margin-top: 12px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.roles__bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-self: end;
+}
+
+.roles__bullets .arrow-row {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--mute);
+}
+
+.roles__bullets .arrow-row::before {
+    color: var(--accent);
+}

@@ -1,0 +1,36 @@
+.stack__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 1100px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.stack__chip {
+    padding: 14px 22px;
+    border: 1.5px solid var(--line);
+    background: var(--card);
+    font-family: var(--font-mono);
+    font-size: 15px;
+    transition:
+        border-color 0.25s,
+        color 0.25s;
+}
+
+.stack__chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+@media (max-width: 560px) {
+    .stack__list {
+        gap: 8px;
+    }
+
+    .stack__chip {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}

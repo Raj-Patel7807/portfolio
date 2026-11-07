@@ -1,0 +1,139 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    background: var(--hero);
+    color: #fff;
+}
+
+.hero__mesh {
+    position: absolute;
+    inset: 0;
+    will-change: transform;
+}
+
+.hero__mesh canvas {
+    position: absolute;
+    inset: -10%;
+    width: 120%;
+    height: 120%;
+    filter: blur(50px) saturate(1.15);
+}
+
+.hero__shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11, 10, 16, 0) 40%, rgba(11, 10, 16, 0.55));
+}
+
+.hero__top {
+    position: relative;
+    padding: 120px var(--gutter) 0;
+    will-change: transform, opacity;
+}
+
+.hero__name {
+    margin: clamp(20px, 4vh, 48px) 0 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(64px, 19vw, 340px);
+    line-height: 0.8;
+    letter-spacing: -0.06em;
+}
+
+.hero__line {
+    display: flex;
+    overflow: hidden;
+    padding-bottom: 0.02em;
+}
+
+.hero__line--end {
+    justify-content: flex-end;
+    padding-bottom: 0.08em;
+}
+
+.hero__line > span {
+    display: inline-block;
+}
+
+.hero__dot {
+    color: #d9ccff;
+}
+
+.hero__bottom {
+    position: relative;
+    margin: 0 var(--gutter);
+    padding: clamp(28px, 4vh, 48px) var(--gutter) clamp(28px, 5vh, 56px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+    gap: 32px;
+    align-items: end;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.35);
+}
+
+.hero__pitch {
+    margin: 0;
+    max-width: 640px;
+    font-family: var(--font-display);
+    font-size: clamp(24px, 2.8vw, 38px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    text-wrap: pretty;
+}
+
+.hero__ctas {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 18px 30px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 16px;
+    transition:
+        transform 0.3s var(--ease-out),
+        background 0.25s,
+        color 0.25s;
+}
+
+.btn--solid {
+    background: #fff;
+    color: var(--accent-deep);
+}
+
+.btn--solid:hover {
+    transform: translateY(-3px);
+    color: var(--accent-deep);
+}
+
+.btn--ghost {
+    border: 1.5px solid #fff;
+    color: #fff;
+}
+
+.btn--ghost:hover {
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+}
+
+/* `translate` composes with the bob animation's `transform`, so centering survives it. */
+.hero__scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    translate: -50% 0;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    animation: bob 2.4s ease-in-out infinite;
+}

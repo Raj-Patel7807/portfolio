@@ -1,0 +1,121 @@
+.gh__counts {
+    display: flex;
+    gap: 40px;
+}
+
+.gh__count-value {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 56px;
+    letter-spacing: -0.05em;
+    line-height: 0.9;
+}
+
+.gh__count-label {
+    margin-top: 6px;
+    font-size: 14px;
+    color: var(--mute);
+}
+
+.gh__chart {
+    padding: 28px;
+    border: 1.5px solid var(--rule);
+    background: var(--card);
+    overflow-x: auto;
+}
+
+.gh__chart-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: var(--mute);
+}
+
+.gh__chart-head a {
+    font-weight: 600;
+}
+
+.gh__chart img {
+    width: 100%;
+    min-width: 680px;
+    transition: filter 0.4s;
+}
+
+/* The chart is a light-themed SVG; invert it for dark mode while keeping the violet hue. */
+:root[data-theme='dark'] .gh__chart img {
+    filter: invert(1) hue-rotate(180deg) brightness(0.9);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) .gh__chart img {
+        filter: invert(1) hue-rotate(180deg) brightness(0.9);
+    }
+}
+
+.gh__repos {
+    margin-top: -1.5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    border-left: 1.5px solid var(--rule);
+}
+
+.gh__repo {
+    padding: 24px;
+    border-right: 1.5px solid var(--rule);
+    border-bottom: 1.5px solid var(--rule);
+    color: var(--fg);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.gh__repo,
+.js .gh__repo {
+    transition:
+        opacity 1s var(--ease-out),
+        transform 1s var(--ease-out),
+        background 0.3s,
+        color 0.3s;
+}
+
+.gh__repo:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+.gh__repo-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.gh__repo-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: var(--font-mono);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.gh__repo-stars {
+    font-size: 13px;
+    white-space: nowrap;
+    opacity: 0.75;
+}
+
+.gh__repo-desc {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.gh__repo-foot {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    opacity: 0.75;
+}

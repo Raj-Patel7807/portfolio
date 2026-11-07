@@ -1,0 +1,255 @@
+.ms {
+    position: relative;
+    margin-top: clamp(80px, 10vw, 140px);
+    padding-left: clamp(20px, 3vw, 36px);
+}
+
+.ms__rail {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--track);
+}
+
+.ms__fill {
+    width: 100%;
+    height: 100%;
+    background: var(--accent);
+    transform-origin: 50% 0;
+    transform: scaleY(0);
+}
+
+.ms__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.ms__title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(40px, 6vw, 96px);
+    letter-spacing: -0.055em;
+    line-height: 0.85;
+}
+
+.ms__year {
+    display: grid;
+    grid-template-columns: clamp(90px, 16vw, 260px) minmax(0, 1fr);
+    gap: clamp(16px, 3vw, 40px);
+    padding: 32px 0 56px;
+    border-top: 1.5px solid var(--rule);
+}
+
+.ms__year-side {
+    position: sticky;
+    top: 90px;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ms__year-num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(40px, 7vw, 120px);
+    letter-spacing: -0.06em;
+    line-height: 0.85;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--fg);
+    transition:
+        color 0.6s ease,
+        -webkit-text-stroke-color 0.6s ease;
+}
+
+/* The column is sized for four-digit years; word labels like "Campus" need a smaller size to fit. */
+.ms__year-num--word {
+    font-size: clamp(22px, 3.2vw, 52px);
+}
+
+.ms__year.is-active .ms__year-num {
+    color: var(--accent);
+    -webkit-text-stroke-color: var(--accent);
+}
+
+.ms__count {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--mute);
+}
+
+.ms__items {
+    display: flex;
+    flex-direction: column;
+}
+
+.ms__item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 20px 40px;
+    align-items: start;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.ms__info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ms__kind {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
+
+.ms__name {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(24px, 2.4vw, 34px);
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+}
+
+.ms__detail {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--mute);
+}
+
+.ms__post {
+    margin-top: 14px;
+    max-width: 420px;
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+    padding: 10px;
+    border: 1.5px solid var(--rule);
+    background: var(--card);
+}
+
+.ms__post-shot {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--bg2);
+}
+
+.ms__post--text {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 12px 14px;
+}
+
+.ms__post-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ms__post-src {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.ms__li {
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    background: #0a66c2;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.ms__post-link {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.ms__stat-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ms__stat-line {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.ms__stat {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(52px, 5.6vw, 88px);
+    letter-spacing: -0.06em;
+    line-height: 0.85;
+    color: var(--accent);
+}
+
+.ms__of {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--mute);
+}
+
+.ms__field {
+    position: relative;
+    height: 26px;
+    max-width: 420px;
+}
+
+.ms__ticks {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 9px;
+    height: 8px;
+    background-image: repeating-linear-gradient(90deg, var(--rule) 0 1px, transparent 1px 7px);
+    opacity: 0.35;
+}
+
+.ms__bar {
+    position: absolute;
+    left: 0;
+    top: 9px;
+    height: 8px;
+    background: var(--accent);
+}
+
+.ms__mark {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 26px;
+    margin-left: -1px;
+    background: var(--fg);
+}
+
+.ms__scale {
+    max-width: 420px;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--mute);
+}

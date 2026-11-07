@@ -1,0 +1,84 @@
+/* White + difference blend keeps the nav legible over every section in both themes. */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 18px var(--gutter);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    mix-blend-mode: difference;
+    color: #fff;
+    pointer-events: none;
+}
+
+.nav a,
+.nav button {
+    pointer-events: auto;
+}
+
+.nav__logo {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: -0.04em;
+    color: #fff;
+}
+
+.nav__logo:hover {
+    color: #fff;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 2.4vw, 32px);
+    font-size: 15px;
+    font-weight: 500;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav__link {
+    color: #fff;
+    transition: opacity 0.2s;
+}
+
+.nav__link:hover {
+    color: #fff;
+    opacity: 0.6;
+}
+
+.nav__theme {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    background: transparent;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    padding: 0;
+}
+
+.nav__resume {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1.5px solid #fff;
+    color: #fff;
+    font-weight: 600;
+}
+
+.nav__resume:hover {
+    background: #fff;
+    color: #000;
+}
+
+@media (max-width: 560px) {
+    .nav__link {
+        display: none;
+    }
+}

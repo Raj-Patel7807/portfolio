@@ -1,28 +1,35 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Raj Patel · Software Developer</title>
+        <meta
+            name="description"
+            content="Raj Patel: software developer and competitive programmer. React 19, TypeScript, C++, PostgreSQL. DAU (formerly DA-IICT)."
+        />
+        <meta property="og:title" content="Raj Patel · Software Developer" />
+        <meta
+            property="og:description"
+            content="I build systems and solve algorithmic challenges. Student at DAU (formerly DA-IICT)."
+        />
+        <meta property="og:type" content="website" />
+        <meta name="theme-color" content="#2A1466" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
             rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
         />
-        <title>Raj Patel — Developer Portfolio</title>
         <script>
+            // Runs before paint: apply saved theme and enable reveal animations without a flash.
             (function () {
+                var html = document.documentElement;
+                html.classList.add('js');
                 try {
-                    var saved = localStorage.getItem('portfolio_theme');
-                    var theme = saved || 'system';
-                    var resolved = theme;
-                    if (theme === 'system') {
-                        resolved = window.matchMedia('(prefers-color-scheme: light)').matches
-                            ? 'light'
-                            : 'dark';
-                    }
-                    document.documentElement.setAttribute('data-theme', resolved);
+                    var saved = localStorage.getItem('sc-theme');
+                    if (saved === 'light' || saved === 'dark') html.dataset.theme = saved;
                 } catch (e) {}
             })();
         </script>

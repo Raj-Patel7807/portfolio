@@ -1,0 +1,31 @@
+.proof {
+    padding: 0 var(--gutter);
+}
+
+.proof__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+
+.proof__cell {
+    padding: 40px 24px 40px 0;
+    border-bottom: 1.5px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.proof__value {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(56px, 6.4vw, 96px);
+    letter-spacing: -0.055em;
+    line-height: 0.85;
+}
+
+.proof__label {
+    max-width: 240px;
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--mute);
+}

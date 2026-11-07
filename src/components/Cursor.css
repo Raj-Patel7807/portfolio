@@ -1,0 +1,46 @@
+.cc-cursor,
+.cc-cursor * {
+    cursor: none !important;
+}
+
+.cursor-dot,
+.cursor-ring {
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    background: var(--accent);
+    z-index: 10000;
+    transition: opacity 0.2s;
+}
+
+.cursor-ring {
+    width: 36px;
+    height: 36px;
+    margin: -18px 0 0 -18px;
+    border: 1.5px solid var(--accent);
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    transition:
+        opacity 0.2s,
+        width 0.35s var(--ease-out),
+        height 0.35s var(--ease-out),
+        margin 0.35s var(--ease-out),
+        background 0.3s,
+        border-color 0.3s;
+}
