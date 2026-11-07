@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    background: #1e1035;
+    background: #0a0812;
     color: #fff;
 }
 
@@ -21,14 +21,16 @@
     inset: -15%;
     width: 130%;
     height: 130%;
-    filter: blur(50px) saturate(1.2);
-    opacity: 1;
+    filter: blur(55px) saturate(1.1);
+    opacity: 0.9;
 }
 
 .hero__shade {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(17, 10, 32, 0) 40%, rgba(17, 10, 32, 0.45) 100%);
+    background:
+        radial-gradient(circle at 50% 40%, rgba(10, 8, 18, 0.15) 0%, rgba(10, 8, 18, 0.75) 100%),
+        linear-gradient(180deg, rgba(10, 8, 18, 0.1) 0%, rgba(10, 8, 18, 0.85) 100%);
     pointer-events: none;
 }
 
