@@ -1,6 +1,6 @@
 .hero {
     position: relative;
-    min-height: 100svh;
+    min-height: 130svh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -44,7 +44,11 @@
 
 :root[data-theme='light'] .hero__shade {
     background:
-        radial-gradient(circle at 50% 40%, rgba(250, 249, 252, 0) 0%, rgba(250, 249, 252, 0.5) 100%),
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(250, 249, 252, 0) 0%,
+            rgba(250, 249, 252, 0.5) 100%
+        ),
         linear-gradient(180deg, rgba(250, 249, 252, 0) 0%, rgba(250, 249, 252, 0.75) 100%);
 }
 
@@ -58,7 +62,7 @@
     margin: 0.17em 0 0 0;
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: clamp(48px, 16vw, 260px);
+    font-size: clamp(400px, 16.5vw, 260px);
     line-height: 0.88;
     letter-spacing: -0.06em;
     width: 100%;
