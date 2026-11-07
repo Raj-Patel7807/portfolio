@@ -26,15 +26,18 @@ export function Cursor() {
             if (m === mode) return;
             mode = m;
             const big = m !== '' && m !== 'link';
-            const size = big ? 84 : m === 'link' ? 56 : 36;
+            const size = big ? 88 : m === 'link' ? 56 : 36;
             ring.style.width = ring.style.height = `${size}px`;
             ring.style.margin = `-${size / 2}px 0 0 -${size / 2}px`;
             ring.style.background = big
-                ? 'var(--accent)'
+                ? 'linear-gradient(135deg, #00f0ff, #8b5cf6)'
                 : m === 'link'
-                  ? 'rgba(139,92,246,.14)'
+                  ? 'rgba(0, 240, 255, 0.18)'
                   : 'transparent';
+            ring.style.borderColor = big ? 'transparent' : 'rgba(0, 240, 255, 0.8)';
             label.textContent = big ? m : '';
+            label.style.color = big ? '#0b0914' : '#fff';
+            label.style.fontWeight = '800';
             dot.style.opacity = big ? '0' : '1';
         };
 

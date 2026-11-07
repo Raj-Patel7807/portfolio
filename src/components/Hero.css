@@ -37,18 +37,20 @@
 }
 
 .hero__name {
-    margin: clamp(20px, 4vh, 48px) 0 0;
+    margin: clamp(10px, 3vh, 32px) 0 0;
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: clamp(64px, 19vw, 340px);
-    line-height: 0.8;
-    letter-spacing: -0.06em;
+    font-size: clamp(80px, 24vw, 380px);
+    line-height: 0.82;
+    letter-spacing: -0.065em;
+    width: 100%;
 }
 
 .hero__line {
     display: flex;
     overflow: hidden;
     padding-bottom: 0.02em;
+    width: 100%;
 }
 
 .hero__line--end {
@@ -61,7 +63,8 @@
 }
 
 .hero__dot {
-    color: #d9ccff;
+    color: #00f0ff;
+    text-shadow: 0 0 30px rgba(0, 240, 255, 0.7);
 }
 
 .hero__bottom {
