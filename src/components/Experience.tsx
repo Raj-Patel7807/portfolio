@@ -18,7 +18,12 @@ export function Experience() {
             <div className="rule-top">
                 <div className="roles__list">
                     {experience.map(e => (
-                        <div key={e.org} data-reveal="" data-cursor="Role" className="roles__item">
+                        <div
+                            key={e.org}
+                            data-reveal=""
+                            data-cursor="Experience"
+                            className="roles__item"
+                        >
                             <div className="roles__header">
                                 <div className="mono-label roles__meta">
                                     <span>{e.when}</span>

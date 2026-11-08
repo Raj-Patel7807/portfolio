@@ -26,9 +26,9 @@
 }
 
 .cursor-ring {
-    width: 30px;
-    height: 30px;
-    margin: -15px 0 0 -15px;
+    width: 36px;
+    height: 36px;
+    margin: -16px 0 0 -16px;
     border: 1.5px solid rgba(255, 255, 255, 0.85);
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4);
     backdrop-filter: invert(0.15);
@@ -38,6 +38,7 @@
     font-family: var(--font-mono);
     font-size: 11px;
     font-weight: 700;
+    text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #fff;

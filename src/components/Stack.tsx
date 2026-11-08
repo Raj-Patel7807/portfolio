@@ -60,7 +60,7 @@ export function Stack() {
             {/* Compact Minimal Logo Grid */}
             <div className="rule-top stack__grid" data-reveal="">
                 {filteredSkills.map(tech => (
-                    <div key={tech.name} className="stack__item" data-cursor={'Tech Stack'}>
+                    <div key={tech.name} className="stack__item" data-cursor={tech.name}>
                         <div className="stack__icon-wrap">
                             <TechIcon name={tech.name} className="stack__icon" />
                         </div>

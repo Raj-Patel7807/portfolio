@@ -26,7 +26,7 @@ export function Cursor() {
             if (m === mode) return;
             mode = m;
             const big = m !== '' && m !== 'link';
-            const size = big ? 88 : m === 'link' ? 56 : 36;
+            const size = big ? 86 : m === 'link' ? 56 : 36;
             ring.style.width = ring.style.height = `${size}px`;
             ring.style.margin = `-${size / 2}px 0 0 -${size / 2}px`;
             ring.style.background = big
@@ -39,6 +39,17 @@ export function Cursor() {
             label.style.color = big ? '#0b0914' : '#fff';
             label.style.fontWeight = '800';
             dot.style.opacity = big ? '0' : '1';
+        };
+
+        const updateUnderCursor = () => {
+            if (mx < 0 || my < 0) return;
+            const t = document.elementFromPoint(mx, my);
+            const link = t?.closest('a,button,input');
+            const area = t?.closest('[data-cursor]');
+            const nestedLink = link && area && area.contains(link) && link !== area;
+            setMode(
+                area && !nestedLink ? (area.getAttribute('data-cursor') ?? '') : link ? 'link' : ''
+            );
         };
 
         const onMove = (e: MouseEvent) => {
@@ -56,6 +67,12 @@ export function Cursor() {
             );
         };
 
+        const onClick = () => {
+            // After click events settle and state re-renders (e.g. accordion open/close),
+            // immediately refresh the cursor label for the element currently under the pointer.
+            requestAnimationFrame(updateUnderCursor);
+        };
+
         const onLeave = () => {
             ring.style.opacity = '0';
             dot.style.opacity = '0';
@@ -71,12 +88,14 @@ export function Cursor() {
         };
 
         window.addEventListener('mousemove', onMove);
+        window.addEventListener('click', onClick);
         html.addEventListener('mouseleave', onLeave);
         raf = requestAnimationFrame(loop);
 
         return () => {
             cancelAnimationFrame(raf);
             window.removeEventListener('mousemove', onMove);
+            window.removeEventListener('click', onClick);
             html.removeEventListener('mouseleave', onLeave);
             html.classList.remove('cc-cursor');
         };

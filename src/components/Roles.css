@@ -21,8 +21,8 @@
     content: '';
     position: absolute;
     left: 0;
-    top: 24px;
-    height: 48px;
+    top: 7%;
+    height: 86%;
     width: 3px;
     background: var(--accent);
     transform: scaleY(0);

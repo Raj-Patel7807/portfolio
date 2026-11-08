@@ -17,7 +17,12 @@ import {
     SiGithub,
     SiCloudflare,
     SiLinux,
+    SiRender,
+    SiVercel,
+    SiGithubactions,
 } from 'react-icons/si';
+
+import { DiRedis } from 'react-icons/di';
 import { FaJava, FaDatabase } from 'react-icons/fa';
 import { TbBrain, TbInfinity } from 'react-icons/tb';
 
@@ -44,6 +49,11 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
     'CI/CD': TbInfinity,
     Docker: SiDocker,
     Linux: SiLinux,
+    Redis: DiRedis,
+    Render: SiRender,
+    Vercel: SiVercel,
+    'GitHub Actions': SiGithubactions,
+    pgvector: SiPostgresql,
 };
 
 export function TechIcon({ name, className }: { name: string; className?: string }) {

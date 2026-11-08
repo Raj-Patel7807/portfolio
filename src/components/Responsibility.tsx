@@ -18,7 +18,7 @@ export function Responsibility() {
             <div className="rule-top">
                 <div className="roles__list">
                     {positionsOfResponsibility.map(e => (
-                        <div key={e.org} data-reveal="" data-cursor="Lead" className="roles__item">
+                        <div key={e.org} data-reveal="" data-cursor="POR" className="roles__item">
                             <div className="roles__header">
                                 <div className="mono-label roles__meta">
                                     <span>{e.when}</span>
