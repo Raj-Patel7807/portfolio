@@ -217,7 +217,7 @@ export const education: EducationItem[] = [
         location: 'Patan, Gujarat',
         highlights: [
             'Mathematics, Physics, and Chemistry.',
-            ''
+            'ACPC 2024: All Gujarat Rank **65** (of 38K+ candidates)',
         ],
     },
     {
