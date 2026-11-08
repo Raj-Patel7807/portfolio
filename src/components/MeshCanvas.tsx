@@ -1,25 +1,25 @@
 import { useEffect, useRef } from 'react';
 import { prefersReducedMotion } from '../hooks/motion';
 
-// Dark Theme palette: tasteful, rich atmospheric jewel tones (royal violet, sapphire, deep amethyst, subtle teal)
-// Gives a subtle, high-end colorful touch so the background is never plain or pitch-black.
+// Refined, subtle, modern ambient palettes (no harsh neon, no dull mud).
+// Dark theme: Deep space indigo/charcoal with subtle accents of twilight violet, slate blue, and muted cyan.
 const DARK_BLOBS = [
-    { c: '#3b1d6e', x: 0.2, y: 0.28, r: 0.65, sx: 0.11, sy: 0.13, p: 0, pull: 0.25 },
-    { c: '#1e295d', x: 0.78, y: 0.22, r: 0.6, sx: 0.09, sy: 0.08, p: 2, pull: 0.15 },
-    { c: '#4a154b', x: 0.52, y: 0.65, r: 0.55, sx: 0.12, sy: 0.1, p: 4, pull: 0.18 },
-    { c: '#0f3854', x: 0.88, y: 0.72, r: 0.52, sx: 0.08, sy: 0.11, p: 1, pull: 0.1 },
-    { c: '#2e124d', x: 0.32, y: 0.78, r: 0.5, sx: 0.13, sy: 0.09, p: 3, pull: 0.15 },
-    { c: '#1a103c', x: 0.05, y: 0.88, r: 0.65, sx: 0.07, sy: 0.07, p: 5, pull: 0 },
+    { c: '#23153c', x: 0.22, y: 0.3, r: 0.65, sx: 0.12, sy: 0.14, p: 0, pull: 0.22 },
+    { c: '#141f36', x: 0.78, y: 0.25, r: 0.6, sx: 0.09, sy: 0.08, p: 2, pull: 0.15 },
+    { c: '#1c183a', x: 0.5, y: 0.62, r: 0.58, sx: 0.13, sy: 0.1, p: 4, pull: 0.18 },
+    { c: '#0f2438', x: 0.85, y: 0.75, r: 0.52, sx: 0.08, sy: 0.11, p: 1, pull: 0.12 },
+    { c: '#2b1b42', x: 0.35, y: 0.8, r: 0.5, sx: 0.14, sy: 0.09, p: 3, pull: 0.16 },
+    { c: '#120f24', x: 0.05, y: 0.9, r: 0.65, sx: 0.07, sy: 0.07, p: 5, pull: 0 },
 ];
 
-// Light Theme palette: clean subtle pastel clouds over clean white background
+// Light theme: Subtle, clean airy tints on white.
 const LIGHT_BLOBS = [
-    { c: '#e9d5ff', x: 0.2, y: 0.25, r: 0.65, sx: 0.1, sy: 0.12, p: 0, pull: 0.15 },
-    { c: '#dbeafe', x: 0.75, y: 0.2, r: 0.6, sx: 0.08, sy: 0.07, p: 2, pull: 0.1 },
-    { c: '#f3e8ff', x: 0.5, y: 0.65, r: 0.55, sx: 0.11, sy: 0.09, p: 4, pull: 0.12 },
-    { c: '#e0e7ff', x: 0.85, y: 0.75, r: 0.5, sx: 0.07, sy: 0.1, p: 1, pull: 0 },
-    { c: '#fae8ff', x: 0.35, y: 0.8, r: 0.5, sx: 0.12, sy: 0.08, p: 3, pull: 0.1 },
-    { c: '#f1f5f9', x: 0.05, y: 0.9, r: 0.65, sx: 0.06, sy: 0.06, p: 5, pull: 0 },
+    { c: '#ede9fe', x: 0.22, y: 0.3, r: 0.65, sx: 0.12, sy: 0.14, p: 0, pull: 0.15 },
+    { c: '#e0f2fe', x: 0.78, y: 0.25, r: 0.6, sx: 0.08, sy: 0.07, p: 2, pull: 0.1 },
+    { c: '#f3e8ff', x: 0.5, y: 0.62, r: 0.55, sx: 0.11, sy: 0.09, p: 4, pull: 0.12 },
+    { c: '#e0e7ff', x: 0.85, y: 0.75, r: 0.5, sx: 0.07, sy: 0.11, p: 1, pull: 0 },
+    { c: '#f5f3ff', x: 0.35, y: 0.8, r: 0.5, sx: 0.12, sy: 0.08, p: 3, pull: 0.1 },
+    { c: '#f8fafc', x: 0.05, y: 0.9, r: 0.65, sx: 0.06, sy: 0.06, p: 5, pull: 0 },
 ];
 
 function isDarkTheme(): boolean {
@@ -57,22 +57,42 @@ export function MeshCanvas({ speed = 0.8 }: { speed?: number }) {
             sx += (mx - sx) * 0.04;
             sy += (my - sy) * 0.04;
 
-            ctx.fillStyle = dark ? '#0f0a1c' : '#faf9fc';
+            // Base gradient fill
+            ctx.fillStyle = dark ? '#0d0b18' : '#faf9fc';
             ctx.fillRect(0, 0, w, h);
 
             const blobs = dark ? DARK_BLOBS : LIGHT_BLOBS;
             for (const b of blobs) {
                 const x =
-                    ((b.x + Math.sin(t * b.sx + b.p) * 0.18) * (1 - b.pull) + sx * b.pull) * w;
-                const y = ((b.y + Math.cos(t * b.sy + b.p) * 0.2) * (1 - b.pull) + sy * b.pull) * h;
+                    ((b.x + Math.sin(t * b.sx + b.p) * 0.16) * (1 - b.pull) + sx * b.pull) * w;
+                const y =
+                    ((b.y + Math.cos(t * b.sy + b.p) * 0.18) * (1 - b.pull) + sy * b.pull) * h;
                 const g = ctx.createRadialGradient(x, y, 0, x, y, b.r * Math.max(w, h));
                 g.addColorStop(0, b.c);
                 g.addColorStop(1, `${b.c}00`);
                 ctx.fillStyle = g;
                 ctx.fillRect(0, 0, w, h);
             }
+
+            // Subtle interactive cursor ambient light follow
+            if (dark) {
+                const pointerG = ctx.createRadialGradient(
+                    sx * w,
+                    sy * h,
+                    0,
+                    sx * w,
+                    sy * h,
+                    Math.max(w, h) * 0.35
+                );
+                pointerG.addColorStop(0, 'rgba(124, 58, 237, 0.14)');
+                pointerG.addColorStop(1, 'rgba(124, 58, 237, 0)');
+                ctx.fillStyle = pointerG;
+                ctx.fillRect(0, 0, w, h);
+            }
+
             if (!reduce && visible) raf = requestAnimationFrame(draw);
         };
+
         const kick = () => {
             if (!raf) raf = requestAnimationFrame(draw);
         };
@@ -93,11 +113,13 @@ export function MeshCanvas({ speed = 0.8 }: { speed?: number }) {
             canvas.height = Math.max(120, canvas.offsetHeight / 4);
             kick();
         };
+
         const onPointer = (e: PointerEvent) => {
             const r = canvas.getBoundingClientRect();
             mx = (e.clientX - r.left) / r.width;
             my = (e.clientY - r.top) / r.height;
         };
+
         const io = new IntersectionObserver(([entry]) => {
             visible = entry.isIntersecting;
             if (visible) kick();
