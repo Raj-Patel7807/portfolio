@@ -37,9 +37,9 @@ export default function App() {
                 <Work />
                 <NowBuilding />
 
-                <Experience />
-
                 <Stack />
+
+                <Experience />
 
                 <Scoreboard cf={cf} />
 
