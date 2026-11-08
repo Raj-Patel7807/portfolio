@@ -1,27 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { prefersReducedMotion } from '../hooks/motion';
 
-// Refined, subtle, modern ambient palettes (no harsh neon, no dull mud).
-// Dark theme: Deep space indigo/charcoal with subtle accents of twilight violet, slate blue, and muted cyan.
-const DARK_BLOBS = [
-    { c: '#281745', x: 0.22, y: 0.3, r: 0.65, sx: 0.12, sy: 0.14, p: 0, pull: 0.22 },
-    { c: '#16233d', x: 0.78, y: 0.25, r: 0.6, sx: 0.09, sy: 0.08, p: 2, pull: 0.15 },
-    { c: '#231b45', x: 0.5, y: 0.62, r: 0.58, sx: 0.13, sy: 0.1, p: 4, pull: 0.18 },
-    { c: '#112b42', x: 0.85, y: 0.75, r: 0.52, sx: 0.08, sy: 0.11, p: 1, pull: 0.12 },
-    { c: '#311d4d', x: 0.35, y: 0.8, r: 0.5, sx: 0.14, sy: 0.09, p: 3, pull: 0.16 },
-    { c: '#141029', x: 0.05, y: 0.9, r: 0.65, sx: 0.07, sy: 0.07, p: 5, pull: 0 },
-];
-
-// Light theme: Subtle, clean airy tints on white (soft lilac, sky breeze, subtle lavender, pale slate).
-const LIGHT_BLOBS = [
-    { c: '#e5deff', x: 0.22, y: 0.3, r: 0.65, sx: 0.12, sy: 0.14, p: 0, pull: 0.2 },
-    { c: '#dbeafe', x: 0.78, y: 0.25, r: 0.6, sx: 0.09, sy: 0.08, p: 2, pull: 0.15 },
-    { c: '#f0e6ff', x: 0.5, y: 0.62, r: 0.58, sx: 0.13, sy: 0.1, p: 4, pull: 0.18 },
-    { c: '#dbe7fb', x: 0.85, y: 0.75, r: 0.52, sx: 0.08, sy: 0.11, p: 1, pull: 0.12 },
-    { c: '#ede8fc', x: 0.35, y: 0.8, r: 0.5, sx: 0.14, sy: 0.09, p: 3, pull: 0.15 },
-    { c: '#f1f5f9', x: 0.05, y: 0.9, r: 0.65, sx: 0.07, sy: 0.07, p: 5, pull: 0 },
-];
-
 function isDarkTheme(): boolean {
     const theme = document.documentElement.dataset.theme;
     if (theme === 'dark') return true;
@@ -29,7 +8,18 @@ function isDarkTheme(): boolean {
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
 
-export function MeshCanvas({ speed = 0.8 }: { speed?: number }) {
+interface Particle {
+    x: number;
+    y: number;
+    vx: number;
+    vy: number;
+    originX: number;
+    originY: number;
+    size: number;
+    baseAlpha: number;
+}
+
+export function MeshCanvas({ speed = 1 }: { speed?: number }) {
     const ref = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
@@ -39,85 +29,205 @@ export function MeshCanvas({ speed = 0.8 }: { speed?: number }) {
 
         const reduce = prefersReducedMotion();
         const host = canvas.closest('section') ?? canvas;
-        let mx = 0.5,
-            my = 0.5,
-            sx = 0.5,
-            sy = 0.5;
+
+        let width = (canvas.width = canvas.offsetWidth);
+        let height = (canvas.height = canvas.offsetHeight);
+
+        let mouseX = -1000;
+        let mouseY = -1000;
+        let smoothMouseX = -1000;
+        let smoothMouseY = -1000;
+        let isHovered = false;
+
         let raf = 0;
         let visible = true;
-        const t0 = performance.now();
-
         let dark = isDarkTheme();
 
-        const draw = (now: number) => {
+        // Spawn dynamic constellation node particles
+        const particleCount = Math.floor(Math.min(width, height) / 16);
+        const particles: Particle[] = [];
+
+        for (let i = 0; i < particleCount; i++) {
+            const x = Math.random() * width;
+            const y = Math.random() * height;
+            particles.push({
+                x,
+                y,
+                originX: x,
+                originY: y,
+                vx: (Math.random() - 0.5) * 0.45 * speed,
+                vy: (Math.random() - 0.5) * 0.45 * speed,
+                size: Math.random() * 1.5 + 1,
+                baseAlpha: Math.random() * 0.4 + 0.2,
+            });
+        }
+
+        let time = 0;
+
+        const draw = () => {
             raf = 0;
-            const t = ((now - t0) / 1000) * speed;
-            const w = canvas.width,
-                h = canvas.height;
-            sx += (mx - sx) * 0.04;
-            sy += (my - sy) * 0.04;
+            time += 0.015 * speed;
 
-            // Base gradient fill
-            ctx.fillStyle = dark ? '#0d0b18' : '#faf9fc';
-            ctx.fillRect(0, 0, w, h);
+            // Smooth pointer tracking
+            smoothMouseX += (mouseX - smoothMouseX) * 0.08;
+            smoothMouseY += (mouseY - smoothMouseY) * 0.08;
 
-            const blobs = dark ? DARK_BLOBS : LIGHT_BLOBS;
-            for (const b of blobs) {
-                const x =
-                    ((b.x + Math.sin(t * b.sx + b.p) * 0.16) * (1 - b.pull) + sx * b.pull) * w;
-                const y =
-                    ((b.y + Math.cos(t * b.sy + b.p) * 0.18) * (1 - b.pull) + sy * b.pull) * h;
-                const g = ctx.createRadialGradient(x, y, 0, x, y, b.r * Math.max(w, h));
-                g.addColorStop(0, b.c);
-                g.addColorStop(1, `${b.c}00`);
-                ctx.fillStyle = g;
-                ctx.fillRect(0, 0, w, h);
+            ctx.clearRect(0, 0, width, height);
+
+            // 1. Fluid Ambient Deep Background Gradient
+            const bgGrad = ctx.createLinearGradient(0, 0, width, height);
+            if (dark) {
+                bgGrad.addColorStop(0, '#0c0a18');
+                bgGrad.addColorStop(0.5, '#130d24');
+                bgGrad.addColorStop(1, '#090712');
+            } else {
+                bgGrad.addColorStop(0, '#faf9fc');
+                bgGrad.addColorStop(0.5, '#f4effc');
+                bgGrad.addColorStop(1, '#f8f6fc');
+            }
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, width, height);
+
+            // 2. Interactive Ambient Light Beam (Follows cursor smoothly)
+            if (isHovered && smoothMouseX > 0 && smoothMouseY > 0) {
+                const mouseAura = ctx.createRadialGradient(
+                    smoothMouseX,
+                    smoothMouseY,
+                    0,
+                    smoothMouseX,
+                    smoothMouseY,
+                    Math.max(width, height) * 0.38
+                );
+                if (dark) {
+                    mouseAura.addColorStop(0, 'rgba(139, 92, 246, 0.16)');
+                    mouseAura.addColorStop(0.5, 'rgba(59, 130, 246, 0.06)');
+                    mouseAura.addColorStop(1, 'rgba(13, 11, 24, 0)');
+                } else {
+                    mouseAura.addColorStop(0, 'rgba(139, 92, 246, 0.14)');
+                    mouseAura.addColorStop(0.5, 'rgba(99, 102, 241, 0.05)');
+                    mouseAura.addColorStop(1, 'rgba(250, 249, 252, 0)');
+                }
+                ctx.fillStyle = mouseAura;
+                ctx.fillRect(0, 0, width, height);
             }
 
-            // Interactive cursor ambient glow aura (both Dark and Light mode)
-            const auraColor = dark ? '124, 58, 237' : '139, 92, 246';
-            const auraAlpha = dark ? 0.15 : 0.09;
-            const pointerG = ctx.createRadialGradient(
-                sx * w,
-                sy * h,
-                0,
-                sx * w,
-                sy * h,
-                Math.max(w, h) * 0.38
-            );
-            pointerG.addColorStop(0, `rgba(${auraColor}, ${auraAlpha})`);
-            pointerG.addColorStop(1, `rgba(${auraColor}, 0)`);
-            ctx.fillStyle = pointerG;
-            ctx.fillRect(0, 0, w, h);
+            // 3. Ambient Fluid Waves (Floating subtle organic light pools)
+            const pools = [
+                {
+                    x: width * 0.25 + Math.sin(time * 0.7) * 60,
+                    y: height * 0.35 + Math.cos(time * 0.6) * 45,
+                    r: Math.min(width, height) * 0.42,
+                    c: dark ? 'rgba(124, 58, 237, 0.12)' : 'rgba(167, 139, 250, 0.15)',
+                },
+                {
+                    x: width * 0.78 + Math.cos(time * 0.5) * 70,
+                    y: height * 0.45 + Math.sin(time * 0.8) * 50,
+                    r: Math.min(width, height) * 0.46,
+                    c: dark ? 'rgba(37, 99, 235, 0.09)' : 'rgba(191, 219, 254, 0.22)',
+                },
+                {
+                    x: width * 0.5 + Math.sin(time * 0.4) * 50,
+                    y: height * 0.8 + Math.cos(time * 0.5) * 40,
+                    r: Math.min(width, height) * 0.38,
+                    c: dark ? 'rgba(192, 38, 211, 0.07)' : 'rgba(245, 208, 254, 0.18)',
+                },
+            ];
 
-            if (!reduce && visible) raf = requestAnimationFrame(draw);
+            for (const pool of pools) {
+                const g = ctx.createRadialGradient(pool.x, pool.y, 0, pool.x, pool.y, pool.r);
+                g.addColorStop(0, pool.c);
+                g.addColorStop(1, 'rgba(0, 0, 0, 0)');
+                ctx.fillStyle = g;
+                ctx.fillRect(0, 0, width, height);
+            }
+
+            // 4. Dynamic Constellation Mesh & Kinetic Physics
+            const maxDistance = 120;
+            const mouseRepelRadius = 140;
+
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+
+                if (!reduce) {
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    // Soft bounce off walls
+                    if (p.x < 0 || p.x > width) p.vx *= -1;
+                    if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                    // Mouse interaction: soft physics repulsion
+                    if (isHovered) {
+                        const dx = p.x - smoothMouseX;
+                        const dy = p.y - smoothMouseY;
+                        const dist = Math.hypot(dx, dy);
+                        if (dist < mouseRepelRadius && dist > 0) {
+                            const force = (mouseRepelRadius - dist) / mouseRepelRadius;
+                            const angle = Math.atan2(dy, dx);
+                            p.x += Math.cos(angle) * force * 3;
+                            p.y += Math.sin(angle) * force * 3;
+                        }
+                    }
+                }
+
+                // Render particle dot
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = dark
+                    ? `rgba(196, 181, 253, ${p.baseAlpha})`
+                    : `rgba(109, 40, 217, ${p.baseAlpha * 0.8})`;
+                ctx.fill();
+
+                // Connect nearby particles with subtle neural threads
+                for (let j = i + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                    if (dist < maxDistance) {
+                        const alpha = (1 - dist / maxDistance) * (dark ? 0.16 : 0.12);
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.strokeStyle = dark
+                            ? `rgba(167, 139, 250, ${alpha})`
+                            : `rgba(124, 58, 237, ${alpha})`;
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            if (visible) raf = requestAnimationFrame(draw);
         };
 
         const kick = () => {
             if (!raf) raf = requestAnimationFrame(draw);
         };
 
-        // Watch for theme toggles on documentElement
-        const observer = new MutationObserver(mutations => {
-            for (const m of mutations) {
-                if (m.type === 'attributes' && m.attributeName === 'data-theme') {
-                    dark = isDarkTheme();
-                    kick();
-                }
-            }
+        // Theme sync
+        const observer = new MutationObserver(() => {
+            dark = isDarkTheme();
+            kick();
         });
         observer.observe(document.documentElement, { attributes: true });
 
-        const resize = () => {
-            canvas.width = Math.max(200, canvas.offsetWidth / 4);
-            canvas.height = Math.max(120, canvas.offsetHeight / 4);
+        const onPointerMove = (e: PointerEvent) => {
+            const r = canvas.getBoundingClientRect();
+            mouseX = e.clientX - r.left;
+            mouseY = e.clientY - r.top;
+            isHovered = true;
             kick();
         };
 
-        const onPointer = (e: PointerEvent) => {
-            const r = canvas.getBoundingClientRect();
-            mx = (e.clientX - r.left) / r.width;
-            my = (e.clientY - r.top) / r.height;
+        const onPointerLeave = () => {
+            isHovered = false;
+            mouseX = -1000;
+            mouseY = -1000;
+        };
+
+        const onResize = () => {
+            width = canvas.width = canvas.offsetWidth;
+            height = canvas.height = canvas.offsetHeight;
+            kick();
         };
 
         const io = new IntersectionObserver(([entry]) => {
@@ -125,17 +235,20 @@ export function MeshCanvas({ speed = 0.8 }: { speed?: number }) {
             if (visible) kick();
         });
 
-        resize();
         io.observe(canvas);
-        window.addEventListener('resize', resize);
-        host.addEventListener('pointermove', onPointer as EventListener);
+        window.addEventListener('resize', onResize);
+        host.addEventListener('pointermove', onPointerMove as EventListener);
+        host.addEventListener('pointerleave', onPointerLeave as EventListener);
+
+        kick();
 
         return () => {
             cancelAnimationFrame(raf);
             observer.disconnect();
             io.disconnect();
-            window.removeEventListener('resize', resize);
-            host.removeEventListener('pointermove', onPointer as EventListener);
+            window.removeEventListener('resize', onResize);
+            host.removeEventListener('pointermove', onPointerMove as EventListener);
+            host.removeEventListener('pointerleave', onPointerLeave as EventListener);
         };
     }, [speed]);
 
