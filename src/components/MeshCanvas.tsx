@@ -1,14 +1,15 @@
 import { useEffect, useRef } from 'react';
 import { prefersReducedMotion } from '../hooks/motion';
 
-// Dark Theme palette: deep nocturnal ambient blobs (midnight, deep indigo, subtle violet)
+// Dark Theme palette: tasteful, rich atmospheric jewel tones (royal violet, sapphire, deep amethyst, subtle teal)
+// Gives a subtle, high-end colorful touch so the background is never plain or pitch-black.
 const DARK_BLOBS = [
-    { c: '#1e1035', x: 0.2, y: 0.25, r: 0.6, sx: 0.1, sy: 0.12, p: 0, pull: 0.2 },
-    { c: '#0f172a', x: 0.75, y: 0.2, r: 0.55, sx: 0.08, sy: 0.07, p: 2, pull: 0.1 },
-    { c: '#241442', x: 0.5, y: 0.65, r: 0.5, sx: 0.11, sy: 0.09, p: 4, pull: 0.15 },
-    { c: '#0c1222', x: 0.85, y: 0.75, r: 0.5, sx: 0.07, sy: 0.1, p: 1, pull: 0 },
-    { c: '#191228', x: 0.35, y: 0.8, r: 0.45, sx: 0.12, sy: 0.08, p: 3, pull: 0.1 },
-    { c: '#09070f', x: 0.05, y: 0.9, r: 0.6, sx: 0.06, sy: 0.06, p: 5, pull: 0 },
+    { c: '#3b1d6e', x: 0.2, y: 0.28, r: 0.65, sx: 0.11, sy: 0.13, p: 0, pull: 0.25 },
+    { c: '#1e295d', x: 0.78, y: 0.22, r: 0.6, sx: 0.09, sy: 0.08, p: 2, pull: 0.15 },
+    { c: '#4a154b', x: 0.52, y: 0.65, r: 0.55, sx: 0.12, sy: 0.1, p: 4, pull: 0.18 },
+    { c: '#0f3854', x: 0.88, y: 0.72, r: 0.52, sx: 0.08, sy: 0.11, p: 1, pull: 0.1 },
+    { c: '#2e124d', x: 0.32, y: 0.78, r: 0.5, sx: 0.13, sy: 0.09, p: 3, pull: 0.15 },
+    { c: '#1a103c', x: 0.05, y: 0.88, r: 0.65, sx: 0.07, sy: 0.07, p: 5, pull: 0 },
 ];
 
 // Light Theme palette: clean subtle pastel clouds over clean white background
@@ -56,7 +57,7 @@ export function MeshCanvas({ speed = 0.8 }: { speed?: number }) {
             sx += (mx - sx) * 0.04;
             sy += (my - sy) * 0.04;
 
-            ctx.fillStyle = dark ? '#0a0812' : '#faf9fc';
+            ctx.fillStyle = dark ? '#0f0a1c' : '#faf9fc';
             ctx.fillRect(0, 0, w, h);
 
             const blobs = dark ? DARK_BLOBS : LIGHT_BLOBS;

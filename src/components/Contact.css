@@ -127,15 +127,15 @@
 }
 
 .contact__wordmark {
-    margin-top: 96px;
-    padding-top: 0.04em;
+    margin-top: 20px;
+    /* padding-top: 0.04em; */
     overflow: hidden;
     white-space: nowrap;
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: clamp(90px, 30vw, 520px);
+    font-size: clamp(420px, 16.5vw, 260px);
     letter-spacing: -0.07em;
-    line-height: 0.74;
+    line-height: 1;
     color: transparent;
     -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.7);
 }

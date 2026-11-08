@@ -1,9 +1,9 @@
 export const profile = {
     name: 'Raj Patel',
     email: 'rajpatel7807@gmail.com',
-    resume: '/resume.pdf',
-    city: 'Gandhinagar',
-    pitch: 'I build backend systems, scalable web applications and solve algorithmic challenges. Student at DAU (formerly DA-IICT).',
+    resume: 'https://drive.google.com/file/d/1Fbk7ntThOS4ssBBVCLYcWdCuEhLwgFht/view?usp=sharing',
+    city: 'Mehsana',
+    pitch: 'I build backend systems and solve competitive programming problems. Third-year student at DA-IICT.',
     portrait: '/images/Raj.png' as string | undefined,
     github: { user: 'Raj-Patel7807', url: 'https://github.com/Raj-Patel7807' },
     linkedin: 'https://www.linkedin.com/in/raj-patel7807',
@@ -11,19 +11,17 @@ export const profile = {
 };
 
 export const marquee = [
-    'Software developer',
-    'Competitive programmer',
-    'React 19 & TypeScript',
-    'C++ & Algorithms',
-    'PostgreSQL',
-    'System Architecture',
-    'Editorial Design',
-    'DAU ’28',
+    'Competitive Programmer',
+    'Software Engineer',
+    'DA-IICT ’28',
+    'CF Expert',
+    'LC Knight',
+    'C++, Java',
 ];
 
 export const exploring = {
     lead: 'Currently exploring',
-    accent: 'distributed architectures, high-performance systems and developer tooling.',
+    accent: 'distributed systems, backend engineering and agentic AI.',
 };
 
 export const about = {

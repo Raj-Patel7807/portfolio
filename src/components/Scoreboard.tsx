@@ -19,7 +19,15 @@ export function Scoreboard({ cf }: { cf: CfUser | null }) {
             note: codeforces.note,
             isLive: cf !== null,
         },
-        ...platforms.map(p => ({ ...p, pct: (p.rating / p.scale) * 100, isLive: false })),
+        ...platforms.map(p => {
+            const numRating = typeof p.rating === 'number' ? p.rating : parseFloat(p.rating) || 0;
+            const scale = p.scale ?? 3500;
+            return {
+                ...p,
+                pct: Math.min(100, (numRating / scale) * 100),
+                isLive: false,
+            };
+        }),
     ];
 
     return (

@@ -11,7 +11,7 @@ export function Roles() {
                     <div className="section-head">
                         <DisplayHeading>Experience</DisplayHeading>
                         <div data-reveal="" className="mono-label">
-                            Engineering & Systems Building
+                            {/* Engineering & Systems Building */}
                         </div>
                     </div>
                     <div className="rule-top">

@@ -1,10 +1,10 @@
-export const problemsSolved = '1,000+';
+export const problemsSolved = '3,100+';
 
 export const proof = {
-    before: [{ v: problemsSolved, l: 'problems solved across competitive programming platforms' }],
+    before: [{ v: problemsSolved, l: 'problems solved across competitive programming sites' }],
     after: [
-        { v: 'DAU', l: 'Information & Communication Technology' },
-        { v: '100%', l: 'commitment to clean engineering & craft' },
+        { v: '4 Star', l: 'CodeChef rating' },
+        { v: 'DA-IICT', l: 'Information & Communication Technology' },
     ],
 };
 
@@ -35,6 +35,14 @@ export const platforms = [
         title: '4 Star',
         note: 'Contestant',
     },
+    {
+        platform: 'Codolio',
+        handle: 'Raj_Patel_7807',
+        href: 'https://codolio.com/profile/Raj_Patel_7807',
+        rating: '3100+',
+        title: '',
+        note: '150+ contest participated',
+    },
 ];
 
 export type Milestone = {
@@ -60,14 +68,12 @@ export const timeline: { year: string; items: Milestone[] }[] = [];
 // Technical Work & Professional Experience
 export const experience: RoleItem[] = [
     {
-        org: 'Software Development & Systems',
-        role: 'Full-Stack Developer & Systems Builder',
-        when: '2024 – Present',
-        where: 'Gandhinagar, India',
+        org: 'CodeHurdle',
+        role: 'PCD Head',
+        when: 'August 2026 - Present',
+        where: 'Freelance',
         bullets: [
-            'Architecting modern frontend applications with React 19, TypeScript, and fluid CSS.',
-            'Building performant backend services and database systems with PostgreSQL.',
-            'Practicing algorithmic problem solving and clean software craft.',
+            'Creating beginner-friendly Post-Contest Discussion (PCD) videos with explanations of CP problems and solutions.',
         ],
     },
 ];
@@ -107,7 +113,7 @@ export type SkillCategory = {
 export const skillCategories: SkillCategory[] = [
     {
         category: 'Languages',
-        items: ['Java', 'C++', 'Python', 'C', 'TypeScript', 'SQL'],
+        items: ['C++', 'Java', 'Python', 'C', 'TypeScript', 'SQL'],
     },
     {
         category: 'Backend & Frameworks',
@@ -115,15 +121,33 @@ export const skillCategories: SkillCategory[] = [
     },
     {
         category: 'Frontend & UI',
-        items: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+        items: [
+            'React',
+            // 'Next.js',
+            'Tailwind CSS',
+            'Vite',
+            // 'HTML',
+            // 'CSS',
+        ],
     },
     {
-        category: 'Databases & Cloud',
-        items: ['PostgreSQL', 'Supabase', 'Redis'],
+        category: 'Databases',
+        items: ['PostgreSQL', 'Redis', 'Supabase', 'pgvector'],
     },
     {
         category: 'DevOps & Tools',
-        items: ['Git', 'GitHub', 'CI/CD', 'Docker', 'Linux', 'Cloudflare', 'Render'],
+        items: [
+            'Git',
+            'GitHub',
+            'Docker',
+            'GitHub Actions',
+            'Linux',
+            // 'Maven',
+            // 'CMake',
+            'Cloudflare',
+            'Render',
+            'Vercel',
+        ],
     },
 ];
 

@@ -25,7 +25,7 @@ export function Contact() {
     return (
         <section id="contact" className="contact">
             <div data-reveal="" className="contact__label">
-                Contact · Open to SDE internships, Summer 2027
+                Contact · Open to SWE internships.
             </div>
             <h2 className="contact__title">
                 <span className="contact__line">
@@ -96,7 +96,7 @@ export function Contact() {
             </span>
 
             <div aria-hidden="true" className="contact__wordmark">
-                shane.
+                Raj 7807.
             </div>
 
             <footer className="contact__footer">
