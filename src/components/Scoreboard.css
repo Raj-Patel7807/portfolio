@@ -82,3 +82,25 @@
     letter-spacing: -0.065em;
     line-height: 0.8;
 }
+
+.score__rating-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.score__value-label {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: -0.2rem;
+}
+
+.score__total {
+    font-size: 0.3em;
+    font-weight: 500;
+    opacity: 0.45;
+    white-space: nowrap;
+    vertical-align: middle;
+}

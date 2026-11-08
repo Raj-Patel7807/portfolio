@@ -18,10 +18,21 @@ export const codeforces = {
 
 export const platforms = [
     {
+        platform: 'Codeforces',
+        handle: 'Raj_Patel_7807',
+        href: 'https://codeforces.com/profile/Raj_Patel_7807',
+        value: 1642,
+        valueType: 'rating',
+        scale: 4000,
+        title: 'Expert',
+        note: 'Top 1000 in india',
+    },
+    {
         platform: 'LeetCode',
         handle: 'Raj_Patel_7807',
         href: 'https://leetcode.com/u/Raj_Patel_7807/',
-        rating: 2059,
+        value: 2059,
+        valueType: 'rating',
         scale: 3500,
         title: 'Knight',
         note: 'Top 1.8% globally',
@@ -30,19 +41,21 @@ export const platforms = [
         platform: 'CodeChef',
         handle: 'raj_patel_7807',
         href: 'https://www.codechef.com/users/raj_patel_7807',
-        rating: 1817,
+        value: 1817,
+        valueType: 'rating',
         scale: 3400,
         title: '4 Star',
-        note: 'Contestant',
+        note: 'Top 2.78% globally',
     },
     {
         platform: 'Codolio',
         handle: 'Raj_Patel_7807',
         href: 'https://codolio.com/profile/Raj_Patel_7807',
-        rating: 126,
+        value: 126,
+        valueType: 'site-wide rank',
         scale: 42000,
         title: '3100+ Problems Solved',
-        note: '150+ contest participated',
+        note: 'Top 0.3% globally',
     },
 ];
 

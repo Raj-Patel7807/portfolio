@@ -1,30 +1,38 @@
-import { codeforces, platforms, problemsSolved } from '../data/content';
+import {
+    // codeforces,
+    platforms,
+    problemsSolved,
+} from '../data/content';
 import type { CfUser } from '../hooks/useLiveStats';
 import { DisplayHeading } from './DisplayHeading';
 import { Milestones } from './Milestones';
 import './Scoreboard.css';
 
-const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+// const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
 export function Scoreboard({ cf }: { cf: CfUser | null }) {
-    const live = cf ?? codeforces.fallback;
+    console.log(cf);
+    // const live = cf ?? codeforces.fallback;
     const rows = [
-        {
-            platform: 'Codeforces',
-            handle: codeforces.handle,
-            href: codeforces.url,
-            rating: live.maxRating,
-            pct: Math.min(100, (live.rating / codeforces.scale) * 100),
-            title: `${capitalize(live.maxRank)}`,
-            note: codeforces.note,
-            isLive: cf !== null,
-        },
+        // {
+        //     platform: 'Codeforces',
+        //     handle: codeforces.handle,
+        //     href: codeforces.url,
+        //     rating: live.maxRating,
+        //     pct: Math.min(100, (live.rating / codeforces.scale) * 100),
+        //     title: `${capitalize(live.maxRank)}`,
+        //     note: codeforces.note,
+        //     isLive: cf !== null,
+        // },
         ...platforms.map(p => {
-            const numRating = typeof p.rating === 'number' ? p.rating : parseFloat(p.rating) || 0;
+            const numValue = typeof p.value === 'number' ? p.value : parseFloat(p.value) || 0;
+
             const scale = p.scale ?? 3500;
+
             return {
                 ...p,
-                pct: Math.min(100, (numRating / scale) * 100),
+                rating: p.valueType === 'rank' ? `#${p.value}` : p.value,
+                pct: Math.min(100, (numValue / scale) * 100),
                 isLive: false,
             };
         }),
@@ -72,7 +80,17 @@ export function Scoreboard({ cf }: { cf: CfUser | null }) {
                                 />
                             </div>
                         </div>
-                        <div className="score__rating">{r.rating}</div>
+                        <div className="score__rating-wrap">
+                            <span className="score__value-label">{r.valueType}</span>
+                            <div className="score__rating">
+                                {r.valueType === 'rating' ? r.value : `#${r.value}`}
+                            </div>
+                            {r.valueType === 'rank' ? (
+                                <div>out of {r.scale.toLocaleString('en-IN')}</div>
+                            ) : (
+                                <></>
+                            )}
+                        </div>
                     </a>
                 ))}
             </div>
