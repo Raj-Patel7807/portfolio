@@ -22,7 +22,7 @@ export function Education() {
 
                 <div className="edu__list">
                     {education.map((e, idx) => (
-                        <div key={idx} data-reveal="" className="edu__item">
+                        <div key={idx} data-reveal="" data-cursor="Learn" className="edu__item">
                             <span aria-hidden="true" className="edu__node" />
 
                             <div className="edu__info">
@@ -41,6 +41,17 @@ export function Education() {
                                         </>
                                     )}
                                 </div>
+                                {e.highlights && e.highlights.length > 0 && (
+                                    <ul className="arrow-list edu__bullets">
+                                        {e.highlights.map((h, hIdx) => (
+                                            <li key={hIdx} className="arrow-row">
+                                                <span className="arrow-text">
+                                                    {formatRichText(h)}
+                                                </span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
                                 {e.highlights && e.highlights.length > 0 && (
                                     <ul className="arrow-list edu__bullets">
                                         {e.highlights.map((h, hIdx) => (

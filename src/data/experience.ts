@@ -215,7 +215,10 @@ export const education: EducationItem[] = [
         scoreType: 'Percentage',
         period: '2023 - 2024',
         location: 'Patan, Gujarat',
-        highlights: ['Mathematics, Physics, and Chemistry.'],
+        highlights: [
+            'Mathematics, Physics, and Chemistry.',
+            ''
+        ],
     },
     {
         institution: 'Pioneer Secondary School',
