@@ -3,11 +3,11 @@ import { toggleTheme } from '../hooks/theme';
 import './Nav.css';
 
 const links = [
+    { href: '#about', label: 'About' },
     { href: '#work', label: 'Work' },
     { href: '#experience', label: 'Experience' },
     { href: '#scoreboard', label: 'Scoreboard' },
     { href: '#education', label: 'Education' },
-    { href: '#about', label: 'About' },
     { href: '#contact', label: 'Contact' },
 ];
 

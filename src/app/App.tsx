@@ -29,15 +29,15 @@ export default function App() {
                 <Hero />
                 <Marquee />
                 <Proof cf={cf} />
+                <About />
                 <Work />
                 <NowBuilding />
                 <Roles />
                 <Scoreboard cf={cf} />
+                <Education />
                 <Stack />
                 <GitHubSection github={github} />
-                <Education />
                 {showGallery && gallery.some((g: GalleryItem) => Boolean(g.image)) && <Gallery />}
-                <About />
                 <Contact />
             </main>
         </>
