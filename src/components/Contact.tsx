@@ -76,18 +76,35 @@ export function Contact() {
                         ↗
                     </span>
                 </a>
-                <button
-                    type="button"
-                    className="contact__link"
-                    onClick={() => copy('discord', profile.discord)}
-                    aria-label={`Copy Discord username ${profile.discord}`}
-                >
-                    <BrandIcon name="discord" />
-                    Discord
-                    <span className="contact__handle">
-                        {copied === 'discord' ? 'Copied ✓' : profile.discord}
-                    </span>
-                </button>
+                {profile.discord.url ? (
+                    <a
+                        href={profile.discord.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="contact__link"
+                        title="Open Discord profile"
+                    >
+                        <BrandIcon name="discord" />
+                        Discord
+                        <span className="contact__handle">{profile.discord.user}</span>
+                        <span aria-hidden="true" className="contact__arrow">
+                            ↗
+                        </span>
+                    </a>
+                ) : (
+                    <button
+                        type="button"
+                        className="contact__link"
+                        onClick={() => copy('discord', profile.discord.user)}
+                        aria-label={`Copy Discord username ${profile.discord.user}`}
+                    >
+                        <BrandIcon name="discord" />
+                        Discord
+                        <span className="contact__handle">
+                            {copied === 'discord' ? 'Copied ✓' : profile.discord.user}
+                        </span>
+                    </button>
+                )}
             </div>
             <span className="sr-only" role="status">
                 {copied

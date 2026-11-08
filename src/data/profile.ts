@@ -7,7 +7,10 @@ export const profile = {
     portrait: '/images/Raj.png' as string | undefined,
     github: { user: 'Raj-Patel7807', url: 'https://github.com/Raj-Patel7807' },
     linkedin: 'https://www.linkedin.com/in/raj-patel7807',
-    discord: '',
+    discord: {
+        user: 'entropyenjoyer.psi278',
+        url: 'https://discord.com/users/entropyenjoyer.psi278',
+    },
 };
 
 export const marquee = [
