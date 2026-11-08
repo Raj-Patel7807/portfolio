@@ -1,23 +1,30 @@
 .edu {
     position: relative;
-    padding-left: clamp(24px, 4vw, 48px);
+    padding-left: clamp(32px, 5vw, 64px);
 }
 
-/* Minimal left indicator track/rail */
+/* Smooth kinetic left indicator rail */
 .edu__track {
     position: absolute;
-    left: 8px;
-    top: 24px;
-    bottom: 24px;
+    left: 12px;
+    top: 20px;
+    bottom: 30px;
     width: 2px;
     background: var(--track);
+    border-radius: 999px;
+    overflow: hidden;
 }
 
 .edu__track-fill {
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, var(--accent) 0%, var(--ink) 100%);
-    opacity: 0.65;
+    background: linear-gradient(
+        180deg,
+        var(--accent) 0%,
+        var(--ink) 50%,
+        rgba(139, 92, 246, 0.2) 100%
+    );
+    opacity: 0.85;
 }
 
 .edu__list {
@@ -30,7 +37,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 32px 48px;
-    padding: clamp(28px, 3.5vw, 44px) 0;
+    padding: clamp(32px, 4vw, 48px) 0;
     border-bottom: 1.5px solid var(--rule);
     align-items: start;
     transition:
@@ -39,41 +46,42 @@
 }
 
 .edu__item:first-child {
-    padding-top: 10px;
+    padding-top: 14px;
 }
 
 .edu__item:hover {
-    padding-left: 12px;
+    padding-left: 14px;
 }
 
-/* Left node icon/dot on the track */
+/* Left node icon/dot on the track with pulsing ring */
 .edu__node {
     position: absolute;
-    left: calc(-1 * clamp(24px, 4vw, 48px) + 3px);
-    top: clamp(28px, 3.5vw, 44px);
-    width: 12px;
-    height: 12px;
+    left: calc(-1 * clamp(32px, 5vw, 64px) + 6px);
+    top: clamp(32px, 4vw, 48px);
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background: var(--bg);
     border: 2px solid var(--accent);
     transform: translate(-50%, -50%);
     transition:
-        transform 0.3s var(--ease-out),
+        transform 0.4s var(--ease-out),
         background 0.3s,
         border-color 0.3s,
-        box-shadow 0.3s;
+        box-shadow 0.4s;
 }
 
 .edu__item:first-child .edu__node {
-    top: 16px;
+    top: 20px;
     background: var(--accent);
-    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.25);
+    box-shadow: 0 0 0 5px rgba(139, 92, 246, 0.22);
 }
 
 .edu__item:hover .edu__node {
-    transform: translate(-50%, -50%) scale(1.35);
+    transform: translate(-50%, -50%) scale(1.45);
     background: var(--accent);
-    box-shadow: 0 0 12px rgba(139, 92, 246, 0.6);
+    border-color: #fff;
+    box-shadow: 0 0 16px rgba(139, 92, 246, 0.85);
 }
 
 .edu__info {
@@ -101,6 +109,11 @@
     letter-spacing: -0.04em;
     line-height: 1.05;
     color: var(--fg);
+    transition: transform 0.4s var(--ease-out);
+}
+
+.edu__item:hover .edu__inst {
+    transform: translateX(4px);
 }
 
 .edu__degree {
@@ -155,7 +168,7 @@
 .edu__item:hover .edu__score-box {
     border-color: var(--accent);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 .edu__score-val {
@@ -178,15 +191,15 @@
 
 @media (max-width: 768px) {
     .edu {
-        padding-left: 24px;
+        padding-left: 28px;
     }
 
     .edu__track {
-        left: 4px;
+        left: 6px;
     }
 
     .edu__node {
-        left: -20px;
+        left: -22px;
     }
 
     .edu__item {

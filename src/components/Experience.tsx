@@ -14,27 +14,38 @@ export function Experience() {
                     Engineering & Professional Work
                 </div>
             </div>
-            <div className="rule-top">
-                {experience.map(e => (
-                    <div key={e.org} data-reveal="" className="roles__item">
-                        <div>
-                            <div className="mono-label">
-                                {e.when} · {e.where}
+
+            <div className="rule-top roles">
+                <div aria-hidden="true" className="roles__track">
+                    <div className="roles__track-fill" />
+                </div>
+
+                <div className="roles__list">
+                    {experience.map(e => (
+                        <div key={e.org} data-reveal="" data-cursor="Role" className="roles__item">
+                            <span aria-hidden="true" className="roles__node" />
+
+                            <div className="roles__header">
+                                <div className="mono-label roles__meta">
+                                    <span>{e.when}</span>
+                                    <span>·</span>
+                                    <span>{e.where}</span>
+                                </div>
+                                <h3 className="roles__org">{formatRichText(e.org)}</h3>
+                                <div className="roles__role">{formatRichText(e.role)}</div>
                             </div>
-                            <h3 className="roles__org">{formatRichText(e.org)}</h3>
-                            <div className="roles__role">{formatRichText(e.role)}</div>
+
+                            <ul className="arrow-list roles__bullets">
+                                {e.bullets.map((b, bIdx) => (
+                                    <li key={bIdx} className="arrow-row">
+                                        <span className="arrow-text">{formatRichText(b)}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                        <ul className="arrow-list roles__bullets">
-                            {e.bullets.map((b, bIdx) => (
-                                <li key={bIdx} className="arrow-row">
-                                    <span className="arrow-text">{formatRichText(b)}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </section>
     );
 }
-
