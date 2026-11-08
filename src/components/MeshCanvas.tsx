@@ -4,22 +4,22 @@ import { prefersReducedMotion } from '../hooks/motion';
 // Refined, subtle, modern ambient palettes (no harsh neon, no dull mud).
 // Dark theme: Deep space indigo/charcoal with subtle accents of twilight violet, slate blue, and muted cyan.
 const DARK_BLOBS = [
-    { c: '#23153c', x: 0.22, y: 0.3, r: 0.65, sx: 0.12, sy: 0.14, p: 0, pull: 0.22 },
-    { c: '#141f36', x: 0.78, y: 0.25, r: 0.6, sx: 0.09, sy: 0.08, p: 2, pull: 0.15 },
-    { c: '#1c183a', x: 0.5, y: 0.62, r: 0.58, sx: 0.13, sy: 0.1, p: 4, pull: 0.18 },
-    { c: '#0f2438', x: 0.85, y: 0.75, r: 0.52, sx: 0.08, sy: 0.11, p: 1, pull: 0.12 },
-    { c: '#2b1b42', x: 0.35, y: 0.8, r: 0.5, sx: 0.14, sy: 0.09, p: 3, pull: 0.16 },
-    { c: '#120f24', x: 0.05, y: 0.9, r: 0.65, sx: 0.07, sy: 0.07, p: 5, pull: 0 },
+    { c: '#281745', x: 0.22, y: 0.3, r: 0.65, sx: 0.12, sy: 0.14, p: 0, pull: 0.22 },
+    { c: '#16233d', x: 0.78, y: 0.25, r: 0.6, sx: 0.09, sy: 0.08, p: 2, pull: 0.15 },
+    { c: '#231b45', x: 0.5, y: 0.62, r: 0.58, sx: 0.13, sy: 0.1, p: 4, pull: 0.18 },
+    { c: '#112b42', x: 0.85, y: 0.75, r: 0.52, sx: 0.08, sy: 0.11, p: 1, pull: 0.12 },
+    { c: '#311d4d', x: 0.35, y: 0.8, r: 0.5, sx: 0.14, sy: 0.09, p: 3, pull: 0.16 },
+    { c: '#141029', x: 0.05, y: 0.9, r: 0.65, sx: 0.07, sy: 0.07, p: 5, pull: 0 },
 ];
 
-// Light theme: Subtle, clean airy tints on white.
+// Light theme: Subtle, clean airy tints on white (soft lilac, sky breeze, subtle lavender, pale slate).
 const LIGHT_BLOBS = [
-    { c: '#ede9fe', x: 0.22, y: 0.3, r: 0.65, sx: 0.12, sy: 0.14, p: 0, pull: 0.15 },
-    { c: '#e0f2fe', x: 0.78, y: 0.25, r: 0.6, sx: 0.08, sy: 0.07, p: 2, pull: 0.1 },
-    { c: '#f3e8ff', x: 0.5, y: 0.62, r: 0.55, sx: 0.11, sy: 0.09, p: 4, pull: 0.12 },
-    { c: '#e0e7ff', x: 0.85, y: 0.75, r: 0.5, sx: 0.07, sy: 0.11, p: 1, pull: 0 },
-    { c: '#f5f3ff', x: 0.35, y: 0.8, r: 0.5, sx: 0.12, sy: 0.08, p: 3, pull: 0.1 },
-    { c: '#f8fafc', x: 0.05, y: 0.9, r: 0.65, sx: 0.06, sy: 0.06, p: 5, pull: 0 },
+    { c: '#e5deff', x: 0.22, y: 0.3, r: 0.65, sx: 0.12, sy: 0.14, p: 0, pull: 0.2 },
+    { c: '#dbeafe', x: 0.78, y: 0.25, r: 0.6, sx: 0.09, sy: 0.08, p: 2, pull: 0.15 },
+    { c: '#f0e6ff', x: 0.5, y: 0.62, r: 0.58, sx: 0.13, sy: 0.1, p: 4, pull: 0.18 },
+    { c: '#dbe7fb', x: 0.85, y: 0.75, r: 0.52, sx: 0.08, sy: 0.11, p: 1, pull: 0.12 },
+    { c: '#ede8fc', x: 0.35, y: 0.8, r: 0.5, sx: 0.14, sy: 0.09, p: 3, pull: 0.15 },
+    { c: '#f1f5f9', x: 0.05, y: 0.9, r: 0.65, sx: 0.07, sy: 0.07, p: 5, pull: 0 },
 ];
 
 function isDarkTheme(): boolean {
@@ -74,21 +74,21 @@ export function MeshCanvas({ speed = 0.8 }: { speed?: number }) {
                 ctx.fillRect(0, 0, w, h);
             }
 
-            // Subtle interactive cursor ambient light follow
-            if (dark) {
-                const pointerG = ctx.createRadialGradient(
-                    sx * w,
-                    sy * h,
-                    0,
-                    sx * w,
-                    sy * h,
-                    Math.max(w, h) * 0.35
-                );
-                pointerG.addColorStop(0, 'rgba(124, 58, 237, 0.14)');
-                pointerG.addColorStop(1, 'rgba(124, 58, 237, 0)');
-                ctx.fillStyle = pointerG;
-                ctx.fillRect(0, 0, w, h);
-            }
+            // Interactive cursor ambient glow aura (both Dark and Light mode)
+            const auraColor = dark ? '124, 58, 237' : '139, 92, 246';
+            const auraAlpha = dark ? 0.15 : 0.09;
+            const pointerG = ctx.createRadialGradient(
+                sx * w,
+                sy * h,
+                0,
+                sx * w,
+                sy * h,
+                Math.max(w, h) * 0.38
+            );
+            pointerG.addColorStop(0, `rgba(${auraColor}, ${auraAlpha})`);
+            pointerG.addColorStop(1, `rgba(${auraColor}, 0)`);
+            ctx.fillStyle = pointerG;
+            ctx.fillRect(0, 0, w, h);
 
             if (!reduce && visible) raf = requestAnimationFrame(draw);
         };

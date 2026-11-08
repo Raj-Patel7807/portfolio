@@ -9,32 +9,56 @@ const delay = (i: number) => ({ transitionDelay: `${(i * 0.04).toFixed(2)}s` });
 export function Hero() {
     const meshRef = useRef<HTMLDivElement>(null);
     const topRef = useRef<HTMLDivElement>(null);
+    const nameRef = useRef<HTMLHeadingElement>(null);
 
-    // Parallax: the name drifts down and fades, the mesh drifts slower and zooms.
+    // Dynamic mouse parallax tilt on the headline + scroll parallax
     useEffect(() => {
         if (prefersReducedMotion()) return;
+
         let raf = 0;
+        let targetX = 0;
+        let targetY = 0;
+        let currentX = 0;
+        let currentY = 0;
+
+        const onPointerMove = (e: MouseEvent) => {
+            const { innerWidth, innerHeight } = window;
+            targetX = (e.clientX / innerWidth - 0.5) * 12; // subtle max 12px shift
+            targetY = (e.clientY / innerHeight - 0.5) * 8;
+        };
+
         const update = () => {
             raf = 0;
-            const y = window.scrollY,
-                vh = window.innerHeight;
-            if (y > vh * 1.3) return;
-            if (topRef.current) {
-                topRef.current.style.transform = `translate3d(0,${y * 0.32}px,0)`;
-                topRef.current.style.opacity = String(Math.max(0, 1 - y / (vh * 0.85)));
+            const y = window.scrollY;
+            const vh = window.innerHeight;
+
+            // Smooth interpolation for mouse follow
+            currentX += (targetX - currentX) * 0.08;
+            currentY += (targetY - currentY) * 0.08;
+
+            if (nameRef.current) {
+                nameRef.current.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
             }
-            if (meshRef.current) {
-                meshRef.current.style.transform = `translate3d(0,${y * 0.18}px,0) scale(${1 + (y / vh) * 0.08})`;
+
+            if (y <= vh * 1.3) {
+                if (topRef.current) {
+                    topRef.current.style.transform = `translate3d(0, ${y * 0.32}px, 0)`;
+                    topRef.current.style.opacity = String(Math.max(0, 1 - y / (vh * 0.85)));
+                }
+                if (meshRef.current) {
+                    meshRef.current.style.transform = `translate3d(0, ${y * 0.18}px, 0) scale(${1 + (y / vh) * 0.08})`;
+                }
             }
+
+            raf = requestAnimationFrame(update);
         };
-        const onScroll = () => {
-            if (!raf) raf = requestAnimationFrame(update);
-        };
-        window.addEventListener('scroll', onScroll, { passive: true });
-        update();
+
+        window.addEventListener('mousemove', onPointerMove, { passive: true });
+        raf = requestAnimationFrame(update);
+
         return () => {
             cancelAnimationFrame(raf);
-            window.removeEventListener('scroll', onScroll);
+            window.removeEventListener('mousemove', onPointerMove);
         };
     }, []);
 
@@ -46,7 +70,7 @@ export function Hero() {
             <div className="hero__shade" />
 
             <div ref={topRef} className="hero__top">
-                <h1 className="hero__name" aria-label={`${profile.name}.`}>
+                <h1 ref={nameRef} className="hero__name" aria-label={`${profile.name}.`}>
                     <span aria-hidden="true" className="hero__line">
                         {[...profile.name].map((ch, i) =>
                             ch === ' ' ? (
