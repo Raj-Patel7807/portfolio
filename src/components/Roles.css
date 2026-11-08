@@ -8,31 +8,50 @@
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.35fr);
     gap: clamp(24px, 4vw, 56px);
-    padding: clamp(34px, 4vw, 50px) 0;
+    padding: clamp(34px, 4vw, 50px) clamp(16px, 2.5vw, 32px);
     border-bottom: 1.5px solid var(--rule);
     align-items: start;
-    transition: background-color 0.35s ease;
+    transition:
+        background-color 0.35s ease,
+        border-color 0.35s ease;
 }
 
 /* Subtle corner focus bracket when hovered */
 .roles__item::before {
     content: '';
     position: absolute;
-    left: -12px;
-    top: 24px;
-    bottom: 24px;
-    width: 2px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
     background: var(--accent);
     transform: scaleY(0);
     transform-origin: 50% 0;
     transition: transform 0.4s var(--ease-out);
 }
 
+.roles__item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.04) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-out);
+    pointer-events: none;
+    z-index: 0;
+}
+
 .roles__item:hover::before {
     transform: scaleY(1);
 }
 
+.roles__item:hover::after {
+    opacity: 1;
+}
+
 .roles__header {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
 }
@@ -63,6 +82,8 @@
 }
 
 .roles__bullets {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -83,7 +104,7 @@
     .roles__item {
         grid-template-columns: minmax(0, 1fr);
         gap: 20px;
-        padding: 26px 0;
+        padding: 26px clamp(10px, 2vw, 16px);
     }
 
     .roles__bullets {

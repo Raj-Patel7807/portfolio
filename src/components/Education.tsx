@@ -49,7 +49,7 @@ export function Education() {
                                 )}
                             </div>
 
-                            <div className="edu__score-wrap">
+                            <div className="edu__score-box">
                                 <span className="edu__score-val">{e.score}</span>
                                 <span className="edu__score-type">{e.scoreType}</span>
                             </div>
