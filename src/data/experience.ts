@@ -182,6 +182,52 @@ export const positionsOfResponsibility: RoleItem[] = [
     },
 ];
 
+export type EducationItem = {
+    institution: string;
+    degree: string;
+    field?: string;
+    score: string;
+    scoreType: string; // 'CGPA' | 'Percentage' | 'Rank'
+    period: string;
+    location: string;
+    highlights?: string[];
+};
+
+export const education: EducationItem[] = [
+    {
+        institution:
+            'Dhirubhai Ambani Institute of Information and Communication Technology (DA-IICT)',
+        degree: 'Bachelor of Technology (B.Tech)',
+        field: 'Information & Communication Technology (ICT)',
+        score: '8.51',
+        scoreType: 'CGPA',
+        period: '2024 - 2028',
+        location: 'Gandhinagar, Gujarat',
+        highlights: [
+            'Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Computer Networks, Operating Systems.',
+            'Active Member & Deputy Convener of Programming Club.',
+        ],
+    },
+    {
+        institution: 'Your Higher Secondary School Name',
+        degree: 'Class XII (HSC / Higher Secondary)',
+        field: 'Science (PCM / GSEB / CBSE)',
+        score: 'XX.X%',
+        scoreType: 'Percentage',
+        period: '2022 - 2024',
+        location: 'City, Gujarat',
+        highlights: ['Focus on Mathematics, Physics, and Chemistry.'],
+    },
+    {
+        institution: 'Your Secondary School Name',
+        degree: 'Class X (SSC / Secondary)',
+        score: 'XX.X%',
+        scoreType: 'Percentage',
+        period: '2020 - 2022',
+        location: 'City, Gujarat',
+    },
+];
+
 // Flat list maintained for backward compatibility
 export type SkillCategory = {
     category: string;

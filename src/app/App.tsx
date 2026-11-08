@@ -4,6 +4,7 @@ import { useRevealObserver } from '@/hooks/useReveal';
 import { About } from '@/components/About';
 import { Contact } from '@/components/Contact';
 import { Cursor } from '@/components/Cursor';
+import { Education } from '@/components/Education';
 import { Gallery } from '@/components/Gallery';
 import { GitHubSection } from '@/components/GitHubSection';
 import { Hero } from '@/components/Hero';
@@ -30,10 +31,11 @@ export default function App() {
                 <Proof cf={cf} />
                 <Work />
                 <NowBuilding />
-                <Scoreboard cf={cf} />
                 <Roles />
+                <Scoreboard cf={cf} />
                 <Stack />
                 <GitHubSection github={github} />
+                <Education />
                 {showGallery && gallery.some((g: GalleryItem) => Boolean(g.image)) && <Gallery />}
                 <About />
                 <Contact />
