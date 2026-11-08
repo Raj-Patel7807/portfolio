@@ -16,18 +16,19 @@
         border-color 0.35s ease;
 }
 
-/* Subtle corner focus bracket when hovered */
+/* Accent indicator: shorter height, smoothly sliding down from top */
 .roles__item::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 0;
-    bottom: 0;
+    top: 24px;
+    height: 48px;
     width: 3px;
     background: var(--accent);
     transform: scaleY(0);
-    transform-origin: 50% 0;
+    transform-origin: 0 0;
     transition: transform 0.4s var(--ease-out);
+    border-radius: 0 2px 2px 0;
 }
 
 .roles__item::after {

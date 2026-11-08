@@ -10,24 +10,25 @@
     gap: clamp(24px, 4vw, 56px);
     padding: clamp(32px, 4vw, 48px) clamp(16px, 2.5vw, 32px);
     border-bottom: 1.5px solid var(--rule);
-    align-items: center;
+    align-items: start;
     transition:
         background-color 0.35s ease,
         border-color 0.35s ease;
 }
 
-/* Smooth ambient hover background + accent indicator */
+/* Accent indicator: shorter height, smoothly sliding down from top */
 .edu__item::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 0;
-    bottom: 0;
+    top: 24px;
+    height: 48px;
     width: 3px;
     background: var(--accent);
     transform: scaleY(0);
-    transform-origin: 50% 0;
+    transform-origin: 0 0;
     transition: transform 0.4s var(--ease-out);
+    border-radius: 0 2px 2px 0;
 }
 
 .edu__item::after {
