@@ -1,5 +1,5 @@
 .contact {
-    margin-top: 80px;
+    margin-top: 30px;
     padding: clamp(80px, 12vw, 160px) var(--gutter) 40px;
     overflow: hidden;
     background: var(--accent);

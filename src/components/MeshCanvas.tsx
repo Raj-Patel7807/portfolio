@@ -43,8 +43,8 @@ export function MeshCanvas({ speed = 1 }: { speed?: number }) {
         let visible = true;
         let dark = isDarkTheme();
 
-        // Spawn dynamic constellation node particles
-        const particleCount = Math.floor(Math.min(width, height) / 16);
+        // Spawn dynamic constellation node particles — area-based for density
+        const particleCount = Math.min(200, Math.max(80, Math.floor((width * height) / 7500)));
         const particles: Particle[] = [];
 
         for (let i = 0; i < particleCount; i++) {
@@ -57,8 +57,8 @@ export function MeshCanvas({ speed = 1 }: { speed?: number }) {
                 originY: y,
                 vx: (Math.random() - 0.5) * 0.45 * speed,
                 vy: (Math.random() - 0.5) * 0.45 * speed,
-                size: Math.random() * 1.5 + 1,
-                baseAlpha: Math.random() * 0.4 + 0.2,
+                size: Math.random() * 2.5 + 1.5,
+                baseAlpha: Math.random() * 0.5 + 0.4,
             });
         }
 
@@ -99,12 +99,12 @@ export function MeshCanvas({ speed = 1 }: { speed?: number }) {
                     Math.max(width, height) * 0.38
                 );
                 if (dark) {
-                    mouseAura.addColorStop(0, 'rgba(139, 92, 246, 0.16)');
-                    mouseAura.addColorStop(0.5, 'rgba(59, 130, 246, 0.06)');
+                    mouseAura.addColorStop(0, 'rgba(139, 92, 246, 0.24)');
+                    mouseAura.addColorStop(0.5, 'rgba(59, 130, 246, 0.09)');
                     mouseAura.addColorStop(1, 'rgba(13, 11, 24, 0)');
                 } else {
-                    mouseAura.addColorStop(0, 'rgba(139, 92, 246, 0.14)');
-                    mouseAura.addColorStop(0.5, 'rgba(99, 102, 241, 0.05)');
+                    mouseAura.addColorStop(0, 'rgba(139, 92, 246, 0.2)');
+                    mouseAura.addColorStop(0.5, 'rgba(99, 102, 241, 0.08)');
                     mouseAura.addColorStop(1, 'rgba(250, 249, 252, 0)');
                 }
                 ctx.fillStyle = mouseAura;
@@ -117,19 +117,19 @@ export function MeshCanvas({ speed = 1 }: { speed?: number }) {
                     x: width * 0.25 + Math.sin(time * 0.7) * 60,
                     y: height * 0.35 + Math.cos(time * 0.6) * 45,
                     r: Math.min(width, height) * 0.42,
-                    c: dark ? 'rgba(124, 58, 237, 0.12)' : 'rgba(167, 139, 250, 0.15)',
+                    c: dark ? 'rgba(124, 58, 237, 0.18)' : 'rgba(167, 139, 250, 0.22)',
                 },
                 {
                     x: width * 0.78 + Math.cos(time * 0.5) * 70,
                     y: height * 0.45 + Math.sin(time * 0.8) * 50,
                     r: Math.min(width, height) * 0.46,
-                    c: dark ? 'rgba(37, 99, 235, 0.09)' : 'rgba(191, 219, 254, 0.22)',
+                    c: dark ? 'rgba(37, 99, 235, 0.14)' : 'rgba(191, 219, 254, 0.3)',
                 },
                 {
                     x: width * 0.5 + Math.sin(time * 0.4) * 50,
                     y: height * 0.8 + Math.cos(time * 0.5) * 40,
                     r: Math.min(width, height) * 0.38,
-                    c: dark ? 'rgba(192, 38, 211, 0.07)' : 'rgba(245, 208, 254, 0.18)',
+                    c: dark ? 'rgba(192, 38, 211, 0.12)' : 'rgba(245, 208, 254, 0.26)',
                 },
             ];
 
@@ -174,8 +174,8 @@ export function MeshCanvas({ speed = 1 }: { speed?: number }) {
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
                 ctx.fillStyle = dark
-                    ? `rgba(196, 181, 253, ${p.baseAlpha})`
-                    : `rgba(109, 40, 217, ${p.baseAlpha * 0.8})`;
+                    ? `rgba(216, 205, 254, ${p.baseAlpha})`
+                    : `rgba(109, 40, 217, ${p.baseAlpha * 0.9})`;
                 ctx.fill();
 
                 // Connect nearby particles with subtle neural threads
@@ -183,13 +183,13 @@ export function MeshCanvas({ speed = 1 }: { speed?: number }) {
                     const p2 = particles[j];
                     const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
                     if (dist < maxDistance) {
-                        const alpha = (1 - dist / maxDistance) * (dark ? 0.16 : 0.12);
+                        const alpha = (1 - dist / maxDistance) * (dark ? 0.3 : 0.22);
                         ctx.beginPath();
                         ctx.moveTo(p.x, p.y);
                         ctx.lineTo(p2.x, p2.y);
                         ctx.strokeStyle = dark
-                            ? `rgba(167, 139, 250, ${alpha})`
-                            : `rgba(124, 58, 237, ${alpha})`;
+                            ? `rgba(192, 168, 255, ${alpha})`
+                            : `rgba(109, 40, 217, ${alpha})`;
                         ctx.lineWidth = 1;
                         ctx.stroke();
                     }
