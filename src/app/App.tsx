@@ -5,6 +5,7 @@ import { About } from '@/components/About';
 import { Contact } from '@/components/Contact';
 import { Cursor } from '@/components/Cursor';
 import { Education } from '@/components/Education';
+import { Experience } from '@/components/Experience';
 import { Gallery } from '@/components/Gallery';
 import { GitHubSection } from '@/components/GitHubSection';
 import { Hero } from '@/components/Hero';
@@ -12,7 +13,7 @@ import { Marquee } from '@/components/Marquee';
 import { Nav } from '@/components/Nav';
 import { NowBuilding } from '@/components/NowBuilding';
 import { Proof } from '@/components/Proof';
-import { Roles } from '@/components/Roles';
+import { Responsibility } from '@/components/Responsibility';
 import { Scoreboard } from '@/components/Scoreboard';
 import { Stack } from '@/components/Stack';
 import { Work } from '@/components/Work';
@@ -28,14 +29,23 @@ export default function App() {
             <main>
                 <Hero />
                 <Marquee />
+
                 <Proof cf={cf} />
+
                 <About />
+
                 <Work />
                 <NowBuilding />
-                <Roles />
-                <Scoreboard cf={cf} />
-                <Education />
+
+                <Experience />
+
                 <Stack />
+
+                <Scoreboard cf={cf} />
+
+                <Responsibility />
+
+                <Education />
                 <GitHubSection github={github} />
                 {showGallery && gallery.some((g: GalleryItem) => Boolean(g.image)) && <Gallery />}
                 <Contact />
