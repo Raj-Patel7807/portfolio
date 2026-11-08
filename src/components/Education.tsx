@@ -15,28 +15,23 @@ export function Education() {
                 </div>
             </div>
 
-            <div className="rule-top edu">
-                <div aria-hidden="true" className="edu__track">
-                    <div className="edu__track-fill" />
-                </div>
-
+            <div className="rule-top">
                 <div className="edu__list">
                     {education.map((e, idx) => (
                         <div key={idx} data-reveal="" data-cursor="Education" className="edu__item">
-                            <span aria-hidden="true" className="edu__node" />
+                            <div className="edu__period-col">
+                                <span className="edu__period-year">{e.period.split(' - ')[0]}</span>
+                                <span className="edu__period-tag">{e.period}</span>
+                            </div>
 
                             <div className="edu__info">
-                                <div className="edu__meta-top mono-label">
-                                    <span className="edu__period">{e.period}</span>
-                                    <span>·</span>
-                                    <span>{e.location}</span>
-                                </div>
+                                <div className="edu__location-tag">{e.location}</div>
                                 <h3 className="edu__inst">{e.institution}</h3>
                                 <div className="edu__degree">
                                     <span>{e.degree}</span>
                                     {e.field && (
                                         <>
-                                            <span style={{ opacity: 0.4 }}>/</span>
+                                            <span style={{ opacity: 0.35 }}>/</span>
                                             <span className="edu__field">{e.field}</span>
                                         </>
                                     )}
@@ -54,7 +49,7 @@ export function Education() {
                                 )}
                             </div>
 
-                            <div className="edu__score-box">
+                            <div className="edu__score-wrap">
                                 <span className="edu__score-val">{e.score}</span>
                                 <span className="edu__score-type">{e.scoreType}</span>
                             </div>

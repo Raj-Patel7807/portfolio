@@ -15,16 +15,10 @@ export function Responsibility() {
                 </div>
             </div>
 
-            <div className="rule-top roles">
-                <div aria-hidden="true" className="roles__track">
-                    <div className="roles__track-fill" />
-                </div>
-
+            <div className="rule-top">
                 <div className="roles__list">
                     {positionsOfResponsibility.map(e => (
                         <div key={e.org} data-reveal="" data-cursor="Lead" className="roles__item">
-                            <span aria-hidden="true" className="roles__node" />
-
                             <div className="roles__header">
                                 <div className="mono-label roles__meta">
                                     <span>{e.when}</span>
