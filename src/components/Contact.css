@@ -1,6 +1,6 @@
 .contact {
     margin-top: 30px;
-    padding: clamp(80px, 12vw, 160px) var(--gutter) 40px;
+    padding: clamp(80px, 12vw, 10px) var(--gutter) 40px;
     overflow: hidden;
     background: var(--accent);
     color: #fff;

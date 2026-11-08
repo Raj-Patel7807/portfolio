@@ -44,7 +44,7 @@ export function MeshCanvas({ speed = 1 }: { speed?: number }) {
         let dark = isDarkTheme();
 
         // Spawn dynamic constellation node particles — area-based for density
-        const particleCount = Math.min(200, Math.max(80, Math.floor((width * height) / 7500)));
+        const particleCount = Math.min(280, Math.max(120, Math.floor((width * height) / 5000)));
         const particles: Particle[] = [];
 
         for (let i = 0; i < particleCount; i++) {
