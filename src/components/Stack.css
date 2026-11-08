@@ -44,7 +44,7 @@
 .stack__grid {
     width: 85%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
     padding-top: 20px;
 }
@@ -52,9 +52,9 @@
 .stack__item {
     display: flex;
     align-items: center;
-    gap: 14px;
-    padding: 15px 15px;
-    border: 1.5px solid var(--line);
+    gap: 15px;
+    padding: 17px 17px;
+    border: 1.7px solid var(--line);
     border-radius: 2px;
     background: var(--card);
     transition:
@@ -73,8 +73,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     flex-shrink: 0;
     color: var(--ink);
     font-size: 20px;
@@ -93,7 +93,7 @@
 .stack__item-name {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 15px;
+    font-size: 16px;
     letter-spacing: -0.02em;
     color: var(--fg);
     white-space: nowrap;

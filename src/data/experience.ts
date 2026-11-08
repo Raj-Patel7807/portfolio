@@ -63,17 +63,81 @@ export type RoleItem = {
     bullets: string[];
 };
 
-export const timeline: { year: string; items: Milestone[] }[] = [];
+export const timeline: { year: string; items: Milestone[] }[] = [
+    {
+        year: '2026',
+        items: [
+            {
+                kind: 'ICPC',
+                title: 'ICPC Preliminary Round',
+                detail: '',
+                stat: '#562',
+                of: 'of 3800+ Teams',
+                field: {
+                    rank: 562,
+                    total: 3883,
+                    top: 'Top 10 in DA-IICT',
+                    label: '',
+                },
+            },
+        ],
+    },
+    {
+        year: '2024',
+        items: [
+            {
+                kind: 'Academics',
+                title: 'ACPC 2024',
+                detail: '99.79 percentile, All Gujarat Rank.',
+                stat: '65',
+                of: 'of 38,000+',
+                field: { rank: 38, total: 38000, top: 'Top 0.2%', label: '38,000 candidates' },
+            },
+            {
+                kind: 'Entrance',
+                title: 'JEE Mains 2024',
+                detail: '98.77 percentile, All India Rank.',
+                stat: '19,520',
+                of: 'of 1.5 million',
+                field: { rank: 19520, total: 1500000, top: 'Top 1.23%', label: '1.5M candidates' },
+            },
+        ],
+    },
+
+    {
+        year: 'Campus',
+        items: [
+            {
+                kind: 'Contests',
+                title: 'Won 10+ institute programming events',
+                detail: 'IPC, BlindCode, Fizzbuzz, Interwing, Robin Relay and more..',
+                stat: '10+',
+                of: 'contest wins',
+            },
+        ],
+    },
+];
 
 // Technical Work & Professional Experience
 export const experience: RoleItem[] = [
     {
+        org: 'Rorfost',
+        role: 'Founder & Independent Software Engineer',
+        when: '2026 - Present',
+        where: 'Self-employed / Freelance',
+        bullets: [
+            'Founded Rorfost as an independent initiative for building software products and undertaking **freelance engineering projects**.',
+            'Design and develop end-to-end software solutions, handling architecture, implementation, deployment, and maintenance.',
+            'Built and deployed a school management platform adopted by a school, **serving 500+ monthly visitors**.',
+        ],
+    },
+    {
         org: 'CodeHurdle',
         role: 'PCD Head',
         when: 'August 2026 - Present',
-        where: 'Freelance',
+        where: 'Remote',
         bullets: [
-            'Creating beginner-friendly Post-Contest Discussion (PCD) videos with explanations of CP problems and solutions.',
+            'Creating beginner-friendly Post-Contest Discussion (PCD) videos with explanations of competitive programming problems and solutions.',
         ],
     },
 ];
@@ -176,11 +240,60 @@ export const skills = [
 
 export const featuredRepos = [
     {
-        repo: 'portfolio',
-        title: 'Portfolio',
-        desc: 'Editorial personal portfolio built with React 19, TypeScript, Vite, and custom CSS design system.',
-        lang: 'TypeScript',
+        repo: 'rooksac',
+        title: 'RookSac',
+        desc: 'A modern C++20 chess engine with advanced search algorithms and UCI support.',
+        lang: 'C++20',
+        href: 'https://github.com/Raj-Patel7807/rooksac',
         stars: 1,
+    },
+    {
+        repo: 'rflow',
+        title: 'RFlow',
+        desc: 'A multi-tenant API gateway for routing and managing requests across backend services.',
+        lang: 'Java',
+        href: 'https://github.com/Raj-Patel7807/rflow',
+        stars: 2,
+    },
+    {
+        repo: 'dibyt',
+        title: 'Dibyt',
+        desc: 'A self-hosted file distribution system focused on parallel, resumable and reliable transfers.',
+        lang: 'C++20',
+        href: 'https://github.com/Raj-Patel7807/dibyt',
+        stars: 1,
+    },
+    // {
+    //     repo: "school-platform",
+    //     title: "School Platform",
+    //     desc: "A Gujarati-first school portal with public information, academic resources and an admin panel.",
+    //     lang: "Java",
+    //     href: "https://github.com/Rorfost/school-platform",
+    //     stars: 1,
+    // },
+    {
+        repo: 'api-health-monitoring-platform',
+        title: 'API Health Monitoring',
+        desc: 'A distributed API monitoring platform built around a modular backend and asynchronous workers.',
+        lang: 'Python',
+        href: 'https://github.com/Raj-Patel7807/api-health-monitoring-platform',
+        stars: 4,
+    },
+    {
+        repo: 'RepoPulse',
+        title: 'RepoPulse',
+        desc: 'A GitHub-inspired repository management and database systems project.',
+        lang: 'Java',
+        href: 'https://github.com/Raj-Patel7807/RepoPulse',
+        stars: 3,
+    },
+    {
+        repo: 'RppLang',
+        title: 'R++ Language',
+        desc: 'A custom programming language built in Java, featuring a lexer, parser, AST and interpreter.',
+        lang: 'Java',
+        href: 'https://github.com/Raj-Patel7807/RppLang',
+        stars: 3,
     },
 ];
 

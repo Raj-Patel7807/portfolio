@@ -10,62 +10,210 @@ export type Project = {
     stack: string[];
     links: { label: string; href: string }[];
     image?: string;
+    impact?: string | null;
 };
 
 export const projects: Project[] = [
     {
-        name: 'Education Portal',
-        kind: 'Full-stack platform',
+        name: 'RookSac',
+        kind: 'Systems Programming / Chess Engine',
         year: '2026',
+        status: 'Core Engine Complete',
         summary:
-            'A comprehensive educational management portal streamlining academic workflows, course management, and student communication.',
+            'A modern C++20 chess engine implementing bitboard-based position representation, legal move generation, advanced search algorithms and the UCI protocol, accompanied by a web platform.',
         purpose:
-            'Built to provide a centralized hub for university departments, eliminating scattered resources and fragmented communication channels.',
+            'Built to explore computational chess, low-level performance engineering, search algorithms and the architecture behind modern chess engines.',
         features: [
-            'Course content distribution and centralized notes directory.',
-            'Assignment submissions and structured grading overview.',
-            'Role-based access for students, educators, and administrators.',
-            'Real-time announcements and notification boards.',
+            'Bitboard-based board representation and compact move encoding',
+            'Legal move generation with castling, en passant and promotions',
+            'Negamax search with Alpha-Beta pruning and Principal Variation Search',
+            'Late Move Reductions, Null-Move Pruning and Quiescence Search',
+            'Zobrist hashing and transposition table and Iterative deepening and time management',
+            'Universal Chess Interface (UCI) support and FastAPI backend and React-based chess interface',
         ],
-        build: 'Full-stack architecture built with React, TypeScript, Node.js backend, and PostgreSQL database with optimized queries and role security.',
-        stack: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Express', 'Vite'],
-        links: [{ label: 'Source', href: 'https://github.com/Raj-Patel7807' }],
-        image: '/images/Education_Portal.png',
+        build: 'Designed a modular C++20 chess engine with separate position, move generation, evaluation and search components. Added a web application layer with a persistent engine worker pool.',
+        stack: ['C++20', 'CMake', 'Python', 'FastAPI', 'React', 'TypeScript', 'PyTorch'],
+        links: [
+            {
+                label: 'GitHub',
+                href: 'https://github.com/Raj-Patel7807/rooksac',
+            },
+        ],
     },
+
     {
-        name: 'Snack Game Engine',
-        kind: 'Interactive game',
-        year: '2025',
+        name: 'RFlow',
+        kind: 'Backend Engineering / Infrastructure',
+        year: '2026',
+        status: 'Deployed',
         summary:
-            'A high-framerate classic arcade game engine running in the browser with canvas optimization and responsive touch inputs.',
+            'A lightweight multi-tenant API gateway built with Spring Boot to centralize request routing and backend service management.',
         purpose:
-            'Engineered to explore low-latency game loops, collision-detection algorithms, and deterministic state updates in pure JavaScript.',
+            'Built to understand API gateway architecture, service routing, tenant isolation and backend infrastructure.',
         features: [
-            '60fps deterministic game loop using requestAnimationFrame.',
-            'Custom spatial grid collision detection.',
-            'Local storage high-score persistence and keyboard/touch navigation.',
+            'Centralized request routing',
+            'Multi-tenant request isolation',
+            'Authentication, authorization and Rate limiting',
+            'Request logging, monitoring and Service health monitoring',
+            'Administrative dashboard',
         ],
-        build: 'Zero-dependency canvas rendering with modular entity-component logic, optimizing draw calls and memory allocations.',
-        stack: ['JavaScript', 'HTML5 Canvas', 'CSS3', 'Algorithms'],
-        links: [{ label: 'Source', href: 'https://github.com/Raj-Patel7807' }],
-        image: '/images/Snack_Game.png',
+        build: 'Implemented a Spring Boot-based gateway with modular routing and tenant-aware request handling, backed by PostgreSQL and a web dashboard.',
+        stack: [
+            'Java 21',
+            'Spring Boot',
+            'PostgreSQL',
+            'Spring Security',
+            'React',
+            'TypeScript',
+            'REST API',
+        ],
+        links: [
+            {
+                label: 'GitHub',
+                href: 'https://github.com/Raj-Patel7807/rflow',
+            },
+            {
+                label: 'Live Demo',
+                href: 'https://rflow-dashboard.vercel.app/',
+            },
+        ],
     },
+
     {
-        name: 'Tetris System',
-        kind: 'Algorithmic game',
-        year: '2025',
+        name: 'Dibyt',
+        kind: 'Systems Programming / Networking',
+        year: '2026',
+        status: 'In Development',
         summary:
-            'An accurate recreation of the iconic Tetris game adhering to official guideline rotation rules and ghost-piece projections.',
+            'A self-hosted file distribution system designed for parallel, resumable and fault-tolerant file transfers over a network.',
         purpose:
-            'Built to test matrix transformation algorithms, SRS (Super Rotation System) kick tables, and board-clearing logic.',
+            'Built to explore computer networking, TCP communication, distributed task coordination and reliable large-file transfers.',
         features: [
-            'Full SRS wall-kick system and tetromino rotation matrices.',
-            'Ghost piece drop projection and hold-queue mechanic.',
-            'Progressive speed curve and multi-line clear combo multiplier.',
+            'Parallel file transfer architecture and Resumable transfer sessions',
+            'File integrity verification using SHA-256',
+            'Persistent transfer checkpoints and Task scheduling and retry handling',
+            'Command-line interface and Self-hosted deployment architecture',
         ],
-        build: 'Implemented with immutable board state transformations, discrete coordinate grids, and efficient line-clearing sweeps.',
-        stack: ['JavaScript', 'HTML5 Canvas', 'Matrix Math', 'CSS3'],
-        links: [{ label: 'Source', href: 'https://github.com/Raj-Patel7807' }],
-        image: '/images/Tetris_Game.png',
+        build: 'Developed using modern C++20 with a modular architecture, separating networking, transfer coordination, storage and application interfaces. The project is being expanded beyond its original computer networks coursework scope.',
+        stack: ['C++20', 'TCP', 'CMake', 'SQLite', 'Docker', 'REST API'],
+        links: [
+            {
+                label: 'GitHub',
+                href: 'https://github.com/Raj-Patel7807/dibyt',
+            },
+        ],
+    },
+
+    {
+        name: 'Rorfost School Platform',
+        kind: 'Freelance / Full-Stack Engineering',
+        year: '2026',
+        status: 'Live',
+
+        summary:
+            'A Gujarati-first school information and management platform, built for real-world use, featuring a public portal and a secure principal administration panel.',
+
+        purpose:
+            'Developed and deployed for a school to digitize its public presence, academic resources, examination results, and administrative workflows through a centralized platform.',
+
+        features: [
+            'Gujarati-first, mobile-responsive public portal',
+            'Principal authentication and session-based administration',
+            'School notices, announcements, and study materials',
+            'Examination result publishing and printable marksheets',
+            'School gallery, profile, and information management',
+            'Academic configuration and result management workflows',
+            'Audit logging and controlled administrative operations',
+        ],
+
+        build: 'Designed and developed a modular Spring Boot backend and React frontend with PostgreSQL persistence, database versioning, and cloud deployment. Built with a multi-school architecture in mind, with multi-tenancy under development.',
+
+        impact: '**500+ monthly visitors**. 1 school actively using the platform.',
+
+        stack: [
+            'Java 21',
+            'Spring Boot',
+            'Spring Security',
+            'React',
+            'TypeScript',
+            'PostgreSQL',
+            'Flyway',
+            'TanStack Query',
+            'Cloudflare',
+            'Render',
+        ],
+
+        links: [
+            {
+                label: 'Live Portal',
+                href: 'https://portal.dhadhana-school.workers.dev',
+            },
+            {
+                label: 'GitHub',
+                href: 'https://github.com/Rorfost/school-platform',
+            },
+        ],
+    },
+
+    {
+        name: 'API Health Monitoring Platform',
+        kind: 'Backend Engineering / Distributed Systems',
+        year: '2026',
+        status: 'In Development',
+        summary:
+            'A distributed API health and incident monitoring platform designed to monitor endpoints, record health checks and eventually manage incidents and alerts.',
+        purpose:
+            'Built to explore asynchronous background processing, scheduled monitoring, distributed workers and reliable incident management.',
+        features: [
+            'Modular monolith architecture and FastAPI backend',
+            'React-based dashboard foundation',
+            'PostgreSQL database integration and Redis-backed infrastructure',
+            'Celery worker architecture',
+            'Docker Compose development environment',
+            'Automated backend and frontend checks',
+        ],
+        build: 'Structured as a modular FastAPI application with separate Celery workers, PostgreSQL persistence and Redis infrastructure. Endpoint registration, incident rules and notification workflows are planned product features.',
+        stack: [
+            'Python',
+            'FastAPI',
+            'React',
+            'TypeScript',
+            'PostgreSQL',
+            'Redis',
+            'Celery',
+            'Docker',
+        ],
+        links: [
+            {
+                label: 'GitHub',
+                href: 'https://github.com/Raj-Patel7807/api-health-monitoring-platform',
+            },
+        ],
+    },
+
+    {
+        name: 'RepoPulse',
+        kind: 'Database Engineering / Backend',
+        year: '2026',
+        status: 'Completed',
+        summary:
+            'A GitHub-inspired repository management system backed by a normalized relational database and a Java-based application interface.',
+        purpose:
+            'Built to explore relational database design, normalization, schema relationships, SQL queries and JDBC-based application development.',
+        features: [
+            'Normalized PostgreSQL database schema',
+            'Repository and user data modeling',
+            'Relational constraints and relationships',
+            'Complex SQL queries',
+            'Java JDBC integration and Console-based application interface',
+        ],
+        build: 'Designed a relational PostgreSQL schema and connected it to a Java application using JDBC to perform database operations and demonstrate relational data management.',
+        stack: ['Java', 'PostgreSQL', 'JDBC', 'SQL'],
+        links: [
+            {
+                label: 'GitHub',
+                href: 'https://github.com/Raj-Patel7807/RepoPulse',
+            },
+        ],
     },
 ];

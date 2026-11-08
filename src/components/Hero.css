@@ -1,6 +1,6 @@
 .hero {
     position: relative;
-    min-height: 130svh;
+    min-height: 122svh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

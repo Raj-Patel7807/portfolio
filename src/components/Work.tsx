@@ -84,6 +84,12 @@ export function Work() {
                                                 <h4 className="work__label">How it’s built</h4>
                                                 <p>{formatRichText(p.build)}</p>
                                             </div>
+                                            {p.impact ? (
+                                                <div className="work__block">
+                                                    <h4 className="work__label">Impact</h4>
+                                                    <p>{formatRichText(p.impact)}</p>
+                                                </div>
+                                            ) : null}
                                             <ul className="work__stack" aria-label="Built with">
                                                 {p.stack.map(s => (
                                                     <li key={s}>{s}</li>

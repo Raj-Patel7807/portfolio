@@ -1,5 +1,6 @@
 .proof {
     padding: 0 var(--gutter);
+    margin-bottom: -2em;
 }
 
 .proof__grid {

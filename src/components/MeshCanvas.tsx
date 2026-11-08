@@ -44,7 +44,7 @@ export function MeshCanvas({ speed = 1 }: { speed?: number }) {
         let dark = isDarkTheme();
 
         // Spawn dynamic constellation node particles — area-based for density
-        const particleCount = Math.min(280, Math.max(120, Math.floor((width * height) / 5000)));
+        const particleCount = Math.min(78, Math.max(32, Math.floor((width * height) / 15000)));
         const particles: Particle[] = [];
 
         for (let i = 0; i < particleCount; i++) {
@@ -57,8 +57,8 @@ export function MeshCanvas({ speed = 1 }: { speed?: number }) {
                 originY: y,
                 vx: (Math.random() - 0.5) * 0.45 * speed,
                 vy: (Math.random() - 0.5) * 0.45 * speed,
-                size: Math.random() * 2.5 + 1.5,
-                baseAlpha: Math.random() * 0.5 + 0.4,
+                size: Math.random() * 1 + 0.78,
+                baseAlpha: Math.random() * 0.27 + 0.27,
             });
         }
 
@@ -142,8 +142,8 @@ export function MeshCanvas({ speed = 1 }: { speed?: number }) {
             }
 
             // 4. Dynamic Constellation Mesh & Kinetic Physics
-            const maxDistance = 120;
-            const mouseRepelRadius = 140;
+            const maxDistance = 100;
+            const mouseRepelRadius = 110;
 
             for (let i = 0; i < particles.length; i++) {
                 const p = particles[i];

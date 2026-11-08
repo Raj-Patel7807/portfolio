@@ -29,21 +29,21 @@ export const exploring = {
 
 export const about = {
     headline: 'Hi, I’m Raj.',
-    headlineAccent: 'Software engineer and algorithmic problem solver.',
+    headlineAccent: 'Software engineer and competitive programmer.',
     body: [
-        'I am a student at Dhirubhai Ambani University (formerly DA-IICT) in Gandhinagar, pursuing B.Tech in Information and Communication Technology.',
-        'I focus on building clean, high-performance web systems and developer tools. My foundation is built on continuous algorithmic challenge solving across Codeforces, LeetCode, and CodeChef.',
-        'I believe in software craft: generous whitespace, elegant typography, strict types, and robust architecture over hype.',
+        'I’m a third-year B.Tech ICT student at Dhirubhai Ambani University (formerly DA-IICT), Gandhinagar. Most of what I build revolves around backend development — designing APIs, working with databases, and figuring out how to deploy and run software reliably.',
+        'I got into programming through competitive programming. A few seniors introduced me to it, and I started practising on Codeforces and participating in contests. Resources like Codeforces blogs, CSES, the USACO Guide, and creators like Errichto, Vivek Gupta, Gaurav Sen and Colin Galen helped shape the way I approach problem-solving.',
+        'Over time, my interests grew beyond algorithms into building real-world software. I enjoy understanding how things work under the hood, experimenting with new technologies, and turning ideas into working projects. I’m also involved with the Programming Club, where I set problems, organize programming activities, and help juniors explore competitive programming.',
     ],
     stats: [
+        { v: '8.51', l: 'CGPA' },
         { v: '3K+', l: 'problems solved' },
-        { v: 'DAU', l: 'B.Tech ICT' },
-        { v: '100%', l: 'craft' },
+        { v: '10+', l: 'college programming events won' },
     ],
     badge: 'DAU · B.TECH ICT · CLASS OF 2028 ·',
     now: [
-        'Building performant web platforms and systems',
-        'Solving advanced dynamic programming and graph problems',
-        'Exploring distributed system architectures',
+        'Building backend systems, APIs, and developer tools',
+        'Exploring distributed systems and system design',
+        'Helping lead the Programming Club and mentoring juniors',
     ],
 };
