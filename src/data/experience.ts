@@ -39,8 +39,9 @@ export const platforms = [
         platform: 'Codolio',
         handle: 'Raj_Patel_7807',
         href: 'https://codolio.com/profile/Raj_Patel_7807',
-        rating: '3100+',
-        title: '',
+        rating: 126,
+        scale: 42000,
+        title: '3100+ Problems Solved',
         note: '150+ contest participated',
     },
 ];
