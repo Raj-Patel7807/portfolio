@@ -21,7 +21,7 @@ export function Experience() {
                         <div
                             key={e.org}
                             data-reveal=""
-                            data-cursor="Experience"
+                            // data-cursor="Experience"
                             className="roles__item"
                         >
                             <div className="roles__header">

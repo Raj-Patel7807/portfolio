@@ -18,7 +18,12 @@ export function Education() {
             <div className="rule-top">
                 <div className="edu__list">
                     {education.map((e, idx) => (
-                        <div key={idx} data-reveal="" data-cursor="Education" className="edu__item">
+                        <div
+                            key={idx}
+                            data-reveal=""
+                            // data-cursor="Education"
+                            className="edu__item"
+                        >
                             <div className="edu__period-col">
                                 <span className="edu__period-year">{e.period.split(' - ')[1]}</span>
                                 <span className="edu__period-tag">{e.period}</span>
