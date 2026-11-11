@@ -8,7 +8,7 @@
 
 .contact__label {
     font-family: var(--font-mono);
-    font-size: 13px;
+    font-size: 16px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
@@ -156,4 +156,12 @@
 
 .contact__footer a:hover {
     color: var(--accent-deep);
+}
+
+.contact__avail-primary {
+    font-size: 1.25em;
+    font-weight: 500;
+    margin-top: 2em;
+    margin-bottom: -1em;
+    /* width: 50%; */
 }

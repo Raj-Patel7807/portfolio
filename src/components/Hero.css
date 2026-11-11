@@ -1,12 +1,15 @@
 .hero {
     position: relative;
-    min-height: 122svh;
+    height: 100svh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
     overflow: hidden;
     background: #0d0b18;
     color: #fff;
+    padding: 0 var(--gutter);
     transition:
         background 0.4s ease-out,
         color 0.4s ease-out;
@@ -35,7 +38,7 @@
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at 50% 30%, rgba(13, 11, 24, 0) 0%, rgba(10, 8, 18, 0.3) 100%),
+        radial-gradient(ellipse at 30% 40%, rgba(13, 11, 24, 0) 0%, rgba(10, 8, 18, 0.35) 100%),
         linear-gradient(180deg, rgba(13, 11, 24, 0) 0%, rgba(10, 8, 18, 0.45) 100%);
     pointer-events: none;
     transition: background 0.4s ease-out;
@@ -44,38 +47,72 @@
 :root[data-theme='light'] .hero__shade {
     background:
         radial-gradient(
-            circle at 50% 40%,
+            circle at 30% 40%,
             rgba(250, 249, 252, 0) 0%,
             rgba(250, 249, 252, 0.25) 100%
         ),
         linear-gradient(180deg, rgba(250, 249, 252, 0) 0%, rgba(250, 249, 252, 0.4) 100%);
 }
 
-.hero__top {
+/* Hero Center Left-Aligned Block (All 3 lines grouped together in 1 screen) */
+.hero__center {
     position: relative;
-    padding: clamp(100px, 12vh, 140px) var(--gutter) 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0;
+    padding-top: clamp(20px, 4vh, 40px);
     will-change: transform, opacity;
 }
 
+/* 1. Small Intro: "Hi, I'm" on the left side */
+.hero__intro {
+    font-family: var(--font-display);
+    font-size: clamp(44px, 1.4vw, 20px);
+    letter-spacing: 0.14em;
+    /* text-transform: uppercase; */
+    color: var(--accent);
+    font-weight: 600;
+    /* margin-bottom: clamp(6px, 1.2vh, 16px); */
+    margin-left: 0.17em;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0.95;
+}
+
+.hero__intro::after {
+    content: '';
+    width: 32px;
+    height: 1.5px;
+    background: currentColor;
+    opacity: 0.45;
+}
+
+/* 2. Main Name Heading: "Raj Patel." oversized on left */
 .hero__name {
-    margin: 0.17em 0 0 0;
+    margin: 0;
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: clamp(400px, 16.5vw, 260px);
-    line-height: 0.88;
-    letter-spacing: -0.06em;
+    font-size: clamp(350px, 14vw, 200px);
+    line-height: 1;
+    letter-spacing: -0.055em;
     width: 100%;
     color: inherit;
+    text-align: left;
 }
 
 .hero__line {
-    display: flex;
+    display: inline-flex;
     align-items: baseline;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     overflow: visible;
     padding-bottom: 0.04em;
-    width: 100%;
 }
 
 .hero__line > span {
@@ -84,53 +121,131 @@
 }
 
 .hero__space {
-    width: 0.22em;
+    width: 0.24em;
 }
 
+/* Special Accent Treatment for the final dot: native font period glyph matching font geometry */
 .hero__dot {
+    display: inline-block;
+    /* font-size: 1em; */
+    line-height: inherit;
     color: #c4b5fd;
-    text-shadow: 0 0 25px rgba(167, 139, 250, 1);
+    text-shadow:
+        0 0 16px rgba(167, 139, 250, 0.9),
+        0 0 32px rgba(139, 92, 246, 0.5);
     margin-left: 0.02em;
 }
 
 :root[data-theme='light'] .hero__dot {
     color: #8b5cf6;
-    text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+    text-shadow:
+        0 0 14px rgba(139, 92, 246, 0.65),
+        0 0 24px rgba(109, 40, 217, 0.35);
 }
 
-.hero__bottom {
+@keyframes dotPulse {
+    0%,
+    100% {
+        opacity: 0.92;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.12);
+        text-shadow:
+            0 0 24px rgba(167, 139, 250, 1),
+            0 0 42px rgba(139, 92, 246, 0.75);
+    }
+}
+
+/* 3. Dynamic Tagline: "I build [changing phrase]" also left-aligned */
+.hero__tagline {
+    margin: clamp(1px, 2.4vh, 28px) 0 0;
+    margin-left: 0.17em;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(22px, 3.2vw, 44px);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    color: inherit;
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 0.28em;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.hero__tagline-lead {
+    color: var(--mute);
+    font-weight: 500;
+}
+
+:root[data-theme='light'] .hero__tagline-lead {
+    color: #524d62;
+}
+
+.hero__tagline-dynamic {
     position: relative;
-    margin: 0 var(--gutter);
-    padding: clamp(24px, 3vh, 36px) var(--gutter) clamp(24px, 4vh, 44px);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
-    gap: 32px;
-    align-items: end;
-    border-top: 1.5px solid rgba(255, 255, 255, 0.28);
+    display: inline-flex;
+    align-items: baseline;
+    color: var(--fg);
+    font-weight: 700;
 }
 
-:root[data-theme='light'] .hero__bottom {
-    border-top-color: var(--rule);
+.hero__tagline-word {
+    white-space: nowrap;
+    display: inline;
 }
 
-.hero__scroll-indicator {
+/* Typewriter blinking cursor */
+.hero__tagline-cursor {
+    display: inline-block;
+    width: 2.5px;
+    height: 0.78em;
+    background: var(--accent);
+    margin-left: 3px;
+    vertical-align: middle;
+    border-radius: 1px;
+    animation: cursorBlink 0.85s step-end infinite;
+    box-shadow: 0 0 8px rgba(167, 139, 250, 0.7);
+    will-change: opacity;
+}
+
+/* Slightly faster blink while deleting for a "busy" feel */
+.hero__tagline-cursor.is-deleting {
+    animation-duration: 0.5s;
+}
+
+@keyframes cursorBlink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Minimal bottom scroll indicator placed subtly at the bottom */
+.hero__scroll {
     position: absolute;
-    top: -30px;
     left: var(--gutter);
-    text-align: center;
+    bottom: clamp(32px, 3vh, 32px);
     display: inline-flex;
     align-items: center;
     gap: 8px;
     font-family: var(--font-mono);
     font-size: 16px;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.65);
     pointer-events: none;
-    animation: bob 2.25s ease-in-out infinite;
+    animation: bob 2.4s ease-in-out infinite;
+    z-index: 2;
 }
 
-:root[data-theme='light'] .hero__scroll-indicator {
+:root[data-theme='light'] .hero__scroll {
     color: var(--mute);
 }
 
@@ -139,73 +254,36 @@
     opacity: 0.85;
 }
 
-.hero__pitch {
-    margin: 0;
-    max-width: 640px;
-    font-family: var(--font-display);
-    font-size: clamp(24px, 2.8vw, 38px);
-    font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    text-wrap: pretty;
-    color: inherit;
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .hero__center {
+        padding-top: 0;
+    }
+
+    .hero__name {
+        font-size: clamp(44px, 15vw, 76px);
+    }
+
+    .hero__tagline {
+        font-size: clamp(18px, 5.2vw, 26px);
+    }
+
+    .hero__tagline-word {
+        white-space: normal;
+    }
+
+    .hero__scroll {
+        bottom: 16px;
+    }
 }
 
-.hero__ctas {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
+@media (prefers-reduced-motion: reduce) {
+    .hero__dot {
+        animation: none;
+    }
 
-.btn {
-    padding: 18px 30px;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 16px;
-    transition:
-        transform 0.3s var(--ease-out),
-        background 0.25s,
-        color 0.25s;
-}
-
-.btn--solid {
-    background: #fff;
-    color: var(--accent-deep);
-}
-
-:root[data-theme='light'] .btn--solid {
-    background: var(--fg);
-    color: #fff;
-}
-
-.btn--solid:hover {
-    transform: translateY(-3px);
-}
-
-.btn--ghost {
-    border: 1.5px solid currentColor;
-    color: inherit;
-}
-
-.btn--ghost:hover {
-    background: rgba(18, 16, 24, 0.08);
-}
-
-:root:not([data-theme='light']) .btn--ghost:hover {
-    background: rgba(255, 255, 255, 0.14);
-}
-
-/* `translate` composes with the bob animation's `transform`, so centering survives it. */
-.hero__scroll {
-    position: absolute;
-    left: 50%;
-    bottom: 14px;
-    translate: -50% 0;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    opacity: 0.7;
-    animation: bob 2.4s ease-in-out infinite;
+    .hero__tagline-cursor {
+        animation: none;
+        opacity: 1;
+    }
 }

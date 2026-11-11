@@ -28,8 +28,8 @@ export const exploring = {
 };
 
 export const about = {
-    headline: 'Hi, I’m Raj.',
-    headlineAccent: 'Software engineer and competitive programmer.',
+    headline: 'Hi, I’m Raj Patel.',
+    headlineAccent: 'From solving problems to building software.',
     body: [
         'I’m a third-year B.Tech ICT student at Dhirubhai Ambani University (formerly DA-IICT), Gandhinagar. Most of what I build revolves around backend development — designing APIs, working with databases, and figuring out how to deploy and run software reliably.',
         'I got into programming through competitive programming. A few seniors introduced me to it, and I started practising on Codeforces and participating in contests. Resources like Codeforces blogs, CSES, the USACO Guide, and creators like Errichto, Vivek Gupta, Gaurav Sen and Colin Galen helped shape the way I approach problem-solving.',
@@ -40,7 +40,7 @@ export const about = {
         { v: '3K+', l: 'problems solved' },
         { v: '10+', l: 'college programming events won' },
     ],
-    badge: 'DAU · B.TECH ICT · CLASS OF 2028 ·',
+    badge: 'DA-IICT · B.TECH ICT · CLASS OF 2028 ·',
     now: [
         'Building backend systems, APIs, and developer tools',
         'Exploring distributed systems and system design',

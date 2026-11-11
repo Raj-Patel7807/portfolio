@@ -25,7 +25,7 @@ export function Contact() {
     return (
         <section id="contact" className="contact">
             <div data-reveal="" className="contact__label">
-                Contact · Open to SWE internships.
+                Contact
             </div>
             <h2 className="contact__title">
                 <span className="contact__line">
@@ -37,6 +37,21 @@ export function Contact() {
                     </span>
                 </span>
             </h2>
+
+            {/* Availability Section */}
+            <div data-reveal="" className="contact__availability">
+                {/* <div className="contact__status-pill">
+                    <span className="contact__status-dot" aria-hidden="true" />
+                    <span className="contact__status-badge">Status:</span>
+                    <span className="contact__status-value">Open to Opportunities</span>
+                </div> */}
+                <p className="contact__avail-primary">
+                    Looking for Software Engineering Internship opportunities for Summer 2027.
+                </p>
+                {/* <p className="contact__avail-sub">
+                    Interested in building reliable software, solving challenging problems, and working with engineering teams.
+                </p> */}
+            </div>
 
             <div data-reveal="" className="contact__email-row">
                 <a href={`mailto:${profile.email}`} className="contact__email">

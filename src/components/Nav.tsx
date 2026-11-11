@@ -5,6 +5,7 @@ import './Nav.css';
 const links = [
     { href: '#about', label: 'About' },
     { href: '#work', label: 'Work' },
+    { href: '#stack', label: 'Skills' },
     { href: '#experience', label: 'Experience' },
     { href: '#scoreboard', label: 'Scoreboard' },
     { href: '#education', label: 'Education' },
