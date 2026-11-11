@@ -41,6 +41,16 @@ export const about = {
         { v: '10+', l: 'college programming events won' },
     ],
     badge: 'DA-IICT · B.TECH ICT · CLASS OF 2028 ·',
+    badgeCenter: 'SWE',
+    easterEgg: {
+        image: '/images/Shinchan.jpg',
+        alt: 'Shinchan easter egg',
+        tag: 'Shinchan! 😁',
+        badge: ' · JUST FOR FUN · ALWAYS CURIOUS',
+        badgeCenter: 'FUN',
+        displayDurationMs: 1500,
+        flipTransitionMs: 600,
+    },
     now: [
         'Building backend systems, APIs, and developer tools',
         'Exploring distributed systems and system design',
