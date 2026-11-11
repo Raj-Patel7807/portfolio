@@ -94,7 +94,7 @@
     font-size: 1rem;
     letter-spacing: 0.12em;
     color: var(--accent);
-    margin-bottom: -0.2rem;
+    /* margin-bottom: -0.2rem; */
 }
 
 .score__total {
@@ -105,7 +105,10 @@
     vertical-align: middle;
 }
 
-/* Mobile: the rating drops under the info so narrow rows are never crushed. */
+/* Mobile: the rating drops under the info so narrow rows are never crushed.
+   It keeps the desktop arrangement (label above the number) but aligns the
+   block left with the rest of the row, so the label and the big digits can
+   never collide on narrow screens. */
 @media (max-width: 640px) {
     .score__row {
         grid-template-columns: minmax(0, 1fr);
@@ -113,12 +116,10 @@
     }
 
     .score__rating-wrap {
-        flex-direction: row;
-        align-items: baseline;
-        gap: 14px;
+        align-items: flex-start;
     }
 
     .score__rating {
-        font-size: clamp(48px, 14vw, 64px);
+        font-size: clamp(44px, 14vw, 64px);
     }
 }

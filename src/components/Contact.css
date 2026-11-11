@@ -148,6 +148,31 @@
     }
 }
 
+/* Below desktop: the link grid splits rows into cells too narrow for the
+   long Discord handle, so let it wrap onto its own line instead of being
+   clipped at the cell/viewport edge. Desktop (>=1024px) keeps one line. */
+@media (max-width: 1023.98px) {
+    .contact__link {
+        /* flex-wrap: wrap; */
+        row-gap: 4px;
+    }
+
+    .contact__handle {
+        order: 10;
+        flex-basis: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Mobile: shrink the wordmark so the full "Raj 7807." fits between the
+   gutters instead of clipping mid-glyph at the right edge. The display face
+   measures ~3.28-3.33em wide, so (container / 3.36) fits with a margin. */
+@media (max-width: 640px) {
+    .contact__wordmark {
+        font-size: calc((100vw - 40px) / 3.36);
+    }
+}
+
 .contact__footer {
     margin-top: 32px;
     display: flex;
