@@ -104,3 +104,21 @@
     white-space: nowrap;
     vertical-align: middle;
 }
+
+/* Mobile: the rating drops under the info so narrow rows are never crushed. */
+@media (max-width: 640px) {
+    .score__row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .score__rating-wrap {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 14px;
+    }
+
+    .score__rating {
+        font-size: clamp(48px, 14vw, 64px);
+    }
+}

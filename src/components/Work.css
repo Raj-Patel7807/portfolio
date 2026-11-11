@@ -247,6 +247,12 @@
         flex-direction: row;
         align-items: center;
         gap: 12px;
+        row-gap: 6px;
         text-align: left;
+        flex-wrap: wrap;
+    }
+
+    .work__kind {
+        white-space: normal;
     }
 }

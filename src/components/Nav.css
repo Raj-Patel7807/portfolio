@@ -77,8 +77,142 @@
     color: #000;
 }
 
-@media (max-width: 560px) {
+/* Burger button: hidden on desktop, shown in the mobile bar (≤767px). */
+.nav__burger {
+    display: none;
+    position: relative;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    background: transparent;
+    color: #fff;
+    padding: 0;
+}
+
+.nav__burger span {
+    position: absolute;
+    left: 50%;
+    width: 14px;
+    height: 1.8px;
+    background: #fff;
+    transform: translateX(-50%);
+    transition:
+        transform 0.3s var(--ease-out),
+        top 0.3s var(--ease-out);
+}
+
+.nav__burger span:nth-child(1) {
+    top: 12px;
+}
+
+.nav__burger span:nth-child(2) {
+    top: 19px;
+}
+
+.nav__burger.is-open span:nth-child(1) {
+    top: 15.5px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.nav__burger.is-open span:nth-child(2) {
+    top: 15.5px;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+/* Full-screen menu behind the fixed bar; never visible on desktop. */
+.nav__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: var(--bg);
+    padding: 110px var(--gutter) 48px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition:
+        opacity 0.35s var(--ease-out),
+        transform 0.35s var(--ease-out),
+        visibility 0s linear 0.35s;
+}
+
+.nav__overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition:
+        opacity 0.35s var(--ease-out),
+        transform 0.35s var(--ease-out);
+}
+
+.nav__overlay-label {
+    margin-bottom: 18px;
+}
+
+.nav__overlay-link {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(32px, 9vw, 44px);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--fg);
+}
+
+.nav__overlay-link:hover {
+    color: var(--accent);
+}
+
+.nav__overlay-idx {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--mute);
+}
+
+.nav__overlay-resume {
+    margin-top: 28px;
+    align-self: flex-start;
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: 1.5px solid var(--rule);
+    color: var(--fg);
+    font-weight: 600;
+}
+
+.nav__overlay-resume:hover {
+    background: var(--fg);
+    color: var(--bg);
+}
+
+/* Tablet: tighten the inline nav so it stays on one line between 768-1023px. */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    .nav__links {
+        gap: clamp(12px, 1.6vw, 16px);
+        font-size: 14px;
+    }
+
+    .nav__resume {
+        padding: 7px 14px;
+    }
+}
+
+/* Mobile: section links live in the overlay menu; the bar keeps
+   logo, theme toggle, resume and the burger button. */
+@media (max-width: 767.98px) {
     .nav__link {
         display: none;
+    }
+
+    .nav__burger {
+        display: block;
     }
 }

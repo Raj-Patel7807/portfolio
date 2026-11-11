@@ -255,6 +255,14 @@
 }
 
 /* Responsive adjustments */
+/* Tablet: scale the display name down from the fixed desktop size so
+   "Raj Patel." fits the viewport instead of being clipped. */
+@media (min-width: 641px) and (max-width: 1279.98px) {
+    .hero__name {
+        font-size: clamp(64px, 20vw, 260px);
+    }
+}
+
 @media (max-width: 640px) {
     .hero__center {
         padding-top: 0;

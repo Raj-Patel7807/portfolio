@@ -140,6 +140,14 @@
     -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.7);
 }
 
+/* Below desktop: keep the outlined wordmark bleeding off-screen at the same
+   proportion as the approved 1440px design instead of a fixed 420px size. */
+@media (max-width: 1279.98px) {
+    .contact__wordmark {
+        font-size: 29.17vw;
+    }
+}
+
 .contact__footer {
     margin-top: 32px;
     display: flex;

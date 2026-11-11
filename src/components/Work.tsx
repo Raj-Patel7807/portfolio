@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { projects } from '../data/content';
 import { DisplayHeading } from './DisplayHeading';
 import { formatRichText } from './RichText';
@@ -7,6 +7,9 @@ import './Work.css';
 // Accordion: hovering, clicking or keyboard-activating a row opens that project.
 export function Work() {
     const [active, setActive] = useState<number | null>(null);
+    // Remembers the last pointer type so touch-generated synthetic mouseleave
+    // events (fired after a tap) don't close the row the tap just opened.
+    const pointerTypeRef = useRef<'touch' | 'other'>('other');
 
     return (
         <section id="work" className="section section--lg">
@@ -19,7 +22,12 @@ export function Work() {
                 </div>
             </div>
 
-            <div className="rule-top" onMouseLeave={() => setActive(null)}>
+            <div
+                className="rule-top"
+                onMouseLeave={() => {
+                    if (pointerTypeRef.current !== 'touch') setActive(null);
+                }}
+            >
                 {projects.map((p, i) => {
                     const open = i === active;
                     const panelId = `project-${i}`;
@@ -29,7 +37,14 @@ export function Work() {
                             data-reveal=""
                             data-cursor={open ? 'Close' : 'Open'}
                             className={open ? 'work__item is-open' : 'work__item'}
-                            onMouseEnter={() => setActive(i)}
+                            // Mouse opens on hover exactly as before; on touch the
+                            // synthetic mouseenter would open+instantly re-close the
+                            // row on tap, so touch devices toggle via the click only.
+                            onPointerEnter={e => {
+                                pointerTypeRef.current =
+                                    e.pointerType === 'touch' ? 'touch' : 'other';
+                                if (e.pointerType !== 'touch') setActive(i);
+                            }}
                             onClick={() => setActive(prev => (prev === i ? null : i))}
                         >
                             <div
