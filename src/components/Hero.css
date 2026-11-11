@@ -269,11 +269,11 @@
     }
 
     .hero__name {
-        font-size: clamp(44px, 15vw, 76px);
+        font-size: clamp(97px, 15vw, 76px);
     }
 
     .hero__tagline {
-        font-size: clamp(18px, 5.2vw, 26px);
+        font-size: clamp(27px, 5.2vw, 26px);
     }
 
     .hero__tagline-word {
