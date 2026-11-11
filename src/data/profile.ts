@@ -48,7 +48,7 @@ export const about = {
         tag: 'Shinchan! 😁',
         badge: ' · JUST FOR FUN · ALWAYS CURIOUS',
         badgeCenter: 'FUN',
-        displayDurationMs: 1500,
+        displayDurationMs: 1000,
         flipTransitionMs: 600,
     },
     now: [
