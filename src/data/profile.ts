@@ -8,8 +8,8 @@ export const profile = {
     github: { user: 'Raj-Patel7807', url: 'https://github.com/Raj-Patel7807' },
     linkedin: 'https://www.linkedin.com/in/raj-patel7807',
     discord: {
-        user: 'entropyenjoyer.psi278',
-        url: 'https://discord.com/users/entropyenjoyer.psi278',
+        user: 'entropy.psi7807',
+        url: 'https://discord.com/users/entropy.psi7807',
     },
 };
 
