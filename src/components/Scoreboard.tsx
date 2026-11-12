@@ -43,7 +43,7 @@ export function Scoreboard({ cf }: { cf: CfUser | null }) {
             <div className="section-head">
                 <DisplayHeading>Scoreboard</DisplayHeading>
                 <div data-reveal="" className="mono-label">
-                    {problemsSolved} problems solved
+                    Click to visit the profile.
                 </div>
             </div>
 
