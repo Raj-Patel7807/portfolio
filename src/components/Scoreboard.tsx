@@ -1,7 +1,7 @@
 import {
     // codeforces,
     platforms,
-    problemsSolved,
+    // problemsSolved,
 } from '../data/content';
 import type { CfUser } from '../hooks/useLiveStats';
 import { DisplayHeading } from './DisplayHeading';
