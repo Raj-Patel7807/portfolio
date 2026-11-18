@@ -93,7 +93,9 @@ export function About() {
                         <div
                             ref={frameRef}
                             className={`about__frame${isFlipped ? ' is-flipped' : ''}`}
-                            style={{ '--flip-duration': `${flipTransition}ms` } as React.CSSProperties}
+                            style={
+                                { '--flip-duration': `${flipTransition}ms` } as React.CSSProperties
+                            }
                             role="button"
                             tabIndex={0}
                             aria-label={`Profile picture of ${profile.name}. Click to flip.`}
@@ -145,7 +147,9 @@ export function About() {
                                 </defs>
                                 <text fontSize="10.5" letterSpacing="2.6">
                                     <textPath href="#about-ring">
-                                        {isFlipped ? (easterEgg?.badge ?? about.badge) : about.badge}
+                                        {isFlipped
+                                            ? (easterEgg?.badge ?? about.badge)
+                                            : about.badge}
                                     </textPath>
                                 </text>
                             </svg>

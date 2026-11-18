@@ -101,7 +101,8 @@
 }
 
 @keyframes shinchanBob {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0) scale(1);
     }
     50% {
@@ -146,7 +147,9 @@
     pointer-events: none;
     opacity: 0;
     transform: translateY(4px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
     z-index: 4;
 }
 
@@ -197,7 +200,9 @@
     border: 1.5px solid var(--rule);
     display: grid;
     place-items: center;
-    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s ease;
+    transition:
+        transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+        background-color 0.4s ease;
     z-index: 5;
 }
 
